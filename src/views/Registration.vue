@@ -1,7 +1,7 @@
 <template>
     <div class="flex flex-col">
-        <h1 class="text-2xl font-semibold mb-6 text-center">{{ title }}</h1>
-        <p class="font-bold mb-2" :class="error ? 'text-red-600' : 'text-green-600'">{{ message }}</p>
+        <h1 class="text-2xl font-semibold mb-6 text-center" v-if="title != ''">{{ title }}</h1>
+        <p class="font-bold mb-2" v-if="error" :class="error ? 'text-red-600' : 'text-green-600'">{{ message }}</p>
         <fwb-input v-model="email" placeholder="Your Email Address" label="Email" size="lg"
             :validation-status="v$.$invalid ? 'error' : 'null'" class="mb-4" />
         <fwb-button @click="register" :disabled="v$.$invalid" color="red" size="xl">{{ buttonLabel
@@ -22,7 +22,7 @@ const props = defineProps({
     },
     title: {
         type: String,
-        default: 'Registration'
+        default: ''
     }
 }
 )
