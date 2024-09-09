@@ -4,7 +4,7 @@ FROM node:22 AS build-stage
 WORKDIR /app
 COPY . .
 
-RUN npm run build
+RUN npm install -D vite && npm run build
 
 # production stage
 FROM nginx:stable-alpine AS production-stage
