@@ -1,0 +1,13 @@
+# build stage
+FROM node:22 AS build-stage
+
+WORKDIR /app
+COPY . .
+
+RUN npm run build
+
+# production stage
+FROM nginx:stable-alpine AS production-stage
+COPY --from=build-stage /app/dist/ /usr/share/nginx/html
+
+CMD ["nginx", "-g", "daemon off;"]
