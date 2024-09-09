@@ -17,6 +17,6 @@ export const router = createRouter({
     {
         path: '/landing2',
         component: () => import('./views/LandingPage2.vue')
-    },
+    }
     ]
 })
