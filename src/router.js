@@ -4,15 +4,15 @@ export const router = createRouter({
     history: createWebHashHistory(),
     routes: [{
         path: '',
-        redirect: '/tunnel-funnel'
+        redirect: '/tool-funnel/0'
     },
     {
-        path: '/tunnel-funnel',
+        path: '/tool-funnel/:id',
         component: () => import('./views/Registration.vue'),
         props: {
             buttonLabel: 'Sign Up',
         },
-        component: () => import('./views/ToolFunnel.vue')
+        component: () => import('./views/ToolFunnel/LandingPage.vue')
     }
     ]
 })
