@@ -29,6 +29,9 @@ const props = defineProps({
     },
     successColor: {
         type: String
+    },
+    campaign: {
+        type: String
     }
 }
 )
@@ -42,7 +45,7 @@ const rules = { email: { required, emailValidation } }
 const v$ = useVuelidate(rules, { email })
 
 const register = () => {
-    axios.post(`${import.meta.env.VITE_API_BASE}/user`, { email: email.value })
+    axios.post(`${import.meta.env.VITE_API_BASE}/user`, { email: email.value, campaign: "tool-funnel" })
         .then((response) => {
             error.value = false
             message.value = 'Registered successfully'

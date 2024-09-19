@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col bg-blue-200 items-center" :class="background">
+  <div class="flex flex-col items-center" :class="background">
     <h1 class="font-bold text-center pt-10 lg:pt-16 pb-2 text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl"
       :class="fontColor">{{
         content[$route.params.id].headline }}</h1>
@@ -8,7 +8,7 @@
         content[$route.params.id].subheadline }}
     </h2>
     <registration class="mt-8" button-label="Book a consultancy call" :errorColor="errorColor"
-      :successColor="successColor" />
+      :successColor="successColor" campaign="tool-funnel" />
   </div>
 </template>
 <script setup>
