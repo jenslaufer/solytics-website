@@ -4,15 +4,24 @@ export const router = createRouter({
     history: createWebHashHistory(),
     routes: [{
         path: '',
-        redirect: '/tunnel-funnel'
+        redirect: '/tool-funnel/0'
     },
     {
-        path: '/tunnel-funnel',
-        component: () => import('./views/Registration.vue'),
+        path: '/tool-funnel/:id',
         props: {
             buttonLabel: 'Sign Up',
+            errorColor: 'text-red-700',
+            successColor: 'text-green-700',
+            background: 'bg-[#080808]',
+            fontColor: 'text-white',
+            content: [
+                {
+                    headline: 'Business Owner?',
+                    subheadline: 'Attract high-quality, low-cost leads with Software Tools and Quizzes'
+                }
+            ]
         },
-        component: () => import('./views/ToolFunnel.vue')
+        component: () => import('./views/LandingPage.vue')
     }
     ]
 })
