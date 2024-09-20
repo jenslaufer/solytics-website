@@ -4,7 +4,8 @@ export const router = createRouter({
     history: createWebHashHistory(),
     routes: [{
         path: '',
-        redirect: '/tool-funnel/0'
+        component: () => import('./views/Index.vue'),
+        redirect: '/not-found'
     },
     {
         path: '/tool-funnel/:id',
@@ -22,6 +23,10 @@ export const router = createRouter({
             ]
         },
         component: () => import('./views/LandingPage.vue')
+    },
+    {
+        path: '/not-found',
+        component: () => import('./views/404.vue')
     }
     ]
 })
