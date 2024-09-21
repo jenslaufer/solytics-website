@@ -5,7 +5,7 @@ export const router = createRouter({
     routes: [{
         path: '',
         component: () => import('./views/Index.vue'),
-        redirect: '/not-found'
+        redirect: '/tool-funnel/0'
     },
     {
         path: '/tool-funnel/:id',
