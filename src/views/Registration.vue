@@ -4,7 +4,7 @@
         <p class="font-bold mb-2" v-if="error" :class="error ? errorColor : successColor">{{ message }}</p>
         <fwb-input v-model="email" placeholder="Your Email Address" label="Email" size="lg"
             :validation-status="v$.$invalid ? 'error' : 'null'" class="mb-4" />
-        <fwb-button @click="register" :disabled="v$.$invalid" pill="true" color="yellow" size="xl">{{ buttonLabel
+        <fwb-button @click="register" :disabled="v$.$invalid" :pill="true" color="yellow" size="xl">{{ buttonLabel
             }}</fwb-button>
     </div>
 </template>
