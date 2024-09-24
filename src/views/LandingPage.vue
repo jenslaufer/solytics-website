@@ -37,8 +37,8 @@ const props = defineProps({
   }
 });
 
-const headline = ref('')
-const subheadline = ref('')
+const headline = ref(0)
+const subheadline = ref(0)
 
 try {
   headline.value = props.content[$route.params.id].headline
