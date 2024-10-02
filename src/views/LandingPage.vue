@@ -6,8 +6,8 @@
     <h2 class="text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl p-6 font-semibold text-center"
       :class="fontColor">{{ subheadline }}
     </h2>
-    <registration class="mt-8" button-label="Book a consultancy call" :errorColor="errorColor"
-      :successColor="successColor" campaign="tool-funnel" />
+    <registration class="mt-8 w-1/3" :button-label="cta" :errorColor="errorColor" :successColor="successColor"
+      :route="route" campaign="tool-funnel" />
   </div>
 </template>
 <script setup>
@@ -34,15 +34,20 @@ const props = defineProps({
   content: {
     type: Array,
     default: () => []
+  },
+  route: {
+    type: String
   }
 });
 
 const headline = ref(0)
 const subheadline = ref(0)
+const cta = ref(0)
 
 try {
   headline.value = props.content[$route.params.id].headline
   subheadline.value = props.content[$route.params.id].subheadline
+  cta.value = props.content[$route.params.id].cta
 } catch (error) {
   $router.push('/not-found')
 }
