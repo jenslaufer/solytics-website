@@ -9,6 +9,7 @@
     </div>
 </template>
 <script setup>
+import { router } from '../router'
 import { useVuelidate } from '@vuelidate/core'
 import { required, email as emailValidation } from '@vuelidate/validators'
 import { ref } from 'vue'
@@ -32,6 +33,9 @@ const props = defineProps({
     },
     campaign: {
         type: String
+    },
+    route: {
+        type: String
     }
 }
 )
@@ -49,6 +53,7 @@ const register = () => {
         .then((response) => {
             error.value = false
             message.value = 'Registered successfully'
+            router.push(props.route)
         })
         .catch((err) => {
             error.value = true

@@ -18,10 +18,12 @@ export const router = createRouter({
                 successColor: 'text-green-700',
                 background: 'bg-[#080808]',
                 fontColor: 'text-white',
+                route: '/calendar',
                 content: [
                     {
                         headline: 'Business Owner?',
-                        subheadline: 'Attract high-quality, low-cost leads with Software Tools and Quizzes'
+                        subheadline: 'Attract high-quality, low-cost leads with Software Tools and Quizzes',
+                        cta: 'Book a free consultation call'
                     }
                 ]
             },
@@ -34,6 +36,10 @@ export const router = createRouter({
         {
             path: '/impressum',
             component: () => import('./views/Impressum.vue')
+        },
+        {
+            path: '/calendar',
+            component: () => import('./views/Calendar.vue')
         }
     ]
 })
