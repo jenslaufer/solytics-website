@@ -10,19 +10,6 @@
 import { onMounted } from 'vue'
 
 onMounted(() => {
-    let widget = document.getElementById("calendlyInlineWidget")
-    let script = document.getElementById("widgetScript")
-
-    if (widget && script && !widget.children.length) {
-        script.remove()
-        var newScript = document.createElement("script");
-        newScript.id = "widgetScript";
-        newScript.type = "text/javascript";
-        newScript.src = "https://assets.calendly.com/assets/external/widget.js";
-        newScript.async = true;
-        document.head.appendChild(newScript);
-    }
-
     Calendly.initInlineWidget({
         url: 'https://calendly.com/jenslaufer/toolfunnelcall',
         parentElement: document.getElementById('calendly-embed')
