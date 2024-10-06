@@ -1,13 +1,13 @@
 <template>
   <div class="flex flex-col items-center" :class="background">
-    <h1 class="font-bold text-center pt-10 lg:pt-16 pb-2 text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl"
+    <h1 class="font-bold text-center pt-10 lg:pt-16 pb-2 text-4xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl"
       :class="fontColor">{{
         headline }}</h1>
-    <h2 class="text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl p-6 font-semibold text-center"
-      :class="fontColor">{{ subheadline }}
+    <h2 class="text-xl md:text-2xl xl:text-3xl 2xl:text-4xl p-6 font-semibold text-center" :class="fontColor">{{
+      subheadline }}
     </h2>
-    <registration class="mt-8 w-1/3" :button-label="cta" :errorColor="errorColor" :successColor="successColor"
-      :route="route" campaign="tool-funnel" />
+    <registration class="mt-8 w-3/4 md:7/12 lg:w-1/2" :button-label="cta" :errorColor="errorColor"
+      :successColor="successColor" :route="route" campaign="tool-funnel" />
   </div>
 </template>
 <script setup>
