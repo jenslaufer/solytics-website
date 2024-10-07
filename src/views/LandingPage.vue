@@ -14,9 +14,11 @@
 import { ref } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import Registration from './Registration.vue';
+import { useGtm } from '@gtm-support/vue-gtm'
 
 const $route = useRoute()
 const $router = useRouter()
+const gtm = useGtm()
 
 const props = defineProps({
   errorColor: {
@@ -51,4 +53,7 @@ try {
 } catch (error) {
   $router.push('/not-found')
 }
+onMounted(() => {
+  // gtm.trackView("", "solytics/") @TODO: Add tracking
+});
 </script>

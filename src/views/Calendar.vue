@@ -8,11 +8,15 @@
 </template>
 <script setup>
 import { onMounted } from 'vue'
+import { useGtm } from '@gtm-support/vue-gtm'
+
+const gtm = useGtm();
 
 onMounted(() => {
     Calendly.initInlineWidget({
         url: 'https://calendly.com/jenslaufer/toolfunnelcall',
         parentElement: document.getElementById('calendly-embed')
     });
+    gtm.trackView("", "solytics/appointment-booking");
 });
 </script>
