@@ -28,3 +28,13 @@
         </div>
     </div>
 </template>
+<script setup>
+import { onMounted } from 'vue'
+import { useGtm } from '@gtm-support/vue-gtm'
+
+const gtm = useGtm()
+
+onMounted(() => {
+    gtm.trackView("", `solytics/impressum`)
+})
+</script>

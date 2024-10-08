@@ -19,6 +19,7 @@ export const router = createRouter({
                 background: 'bg-[#080808]',
                 fontColor: 'text-white',
                 route: '/calendar',
+                campaign: 'tool-funnel',
                 content: [
                     {
                         headline: 'Business Owner?',

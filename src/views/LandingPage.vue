@@ -7,11 +7,11 @@
       subheadline }}
     </h2>
     <registration class="mt-8 w-3/4 md:7/12 lg:w-1/2" :button-label="cta" :errorColor="errorColor"
-      :successColor="successColor" :route="route" campaign="tool-funnel" />
+      :successColor="successColor" :route="route" :campaign="campaign" />
   </div>
 </template>
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import Registration from './Registration.vue';
 import { useGtm } from '@gtm-support/vue-gtm'
@@ -37,6 +37,9 @@ const props = defineProps({
     type: Array,
     default: () => []
   },
+  campaign: {
+    type: String
+  },
   route: {
     type: String
   }
@@ -53,7 +56,8 @@ try {
 } catch (error) {
   $router.push('/not-found')
 }
+
 onMounted(() => {
-  // gtm.trackView("", "solytics/") @TODO: Add tracking
+  gtm.trackView("", `solytics${$route.path}`)
 });
 </script>
