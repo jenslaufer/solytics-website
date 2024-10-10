@@ -55,17 +55,17 @@ console.log(props.campaign)
 const register = () => {
     axios.post(`${import.meta.env.VITE_API_BASE}/user`, { email: email.value, campaign: props.campaign })
         .then((response) => {
-            error.value = false
-            message.value = 'Registered successfully'
-            router.push(props.route)
-
             gtm.trackEvent({
                 event: null,
                 category: "solytics",
                 action: "lead-generated",
-                label: campaign,
+                label: props.campaign,
                 value: 1,
             });
+            error.value = false
+            message.value = 'Registered successfully'
+            router.push(props.route)
+
         })
         .catch((err) => {
             error.value = true
