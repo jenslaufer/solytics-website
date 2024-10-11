@@ -1,7 +1,6 @@
 <template>
   <marketing-header :headline="headline" :subheadline="subheadline" :cta="cta" :errorColor="errorColor"
-    :successColor="successColor" :background="background" :fontColor="fontColor" :content="content" :route="route"
-    :campaign="campaign" />
+    :successColor="successColor" :background="background" :fontColor="fontColor" :route="route" :campaign="campaign" />
 </template>
 <script setup>
 import { ref, onMounted } from 'vue';

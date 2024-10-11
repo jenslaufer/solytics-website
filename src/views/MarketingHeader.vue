@@ -35,10 +35,6 @@ const props = defineProps({
     fontColor: {
         type: String
     },
-    content: {
-        type: Array,
-        default: () => []
-    },
     campaign: {
         type: String
     },

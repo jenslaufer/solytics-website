@@ -50,7 +50,6 @@ const error = ref(false)
 const rules = { email: { required, emailValidation } }
 
 const v$ = useVuelidate(rules, { email })
-console.log(props.campaign)
 
 const register = () => {
     axios.post(`${import.meta.env.VITE_API_BASE}/user`, { email: email.value, campaign: props.campaign })
