@@ -1,20 +1,13 @@
 <template>
-  <div class="flex flex-col items-center" :class="background">
-    <h1 class="font-bold text-center pt-10 lg:pt-16 pb-2 text-4xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl"
-      :class="fontColor">{{
-        headline }}</h1>
-    <h2 class="text-xl md:text-2xl xl:text-3xl 2xl:text-4xl p-6 font-semibold text-center" :class="fontColor">{{
-      subheadline }}
-    </h2>
-    <registration class="mt-8 w-3/4 md:7/12 lg:w-1/2" :button-label="cta" :errorColor="errorColor"
-      :successColor="successColor" :route="route" :campaign="campaign" />
-  </div>
+  <marketing-header :headline="headline" :subheadline="subheadline" :cta="cta" :errorColor="errorColor"
+    :successColor="successColor" :background="background" :fontColor="fontColor" :content="content" :route="route"
+    :campaign="campaign" />
 </template>
 <script setup>
 import { ref, onMounted } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
-import Registration from './Registration.vue';
 import { useGtm } from '@gtm-support/vue-gtm'
+import MarketingHeader from '../views/MarketingHeader.vue';
 
 const $route = useRoute()
 const $router = useRouter()

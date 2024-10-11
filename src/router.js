@@ -4,10 +4,10 @@ export const router = createRouter({
     history: createWebHashHistory(),
     routes: [
         // will match everything and put it under `route.params.pathMatch`
-        { path: '/:pathMatch(.*)*', name: 'NotFound', component: () => import('./views/404.vue') },
+        { path: '/:pathMatch(.*)*', name: 'NotFound', component: () => import('./pages/404.vue') },
         {
             path: '',
-            component: () => import('./views/Index.vue'),
+            component: () => import('./pages/Index.vue'),
             redirect: '/tool-funnel/0'
         },
         {
@@ -28,19 +28,19 @@ export const router = createRouter({
                     }
                 ]
             },
-            component: () => import('./views/LandingPage.vue')
+            component: () => import('./pages/LandingPage.vue')
         },
         {
             path: '/not-found',
-            component: () => import('./views/404.vue')
+            component: () => import('./pages/404.vue')
         },
         {
             path: '/impressum',
-            component: () => import('./views/Impressum.vue')
+            component: () => import('./pages/Impressum.vue')
         },
         {
             path: '/calendar',
-            component: () => import('./views/Calendar.vue')
+            component: () => import('./pages/Calendar.vue')
         }
     ]
 })
