@@ -1,6 +1,7 @@
 <template>
-  <marketing-header :headline="headline" :subheadline="subheadline" :cta="cta" :errorColor="errorColor"
-    :successColor="successColor" :background="background" :fontColor="fontColor" :route="route" :campaign="campaign" />
+  <marketing-header :headline="headline" :subheadline="subheadline" :explainer="explainer" :cta="cta"
+    :errorColor="errorColor" :successColor="successColor" :background="background" :fontColor="fontColor" :route="route"
+    :campaign="campaign" />
 </template>
 <script setup>
 import { ref, onMounted } from 'vue';
@@ -37,13 +38,15 @@ const props = defineProps({
   }
 });
 
-const headline = ref(0)
-const subheadline = ref(0)
-const cta = ref(0)
+const headline = ref("")
+const subheadline = ref("")
+const explainer = ref("")
+const cta = ref("")
 
 try {
   headline.value = props.content[$route.params.id].headline
   subheadline.value = props.content[$route.params.id].subheadline
+  explainer.value = props.content[$route.params.id].explainer
   cta.value = props.content[$route.params.id].cta
 } catch (error) {
   $router.push('/not-found')
