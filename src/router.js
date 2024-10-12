@@ -24,7 +24,7 @@ export const router = createRouter({
                     {
                         headline: 'Business Owner?',
                         subheadline: 'Attract high-quality, low-cost leads with Software Tools and Quizzes',
-                        explainer: 'Software Tools and quizzes are a cost-efficient way to generate high-quality leads for your business. Your customers are driven by the desire for insights—this is the gap your software tool or quiz fills. You generate a lead, while your customers receive something valuable in return. It’s a win-win situation for both sides and trust-building...',
+                        explainer: 'Software tools and quizzes are a cost-efficient way to generate high-quality leads for your business. Your customers are driven by their desire for insights, and this is the gap your software tool or quiz fills. You generate leads while your customers receive something valuable in return, creating a win-win situation that builds trust in your business.',
                         cta: 'Book a free consultation call'
                     }
                 ]
