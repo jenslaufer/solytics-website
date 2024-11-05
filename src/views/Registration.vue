@@ -9,12 +9,15 @@
     </div>
 </template>
 <script setup>
+import { useGtm } from '@gtm-support/vue-gtm'
 import { router } from '../router'
 import { useVuelidate } from '@vuelidate/core'
 import { required, email as emailValidation } from '@vuelidate/validators'
 import { ref } from 'vue'
 import axios from 'axios'
 import { FwbInput, FwbButton } from 'flowbite-vue'
+
+const gtm = useGtm()
 
 const props = defineProps({
     buttonLabel: {
@@ -49,11 +52,19 @@ const rules = { email: { required, emailValidation } }
 const v$ = useVuelidate(rules, { email })
 
 const register = () => {
-    axios.post(`${import.meta.env.VITE_API_BASE}/user`, { email: email.value, campaign: "tool-funnel" })
+    axios.post(`${import.meta.env.VITE_API_BASE}/user`, { email: email.value, campaign: props.campaign })
         .then((response) => {
+            gtm.trackEvent({
+                event: null,
+                category: "solytics",
+                action: "lead-generated",
+                label: props.campaign,
+                value: 1,
+            });
             error.value = false
             message.value = 'Registered successfully'
             router.push(props.route)
+
         })
         .catch((err) => {
             error.value = true
