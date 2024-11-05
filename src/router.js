@@ -18,14 +18,35 @@ export const router = createRouter({
                 successColor: 'text-green-700',
                 background: 'bg-[#080808]',
                 fontColor: 'text-white',
-                route: '/calendar',
                 campaign: 'tool-funnel',
                 content: [
                     {
-                        headline: 'Business Owner?',
-                        subheadline: 'Attract high-quality, low-cost leads with Software Tools and Quizzes',
-                        explainer: 'Software tools and quizzes are a cost-efficient way to generate high-quality leads for your business. Your customers are driven by their desire for insights, and this is the gap your software tool or quiz fills. You generate leads while your customers receive something valuable in return, creating a win-win situation that builds trust in your business.',
-                        cta: 'Book a free consultation call'
+                        "headline": "Need Leads for Your Business?",
+                        "subheadline": "Attract high-quality leads at low costs with Software Tools and Quizzes",
+                        "cta": "Book a free consultation call",
+                        "url": "/calendar",
+                        "explainer": "Software tools and quizzes are a cost-efficient way to generate high-quality leads for your business. Your customers are driven by their desire for insights, and this is the gap your software tool or quiz fills. You generate leads while your customers receive something valuable in return, creating a win-win situation that builds trust in your business."
+                    },
+                    {
+                        "headline": "High-Quality, Low-Cost Leads",
+                        "subheadline": "Software tools and quizzes are the secret to attracting high-quality, low-cost leads",
+                        "cta": "Book a free consultation call",
+                        "url": "/calendar",
+                        "explainer": "Software tools and quizzes are a cost-efficient way to generate high-quality leads for your business. Your customers are driven by their desire for insights, and this is the gap your software tool or quiz fills. You generate leads while your customers receive something valuable in return, creating a win-win situation that builds trust in your business."
+                    },
+                    {
+                        "headline": "High-Quality, Low-Cost Leads",
+                        "subheadline": "Attract high-quality, low-cost leads with Software tools and Quizzes",
+                        "cta": "Book a free consultation call",
+                        "url": "/calendar",
+                        "explainer": "Software tools and quizzes are a cost-efficient way to generate high-quality leads for your business. Your customers are driven by their desire for insights, and this is the gap your software tool or quiz fills. You generate leads while your customers receive something valuable in return, creating a win-win situation that builds trust in your business."
+                    },
+                    {
+                        "headline": "Business Owner?",
+                        "subheadline": "Attract high-quality, low-cost leads with Software tools and Quizzes",
+                        "cta": "Book a free consultation call",
+                        "url": "/calendar",
+                        "explainer": "Software tools and quizzes are a cost-efficient way to generate high-quality leads for your business. Your customers are driven by their desire for insights, and this is the gap your software tool or quiz fills. You generate leads while your customers receive something valuable in return, creating a win-win situation that builds trust in your business."
                     }
                 ]
             },

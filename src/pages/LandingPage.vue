@@ -1,6 +1,6 @@
 <template>
   <marketing-header :headline="headline" :subheadline="subheadline" :explainer="explainer" :cta="cta"
-    :errorColor="errorColor" :successColor="successColor" :background="background" :fontColor="fontColor" :route="route"
+    :errorColor="errorColor" :successColor="successColor" :background="background" :fontColor="fontColor" :route="url"
     :campaign="campaign" />
 </template>
 <script setup>
@@ -32,9 +32,6 @@ const props = defineProps({
   },
   campaign: {
     type: String
-  },
-  route: {
-    type: String
   }
 });
 
@@ -42,12 +39,14 @@ const headline = ref("")
 const subheadline = ref("")
 const explainer = ref("")
 const cta = ref("")
+const url = ref("")
 
 try {
   headline.value = props.content[$route.params.id].headline
   subheadline.value = props.content[$route.params.id].subheadline
   explainer.value = props.content[$route.params.id].explainer
   cta.value = props.content[$route.params.id].cta
+  url.value = props.content[$route.params.id].url
 } catch (error) {
   $router.push('/not-found')
 }
