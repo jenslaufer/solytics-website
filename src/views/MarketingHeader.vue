@@ -48,12 +48,14 @@ const props = defineProps({
     route: {
         type: String
     },
+    buttonLabel: {
+        type: String
+    },
     showExplainer: {
         type: Boolean
     },
     registration: {
         type: Boolean
     }
-
 });
 </script>

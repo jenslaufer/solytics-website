@@ -44,13 +44,15 @@ const landingPageProps = {
 const registrationProps = {
     ...landingPageProps,
     showExplainer: true,
-    registration: true
+    registration: true,
+    showFooter: true
 }
 
 const ctaProps = {
     ...landingPageProps,
     showExplainer: false,
-    registration: false
+    registration: false,
+    showFooter: false
 }
 
 export const router = createRouter({
