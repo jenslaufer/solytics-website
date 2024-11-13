@@ -1,19 +1,28 @@
 <template>
   <marketing-header :headline="headline" :subheadline="subheadline" :explainer="explainer" :cta="cta"
     :errorColor="errorColor" :successColor="successColor" :background="background" :fontColor="fontColor" :route="url"
-    :campaign="campaign" />
+    :campaign="campaign" :showExplainer="showExplainer" :registration="registration" class="grow" />
+  <app-footer v-show="showFooter" />
 </template>
 <script setup>
 import { ref, onMounted } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import { useGtm } from '@gtm-support/vue-gtm'
-import MarketingHeader from '../views/MarketingHeader.vue';
+import MarketingHeader from '../views/MarketingHeader.vue'
+import AppFooter from '../views/AppFooter.vue';
 
 const $route = useRoute()
 const $router = useRouter()
 const gtm = useGtm()
 
 const props = defineProps({
+  content: {
+    type: Array,
+    default: () => []
+  },
+  buttonLabel: {
+    type: String
+  },
   errorColor: {
     type: String
   },
@@ -26,12 +35,20 @@ const props = defineProps({
   fontColor: {
     type: String
   },
-  content: {
-    type: Array,
-    default: () => []
-  },
   campaign: {
     type: String
+  },
+  showExplainer: {
+    type: Boolean,
+    default: true
+  },
+  registration: {
+    type: Boolean,
+    default: false
+  },
+  showFooter: {
+    type: Boolean,
+    default: true
   }
 });
 
