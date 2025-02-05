@@ -38,7 +38,7 @@ const landingPageProps = {
     successColor: 'text-green-700',
     background: 'bg-[#080808]',
     fontColor: 'text-white',
-    campaign: 'tool-funnel'
+    product: 'tool-funnel'
 }
 
 const registrationProps = {

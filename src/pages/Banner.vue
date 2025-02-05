@@ -1,19 +1,20 @@
 <template>
-  <marketing-header :headline="headline" :subheadline="subheadline" :explainer="explainer" :cta="cta"
-    :errorColor="errorColor" :successColor="successColor" :background="background" :fontColor="fontColor" :route="url"
-    :product="product" :showExplainer="showExplainer" :registration="registration" class="grow" />
-  <app-footer v-show="showFooter" />
+  <div class="flex flex-col items-center grow" :class="background">
+    <h1 class="font-bold text-center px-4 pt-10 pb-1 text-7xl" :class="fontColor">{{ headline }}</h1>
+    <h2 class="px-6 text-3xl pt-4 font-semibold text-center" :class="fontColor">
+      {{ subheadline }}
+    </h2>
+    <p class="mt-6 inline-block px-6 py-3 bg-red-600 text-white font-semibold text-3xl rounded-md">
+      {{ cta }}
+    </p>
+  </div>
 </template>
 <script setup>
-import { ref, onMounted } from 'vue';
-import { useRoute, useRouter } from 'vue-router';
-import { useGtm } from '@gtm-support/vue-gtm'
-import MarketingHeader from '../views/MarketingHeader.vue'
-import AppFooter from '../views/AppFooter.vue';
+import { ref } from 'vue'
 
+import { useRoute, useRouter } from 'vue-router'
 const $route = useRoute()
 const $router = useRouter()
-const gtm = useGtm()
 
 const props = defineProps({
   content: {
@@ -50,7 +51,7 @@ const props = defineProps({
     type: Boolean,
     default: true
   }
-});
+})
 
 const headline = ref("")
 const subheadline = ref("")
@@ -68,7 +69,4 @@ try {
   $router.push('/not-found')
 }
 
-onMounted(() => {
-  gtm.trackView("", `solytics${$route.path}`)
-});
 </script>
