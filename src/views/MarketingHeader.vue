@@ -9,7 +9,7 @@
         </p>
         <registration v-show="registration" class="mt-8 w-10/12 sm:w-8/12 md:w-7/12 lg:w-5/12 xl:w-4/12"
             :button-label="cta" :errorColor="errorColor" :successColor="successColor" :route="route"
-            :campaign="campaign" />
+            :product="product" />
         <cta v-show="!registration" :route="route" :cta="cta" />
     </div>
 </template>
@@ -42,7 +42,7 @@ const props = defineProps({
     fontColor: {
         type: String
     },
-    campaign: {
+    product: {
         type: String
     },
     route: {

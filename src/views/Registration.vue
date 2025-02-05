@@ -34,7 +34,7 @@ const props = defineProps({
     successColor: {
         type: String
     },
-    campaign: {
+    product: {
         type: String
     },
     route: {
@@ -52,13 +52,13 @@ const rules = { email: { required, emailValidation } }
 const v$ = useVuelidate(rules, { email })
 
 const register = () => {
-    axios.post(`${import.meta.env.VITE_API_BASE}/user`, { email: email.value, campaign: props.campaign })
+    axios.post(`${import.meta.env.VITE_API_BASE}/user`, { email: email.value, product: props.product })
         .then((response) => {
             gtm.trackEvent({
                 event: null,
                 category: "solytics",
                 action: "lead-generated",
-                label: props.campaign,
+                label: props.product,
                 value: 1,
             });
             error.value = false

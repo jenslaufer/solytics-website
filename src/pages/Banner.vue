@@ -36,7 +36,7 @@ const props = defineProps({
   fontColor: {
     type: String
   },
-  campaign: {
+  product: {
     type: String
   },
   showExplainer: {

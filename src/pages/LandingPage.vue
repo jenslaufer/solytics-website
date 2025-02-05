@@ -1,7 +1,7 @@
 <template>
   <marketing-header :headline="headline" :subheadline="subheadline" :explainer="explainer" :cta="cta"
     :errorColor="errorColor" :successColor="successColor" :background="background" :fontColor="fontColor" :route="url"
-    :campaign="campaign" :showExplainer="showExplainer" :registration="registration" class="grow" />
+    :product="product" :showExplainer="showExplainer" :registration="registration" class="grow" />
   <app-footer v-show="showFooter" />
 </template>
 <script setup>
@@ -35,7 +35,7 @@ const props = defineProps({
   fontColor: {
     type: String
   },
-  campaign: {
+  product: {
     type: String
   },
   showExplainer: {
