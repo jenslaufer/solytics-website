@@ -52,7 +52,14 @@ const rules = { email: { required, emailValidation } }
 const v$ = useVuelidate(rules, { email })
 
 const register = () => {
-    axios.post(`${import.meta.env.VITE_API_BASE}/user`, { email: email.value, product: props.product })
+    axios.post(`${import.meta.env.VITE_API_BASE}/user`, {
+        key: crypto.randomUUID(),
+        credentials: {
+            email: email.value,
+            password: Math.random().toString(36).slice(-8),
+            product: `${import.meta.env.VITE_PRODUCT_PREFIX}/${props.product}`
+        }
+    })
         .then((response) => {
             gtm.trackEvent({
                 event: null,
