@@ -56,7 +56,6 @@ const register = () => {
         key: crypto.randomUUID(),
         credentials: {
             email: email.value,
-            password: Math.random().toString(36).slice(-8),
             product: `${import.meta.env.VITE_PRODUCT_PREFIX}/${props.product}`
         }
     })
