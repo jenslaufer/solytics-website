@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col items-center bg-[#090909]">
+    <div class="flex flex-col items-center bg-[#090909] grow">
         <h1
             class="font-bold text-center pt-10 lg:pt-16 pb-6 text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl text-white">
             Appointment Booking</h1>
