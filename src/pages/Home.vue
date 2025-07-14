@@ -1,10 +1,10 @@
 <template>
   <div class="flex justify-center items-center h-screen">
     <div class="text-center p-10 lg:p-0 min-w-sm max-w-5xl">
-      <h1 class="text-2xl md:text-4xl xl:text-5xl font-extrabold mt-2 lg:mt-28 font-sans-serif leading-tight">
+      <h1 class="text-3xl md:text-4xl xl:text-5xl font-extrabold mt-2 lg:mt-28 font-sans-serif leading-tight">
         {{ currentHeadline.headline }}
       </h1>
-      <h1 class="text-xl md:text-xl xl:text-2xl font-normal lg:font-semibold mt-4 leading-tight">
+      <h1 class="text-xl md:text-2xl xl:text-3xl font-serif lg:font-semibold mt-4 leading-tight">
         {{ currentHeadline.subheadline }}
       </h1>
       <div class="mt-4 lg:mt-6">
