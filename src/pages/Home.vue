@@ -8,7 +8,7 @@
         {{ currentHeadline.subheadline }}
       </h1>
       <div class="mt-4 lg:mt-6">
-        <button @click="router.push('/termin')"
+        <button @click="router.push('/appointment')"
           class="bg-red-500 hover:bg-red-600 text-white font-semibold py-3 px-8 rounded-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
           {{ currentHeadline.cta }}
         </button>

@@ -5,8 +5,8 @@ export const router = createRouter({
     routes: [
         { path: '/:pathMatch(.*)*', name: 'NotFound', component: () => import('./pages/404.vue') },
         {
-            path: '/impressum',
-            component: () => import('./pages/Impressum.vue'),
+            path: '/inpress',
+            component: () => import('./pages/Inpress.vue'),
             props: {
                 name: "Solytics GmbH",
                 address: "Hörsteiner Str. 20a",
@@ -19,8 +19,8 @@ export const router = createRouter({
                 vertreter: "Jens Laufer (Geschäftsführer)"
             },
         },
-        { path: '/datenschutzerklaerung', component: () => import('./pages/Datenschutzerklaerung.vue') },
-        { path: '/termin', component: () => import('./pages/Termin.vue') },
+        { path: '/privacy_policy', component: () => import('./pages/PrivacyPolicy.vue') },
+        { path: '/appointment', component: () => import('./pages/Appointment.vue') },
         {
             path: '/',
             component: () => import('./pages/Home.vue'),
