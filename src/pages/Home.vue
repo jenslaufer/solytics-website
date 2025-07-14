@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-center h-screen">
+  <div class="flex justify-center items-center h-screen">
     <div class="text-center p-10 lg:p-0 min-w-sm max-w-5xl">
       <h1 class="text-2xl md:text-4xl xl:text-5xl font-extrabold mt-2 lg:mt-28 font-sans-serif leading-tight">
         {{ currentHeadline.headline }}
@@ -42,7 +42,7 @@ onMounted(() => {
   if (props.headlines.length > 1) {
     intervalId = setInterval(() => {
       currentIndex.value = (currentIndex.value + 1) % props.headlines.length
-    }, 10000)
+    }, 7000)
   }
 })
 
