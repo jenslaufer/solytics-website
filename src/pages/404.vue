@@ -1,23 +1,21 @@
 <template>
-    <div class="flex items-center justify-center bg-[#090909]">
-        <div class="text-center">
-            <h1 class="text-6xl font-bold text-white">404</h1>
-            <p class="text-2xl text-white mt-4">Page Not Found</p>
-            <p class="text-white mt-2">Sorry, the page you are looking for does not exist.</p>
-            <a href="/"
-                class="mt-6 inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded-md shadow-md hover:bg-blue-700">
-                Go to Homepage
-            </a>
+    <div class="min-h-screen flex justify-center bg-gray-100">
+        <div class="text-center px-4">
+            <h1 class="text-6xl font-bold text-gray-900 mb-4">404</h1>
+            <h2 class="text-2xl font-semibold text-gray-700 mb-4">Page Not Found</h2>
+            <p class="text-gray-600 mb-8">
+                The page you are looking for doesn't exist or has been moved.
+            </p>
+            <router-link :to="router.go(-1)"
+                class="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200">
+                Go Back Home
+            </router-link>
         </div>
     </div>
 </template>
+
 <script setup>
-import { onMounted } from 'vue'
-import { useGtm } from '@gtm-support/vue-gtm'
+import { useRouter } from 'vue-router'
 
-const gtm = useGtm()
-
-onMounted(() => {
-    gtm.trackView("", `solytics/404`)
-})
+const router = useRouter()
 </script>
