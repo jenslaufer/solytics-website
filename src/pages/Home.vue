@@ -1,12 +1,18 @@
 <template>
   <div class="flex justify-center h-screen">
-    <div class="text-center min-w-xl max-w-4xl">
-      <h1 class="text-3xl md:text-5xl font-extrabold mt-8 lg:mt-40 font-sans-serif">
+    <div class="text-center p-10 lg:p-0 min-w-sm max-w-5xl">
+      <h1 class="text-2xl md:text-4xl xl:text-5xl font-extrabold mt-2 lg:mt-28 font-sans-serif leading-tight">
         {{ currentHeadline.headline }}
       </h1>
-      <h1 class="text-xl md:text-2xl font-semibold mt-2 font-serif mb-4">
+      <h1 class="text-xl md:text-xl xl:text-2xl font-normal lg:font-semibold mt-4 leading-tight">
         {{ currentHeadline.subheadline }}
       </h1>
+      <div class="mt-4 lg:mt-6">
+        <button @click="router.push('/termin')"
+          class="bg-red-500 hover:bg-red-600 text-white font-semibold py-3 px-8 rounded-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
+          {{ currentHeadline.cta }}
+        </button>
+      </div>
     </div>
   </div>
 </template>
@@ -17,10 +23,7 @@ import { ref, onMounted, onUnmounted, computed } from 'vue'
 
 const props = defineProps({
   headlines: {
-    type: Array,
-    default: () => [
-      { headline: 'Solytics GmbH', subheadline: 'In Data we Trust' }
-    ]
+    type: Array
   }
 })
 
@@ -29,6 +32,9 @@ const currentIndex = ref(0)
 let intervalId = null
 
 const currentHeadline = computed(() => {
+  if (!props.headlines || props.headlines.length === 0) {
+    return { headline: '', subheadline: '', cta: '' }
+  }
   return props.headlines[currentIndex.value] || props.headlines[0]
 })
 
