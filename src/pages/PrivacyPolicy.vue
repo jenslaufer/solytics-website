@@ -103,8 +103,8 @@
             Stand: Juli 2025. Änderungen dieser Erklärung bleiben vorbehalten.
         </p>
         <a @click="router.go(-1)"
-            class="mt-6 mb-10 inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded-md shadow-md hover:bg-blue-700">
-            Back
+            class="mt-6 mb-10 inline-block px-6 py-3 bg-red-500 hover:bg-red-600 text-white font-semibold rounded-md shadow-md">
+            Go Back
         </a>
     </section>
 </template>

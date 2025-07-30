@@ -1,5 +1,5 @@
 <template>
-    <div class="flex justify-center h-screen">
+    <div class="flex justify-center items-center h-screen">
         <div class="text-center">
             <h1
                 class="font-bold text-center pt-10 lg:pt-16 pb-2 text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl text-white">
@@ -14,12 +14,12 @@
             <p class="mt-2">{{ handelsregister }}<br />
                 {{ amtsgericht }}</p>
 
-            <p class="mt-2"><strong>Vertreten durch:</strong><br />
+            <p class="mt-2 mb-10"><strong>Vertreten durch:</strong><br />
                 {{ vertreter }}</p>
 
             <a @click="router.go(-1)"
-                class="mt-6 inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded-md shadow-md hover:bg-blue-700">
-                Back
+                class="bg-red-500 hover:bg-red-600 text-white font-semibold py-3 px-8 rounded-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
+                Go Back
             </a>
         </div>
     </div>

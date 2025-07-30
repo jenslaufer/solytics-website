@@ -2,6 +2,7 @@
     <div class="flex justify-between items-center">
         <div class="flex gap-2">
             <a href="#/" class="hover:text-black">Home</a> |
+            <a href="#/jobs" class="hover:text-black">Jobs</a> |
             <a href="#/inpress" class="hover:text-black">Impressum</a> |
             <a href="#/privacy_policy" class="hover:text-black">Datenschutzerklärung</a>
         </div>
