@@ -27,7 +27,7 @@ export const router = createRouter({
             props: {
                 type: "Hockey (Ice Hockey) for German Hockey League (DEL)"
             }
-        }, ,
+        },
         {
             path: '/jobs/football_analytics_job', component: () => import('./pages/SportsAnalyticsJob.vue'),
             props: {
