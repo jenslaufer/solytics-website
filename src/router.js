@@ -21,6 +21,19 @@ export const router = createRouter({
         },
         { path: '/privacy_policy', component: () => import('./pages/PrivacyPolicy.vue') },
         { path: '/appointment', component: () => import('./pages/Appointment.vue') },
+        { path: '/jobs', component: () => import('./pages/Jobs.vue') },
+        {
+            path: '/jobs/hockey_analytics_job', component: () => import('./pages/SportsAnalyticsJob.vue'),
+            props: {
+                type: "Hockey (Ice Hockey) for German Hockey League (DEL)"
+            }
+        },
+        {
+            path: '/jobs/football_analytics_job', component: () => import('./pages/SportsAnalyticsJob.vue'),
+            props: {
+                type: "Football (Soccer)"
+            }
+        },
         {
             path: '/',
             component: () => import('./pages/Home.vue'),
