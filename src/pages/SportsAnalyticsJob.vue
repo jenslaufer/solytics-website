@@ -146,12 +146,29 @@
                             </ul>
                         </div>
 
-                        <!-- CTA Button -->
-                        <div class="mt-8">
-                            <button @click="$router.push('/appointment')"
-                                class="bg-red-500 hover:bg-red-600 text-white font-semibold py-3 px-8 rounded-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
-                                Get In Touch
-                            </button>
+                        <!-- Email Input and CTA -->
+                        <div class="mt-8 space-y-4">
+                            <div v-if="!formSent" class="max-w-md mx-auto">
+                                <input v-model="emailInput" type="email" placeholder="Enter your email address"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                                    :class="{ 'border-red-500': v$.emailInput.$error }" />
+                                <p v-if="v$.emailInput.$error" class="text-red-500 text-sm mt-2">
+                                    Please enter a valid email address
+                                </p>
+                            </div>
+
+                            <div v-if="!formSent">
+                                <button @click="submitEmail" :disabled="v$.emailInput.$invalid"
+                                    class="bg-red-500 hover:bg-red-600 disabled:bg-gray-400 disabled:cursor-not-allowed text-white font-semibold py-3 px-8 rounded-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
+                                    Get In Touch
+                                </button>
+                            </div>
+
+                            <div v-if="message" class="text-center">
+                                <p class="text-lg font-medium" :class="formSent ? 'text-green-600' : 'text-red-600'">
+                                    {{ message }}
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -162,9 +179,61 @@
 </template>
 
 <script setup>
+import { onMounted, ref } from 'vue'
+import { required, email } from '@vuelidate/validators'
+import { useVuelidate } from '@vuelidate/core'
+import axios from 'axios'
+
 const props = defineProps({
     type: {
         type: String
+    },
+    product: {
+        type: String,
+        default: 'sports-analytics-job'
     }
 })
+
+const FORM_SENT_EVENT = 'formSent'
+
+const emit = defineEmits([FORM_SENT_EVENT])
+
+const emailInput = ref('')
+
+const rules = {
+    emailInput: { required, email }
+}
+
+const message = ref('')
+const formSent = ref(false)
+
+const v$ = useVuelidate(rules, { emailInput })
+
+onMounted(() => {
+    v$.value.$touch()
+})
+
+const submitEmail = async () => {
+    v$.value.$touch()
+    if (v$.value.$invalid) {
+        return
+    }
+
+    try {
+        const response = await axios.post(`${import.meta.env.VITE_API_BASE}/user`, {
+            key: crypto.randomUUID(),
+            credentials: {
+                email: emailInput.value,
+                product: props.product
+            }
+        });
+        if (response.status === 201) {
+            emit(FORM_SENT_EVENT, emailInput.value);
+            message.value = 'Thank you! You will be notified as soon as we go live.';
+        }
+        formSent.value = true
+    } catch (err) {
+        message.value = `An unknown error occurred: ${err.message}`;
+    }
+};
 </script>
