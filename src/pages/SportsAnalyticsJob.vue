@@ -229,7 +229,7 @@ const submitEmail = async () => {
         });
         if (response.status === 201) {
             emit(FORM_SENT_EVENT, emailInput.value);
-            message.value = 'Thank you! You will be notified as soon as we go live.';
+            message.value = "Thanks! We'll send you an email with further instructions.";
         }
         formSent.value = true
     } catch (err) {
