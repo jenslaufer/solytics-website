@@ -20,6 +20,7 @@ export const router = createRouter({
             },
         },
         { path: '/privacy_policy', component: () => import('./pages/PrivacyPolicy.vue') },
+        { path: '/privacy_policy_recipe_radar', component: () => import('./pages/RecipeRadarPrivacyPolicy.vue') },
         { path: '/appointment', component: () => import('./pages/Appointment.vue') },
         { path: '/jobs', component: () => import('./pages/Jobs.vue') },
         {
