@@ -158,7 +158,7 @@
                             </div>
 
                             <div v-if="!formSent">
-                                <button @click="submitEmail" :disabled="v$.emailInput.$invalid"
+                                <button @click="submitEmail" :disabled="true"
                                     class="bg-red-500 hover:bg-red-600 disabled:bg-gray-400 disabled:cursor-not-allowed text-white font-semibold py-3 px-8 rounded-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
                                     Get In Touch
                                 </button>
