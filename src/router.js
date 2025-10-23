@@ -3,6 +3,10 @@ import { createWebHashHistory, createRouter } from 'vue-router'
 export const router = createRouter({
     history: createWebHashHistory(),
     routes: [
+        { path: '/chrome_extension', redirect: '/' },
+        { path: '/mcp_server', redirect: '/' },
+        { path: '/software_development', redirect: '/' },
+        { path: '/data_science', redirect: '/' },
         { path: '/:pathMatch(.*)*', name: 'NotFound', component: () => import('./pages/404.vue') },
         {
             path: '/inpress',
