@@ -7,6 +7,12 @@ export const router = createRouter({
         { path: '/mcp_server', redirect: '/' },
         { path: '/software_development', redirect: '/' },
         { path: '/data_science', redirect: '/' },
+        {
+            path: '/privacy_policy_recipe_radar', component: () => import('./pages/RecipeRadarPrivacyPolicy.vue')
+        },
+        {
+            path: '/privacy_policy_xg_goals_calculator', component: () => import('./pages/XgCalculatorPrivacyPolicy.vue')
+        },
         { path: '/:pathMatch(.*)*', name: 'NotFound', component: () => import('./pages/404.vue') },
         {
             path: '/inpress',
@@ -24,7 +30,6 @@ export const router = createRouter({
             },
         },
         { path: '/privacy_policy', component: () => import('./pages/PrivacyPolicy.vue') },
-        { path: '/privacy_policy_recipe_radar', component: () => import('./pages/RecipeRadarPrivacyPolicy.vue') },
         { path: '/appointment', component: () => import('./pages/Appointment.vue') },
         { path: '/jobs', component: () => import('./pages/Jobs.vue') },
         {
