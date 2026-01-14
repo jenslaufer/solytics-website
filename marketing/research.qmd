@@ -1,0 +1,36 @@
+---
+format:
+    html:
+        embed-resources: true
+editor:
+    render-on-save: true
+execute: 
+  echo: false
+  warning: false
+---
+
+# Beratung für AI-Automatierung für 
+
+## Research
+
+### Was ist der Kunde?
+
+#### "Buchhaltungsbüro
+
+- "Wir haben Chaos"
+- "Wir verlieren ständig Belege"
+- "Es dauert zu lange eine Rechnung zuzordnen"
+- "Die schicken so viele verschiedene Formate"
+- "Wir machen zu viel von Hand"
+
+
+
+## Copyelements
+
+- "Mehr Zeit, weniger Chaos: Belegmanagement ohne menschliche Fehler"
+- "Mehr Zeit, weniger Chaos: Ersetzen die Routinetätigkeiten mit AI"
+- "Wir sagen den Routinetätigkeiten den Kampf an: Mehr Zeit, niedrigere Kosten, weniger Chaos"
+- "Zuviele langweilige, zeitaufwendige Routinetätigkeiten?"
+- "Sagen Sie der Ineffizienz den Kampf an"
+- "Wir ersetzen Routinetätigkeiten mit AI, senken Kosten und verbannen das Chaos aus Ihrem Buchhaltungsbüro"
+- "Wir sagen dem Chaos und den hohen Kosten den Kampf an"
