@@ -1,0 +1,42 @@
+---
+format:
+    html:
+        embed-resources: true
+editor:
+    render-on-save: true
+execute: 
+  echo: false
+  warning: false
+---
+
+# Tail Hedging Strategies
+
+## Research
+
+
+### Where and when do you meet the target prospect?
+
+### Who is the target prospect?
+
+### What is the product?
+
+### Why does the target prospect benefit from the product?
+
+
+
+## Copyelements
+```{r}
+library(tidyverse)
+library(glue)
+library(DT)
+
+customer_type <- "investor"
+
+"copyelements.csv" |>
+    read_csv() |>
+    filter(prospect == customer_type) |>
+    select(-prospect) |>
+    datatable()
+```
+
+
