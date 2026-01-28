@@ -13,18 +13,33 @@ execute:
 
 ## Research
 
-
 ### Where and when do you meet the target prospect?
+
+- Google Search
+- Bing Search
+- Reddit
+- X
+- YouTube
 
 ### Who is the target prospect?
 
+- Retail Investor
+    - I want steady income
+    - I want to retire as soon as possible
+    - I am scared of missing opportunities
+
 ### What is the product?
+
+- Insurance for massive drawdowns of the market
+- Insurance to 
 
 ### Why does the target prospect benefit from the product?
 
 
 
-## Copyelements
+## Copy Elements
+
+
 ```{r}
 library(tidyverse)
 library(glue)
@@ -38,5 +53,4 @@ customer_type <- "investor"
     select(-prospect) |>
     datatable()
 ```
-
 
