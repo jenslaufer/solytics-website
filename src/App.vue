@@ -1,9 +1,10 @@
 <template>
-  <router-view class="z-101" />
-  <app-footer
-    class="fixed bottom-0 left-0 right-0 gap-4 bg-slate-100 text-slate-700 font-normal text-xs p-3 font-sans-serif" />
-
+  <router-view />
 </template>
+
 <script setup>
-import AppFooter from './pages/partials/AppFooter.vue'
+import { useDarkMode } from './composables/useDarkMode.js'
+
+const { init } = useDarkMode()
+init()
 </script>
