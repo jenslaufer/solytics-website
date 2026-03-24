@@ -31,6 +31,10 @@ export const router = createRouter({
         },
         { path: '/privacy_policy', component: () => import('./pages/PrivacyPolicy.vue') },
         { path: '/appointment', component: () => import('./pages/Appointment.vue') },
+        { path: '/e-rechnung', component: () => import('./pages/einvoice/Index.vue') },
+        { path: '/e-rechnung/pflicht-check', component: () => import('./pages/einvoice/PflichtCheck.vue') },
+        { path: '/ki-automatisierung', component: () => import('./pages/ai/Index.vue') },
+        { path: '/ki-automatisierung/readiness-check', component: () => import('./pages/ai/ReadinessCheck.vue') },
         { path: '/jobs', component: () => import('./pages/Jobs.vue') },
         {
             path: '/jobs/hockey_analytics_job', component: () => import('./pages/SportsAnalyticsJob.vue'),
