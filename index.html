@@ -1,16 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Solytics GmbH</title>
+    <meta name="description" content="Solytics GmbH — E-Rechnung & KI-Automatisierung. XRechnung, ZUGFeRD, KI-Agenten für Ihr Unternehmen." />
+    <meta property="og:title" content="Solytics GmbH — E-Rechnung & KI-Automatisierung" />
+    <meta property="og:description" content="Compliance-Expertise in E-Rechnung kombiniert mit intelligenter Prozessautomatisierung durch KI-Agenten." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://solytics.de" />
+    <meta property="og:locale" content="de_DE" />
+    <title>Solytics GmbH — E-Rechnung & KI-Automatisierung</title>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Solytics GmbH",
+      "url": "https://solytics.de",
+      "email": "jens.laufer@solytics.de",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Hörsteiner Str. 20a",
+        "addressLocality": "Karlstein a. Main",
+        "postalCode": "63791",
+        "addressCountry": "DE"
+      },
+      "founder": {
+        "@type": "Person",
+        "name": "Jens Laufer"
+      },
+      "description": "E-Rechnung & KI-Automatisierung. XRechnung, ZUGFeRD Compliance und KI-Agenten für Geschäftsprozesse."
+    }
+    </script>
+    <!-- GitHub Pages SPA redirect handler -->
+    <script>
+      (function(l) {
+        if (l.search[1] === '/') {
+          var decoded = l.search.slice(1).split('&').map(function(s) {
+            return s.replace(/~and~/g, '&')
+          }).join('?');
+          window.history.replaceState(null, null, l.pathname.slice(0, -1) + decoded + l.hash);
+        }
+      }(window.location))
+    </script>
   </head>
   <body>
     <div id="app"></div>
     <script
       type="text/javascript"
       src="https://assets.calendly.com/assets/external/widget.js"
+      async
     ></script>
     <script type="module" src="/src/main.js"></script>
   </body>
