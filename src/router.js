@@ -13,6 +13,8 @@ export const router = createRouter({
         {
             path: '/privacy_policy_xg_goals_calculator', component: () => import('./pages/XgCalculatorPrivacyPolicy.vue')
         },
+        { path: '/blog', component: () => import('./pages/Blog.vue') },
+        { path: '/blog/:slug', component: () => import('./pages/BlogArticle.vue') },
         { path: '/:pathMatch(.*)*', name: 'NotFound', component: () => import('./pages/404.vue') },
         {
             path: '/inpress',
