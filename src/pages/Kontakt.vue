@@ -63,6 +63,7 @@
 </template>
 
 <script setup>
+import { onMounted } from 'vue'
 import MainLayout from '../layouts/MainLayout.vue'
 import SectionHeading from '../components/SectionHeading.vue'
 import { useHead } from '../composables/useHead.js'
@@ -70,5 +71,14 @@ import { useHead } from '../composables/useHead.js'
 useHead({
   title: 'Kontakt — Solytics GmbH',
   description: 'Nehmen Sie Kontakt mit Solytics auf. Vereinbaren Sie ein unverbindliches Erstgespräch zu E-Rechnung oder KI-Automatisierung.',
+})
+
+onMounted(() => {
+  if (window.Calendly) {
+    window.Calendly.initInlineWidget({
+      url: 'https://calendly.com/jens-laufer-solytics/30min',
+      parentElement: document.querySelector('.calendly-inline-widget'),
+    })
+  }
 })
 </script>
