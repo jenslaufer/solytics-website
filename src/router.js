@@ -25,6 +25,18 @@ export const router = createRouter({
       component: () => import('./pages/Blog.vue'),
     },
     {
+      path: '/blog/:slug',
+      component: () => import('./pages/BlogArticle.vue'),
+    },
+    {
+      path: '/ki-automatisierung/readiness-check',
+      component: () => import('./pages/ai/ReadinessCheck.vue'),
+    },
+    {
+      path: '/e-rechnung/pflicht-check',
+      component: () => import('./pages/einvoice/PflichtCheck.vue'),
+    },
+    {
       path: '/kontakt',
       component: () => import('./pages/Kontakt.vue'),
     },

@@ -134,22 +134,17 @@
       </div>
     </section>
 
-    <!-- Pflicht-Check Placeholder -->
+    <!-- Pflicht-Check -->
     <section class="py-(--spacing-section) bg-white dark:bg-surface-200">
       <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center fade-up">
-        <SectionHeading badge="Self-Service">
+        <SectionHeading badge="Kostenlos">
           Sind Sie bereit für die E-Rechnungspflicht?
-          <template #description>Unser interaktiver Pflicht-Check zeigt Ihnen in wenigen Minuten, wo Sie stehen.</template>
+          <template #description>Finden Sie in 4 Schritten heraus, ob und wann Ihr Unternehmen betroffen ist.</template>
         </SectionHeading>
-        <div class="bg-surface-50 dark:bg-surface-100 rounded-[var(--radius-card)] p-12 border-2 border-dashed border-surface-300 dark:border-surface-400">
-          <svg class="w-16 h-16 mx-auto text-surface-300 dark:text-surface-500 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-            <path d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z"/>
-          </svg>
-          <p class="text-surface-500 font-medium">Interaktiver Pflicht-Check — demnächst verfügbar</p>
-          <router-link to="/kontakt" class="inline-flex items-center justify-center mt-6 px-6 py-3 text-sm font-semibold text-white bg-primary-500 hover:bg-primary-600 rounded-[var(--radius-button)] transition-colors">
-            Stattdessen persönlich beraten lassen
-          </router-link>
-        </div>
+        <router-link to="/e-rechnung/pflicht-check"
+          class="mt-8 inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-primary-950 bg-accent-400 hover:bg-accent-300 rounded-[var(--radius-button)] transition-colors shadow-lg shadow-accent-400/25">
+          Jetzt Check starten
+        </router-link>
       </div>
     </section>
 
