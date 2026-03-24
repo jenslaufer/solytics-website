@@ -1,33 +1,24 @@
 import { onMounted } from 'vue'
 
+function setMeta(attr, key, content) {
+  let el = document.querySelector(`meta[${attr}="${key}"]`)
+  if (!el) {
+    el = document.createElement('meta')
+    el.setAttribute(attr, key)
+    document.head.appendChild(el)
+  }
+  el.setAttribute('content', content)
+}
+
 export function useHead({ title, description }) {
   onMounted(() => {
-    if (title) document.title = title
-    if (description) {
-      let meta = document.querySelector('meta[name="description"]')
-      if (!meta) {
-        meta = document.createElement('meta')
-        meta.setAttribute('name', 'description')
-        document.head.appendChild(meta)
-      }
-      meta.setAttribute('content', description)
-
-      let og = document.querySelector('meta[property="og:description"]')
-      if (!og) {
-        og = document.createElement('meta')
-        og.setAttribute('property', 'og:description')
-        document.head.appendChild(og)
-      }
-      og.setAttribute('content', description)
-    }
     if (title) {
-      let ogTitle = document.querySelector('meta[property="og:title"]')
-      if (!ogTitle) {
-        ogTitle = document.createElement('meta')
-        ogTitle.setAttribute('property', 'og:title')
-        document.head.appendChild(ogTitle)
-      }
-      ogTitle.setAttribute('content', title)
+      document.title = title
+      setMeta('property', 'og:title', title)
+    }
+    if (description) {
+      setMeta('name', 'description', description)
+      setMeta('property', 'og:description', description)
     }
   })
 }
