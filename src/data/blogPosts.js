@@ -29,6 +29,15 @@ export const blogPosts = [
     component: defineAsyncComponent(() => import('../pages/blog/ERechnungSoftwareVergleich2026.vue')),
   },
   {
+    slug: 'e-rechnung-handwerk',
+    title: 'E-Rechnung im Handwerk: Was Handwerksbetriebe 2027 wissen müssen',
+    excerpt: 'Ab 2027 müssen Handwerksbetriebe E-Rechnungen versenden. Erfahren Sie, welche Fristen gelten, was bei Abschlagsrechnungen und Aufmaß zu beachten ist und wie Sie Ihren Betrieb Schritt für Schritt vorbereiten.',
+    date: '2026-03-25',
+    category: 'e-rechnung',
+    readingTime: '9 Min.',
+    component: defineAsyncComponent(() => import('../pages/blog/ERechnungHandwerk.vue')),
+  },
+  {
     slug: 'xrechnung-vs-zugferd',
     title: 'XRechnung vs ZUGFeRD: Welches Format passt zu Ihrem Unternehmen?',
     excerpt: 'XRechnung oder ZUGFeRD? Unterschiede, Einsatzbereiche und Entscheidungshilfe. Finden Sie heraus, welches E-Rechnungsformat zu Ihrem Unternehmen passt.',
