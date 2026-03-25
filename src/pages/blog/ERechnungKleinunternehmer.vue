@@ -1,0 +1,270 @@
+<template>
+  <article class="prose-article">
+    <h2>Ab wann gilt die E-Rechnungspflicht?</h2>
+    <p>Das <strong>Wachstumschancengesetz</strong> (verabschiedet März 2024) hat die Regeln für Rechnungen in Deutschland grundlegend geändert. §14 UStG definiert eine „Rechnung" neu: Künftig ist nur noch eine <em>strukturierte elektronische Rechnung</em> nach der europäischen Norm EN 16931 eine echte Rechnung im Sinne des Umsatzsteuergesetzes.</p>
+
+    <p>Für den B2B-Bereich gelten zwei zentrale Fristen:</p>
+
+    <h3>Die zwei Stichtage</h3>
+    <ul>
+      <li><strong>1. Januar 2025:</strong> Alle Unternehmen müssen E-Rechnungen <em>empfangen</em> können.</li>
+      <li><strong>1. Januar 2028:</strong> Alle Unternehmen müssen E-Rechnungen <em>versenden</em> können. Für Unternehmen mit über 800.000 € Jahresumsatz gilt die Versandpflicht bereits ab 2027.</li>
+    </ul>
+
+    <p>Das heißt: Seit Anfang 2025 müssen auch Kleinunternehmer in der Lage sein, E-Rechnungen entgegenzunehmen. Die Versandpflicht kommt spätestens 2028 — aber sich jetzt schon vorzubereiten, spart später Stress.</p>
+
+    <h2>Wer ist betroffen? Kleinunternehmer, Freiberufler, §19 UStG</h2>
+    <p>Die kurze Antwort: <strong>Jeder, der B2B-Rechnungen stellt oder empfängt.</strong></p>
+
+    <p>Es spielt keine Rolle, ob Sie:</p>
+    <ul>
+      <li>die <strong>Kleinunternehmerregelung nach §19 UStG</strong> nutzen (keine Umsatzsteuer ausweisen)</li>
+      <li>als <strong>Freiberufler</strong> tätig sind (Berater, Designer, Entwickler, Ärzte, Anwälte)</li>
+      <li>ein <strong>Einzelunternehmen</strong> oder eine <strong>GbR</strong> betreiben</li>
+      <li>nur wenige Rechnungen pro Monat schreiben</li>
+    </ul>
+
+    <p>Entscheidend ist nicht die Größe Ihres Unternehmens, sondern <strong>an wen</strong> Sie Rechnungen stellen. Sobald Ihr Kunde ein Unternehmen ist (B2B), gelten die neuen Regeln.</p>
+
+    <h3>Ausnahmen</h3>
+    <ul>
+      <li><strong>B2C-Rechnungen</strong> (an Privatpersonen) sind nicht betroffen. Hier dürfen Sie weiterhin PDF oder Papier verwenden.</li>
+      <li><strong>Kleinbetragsrechnungen unter 250 €</strong> und <strong>Fahrausweise</strong> sind ebenfalls ausgenommen.</li>
+    </ul>
+
+    <p>Ein häufiges Missverständnis: Viele Kleinunternehmer denken, die Regelung betreffe sie nicht, weil sie keine Umsatzsteuer ausweisen. Falsch. Die E-Rechnungspflicht gilt unabhängig vom Steuerstatus. Auch eine Rechnung ohne ausgewiesene USt muss künftig als E-Rechnung verschickt werden, wenn der Empfänger ein Unternehmen ist.</p>
+
+    <h2>Was ist eine E-Rechnung?</h2>
+    <p>Eine E-Rechnung ist <strong>kein PDF per E-Mail</strong>. Das ist der wichtigste Punkt.</p>
+
+    <p>Eine E-Rechnung ist eine <strong>strukturierte XML-Datei</strong>, die der europäischen Norm EN 16931 entspricht. Maschinen können sie automatisch lesen und verarbeiten. Zwei Formate erfüllen die Anforderungen:</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th>XRechnung</th>
+          <th>ZUGFeRD 2.3</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Format</strong></td>
+          <td>Reine XML-Datei</td>
+          <td>PDF mit eingebettetem XML</td>
+        </tr>
+        <tr>
+          <td><strong>Lesbarkeit</strong></td>
+          <td>Nur maschinell</td>
+          <td>PDF für Menschen + XML für Maschinen</td>
+        </tr>
+        <tr>
+          <td><strong>Für Kleinunternehmer</strong></td>
+          <td>Eher technisch, gut für B2G</td>
+          <td>Ideal — sieht aus wie normales PDF</td>
+        </tr>
+        <tr>
+          <td><strong>Empfehlung</strong></td>
+          <td>Bei Rechnungen an Behörden</td>
+          <td>Für alle B2B-Rechnungen</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p><strong>Für Kleinunternehmer ist ZUGFeRD die beste Wahl.</strong> Ihr Kunde sieht ein ganz normales PDF. Die strukturierten Rechnungsdaten stecken unsichtbar drin. Beide Seiten sind glücklich.</p>
+
+    <h2>Empfangspflicht vs. Sendepflicht: Die Übergangsfristen</h2>
+    <p>Das Gesetz unterscheidet klar zwischen Empfang und Versand. Das ist entscheidend, denn die Pflichten kommen gestaffelt:</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Ab wann</th>
+          <th>Was gilt</th>
+          <th>Für wen</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>01.01.2025</strong></td>
+          <td>E-Rechnungen empfangen</td>
+          <td>Alle Unternehmen, auch Kleinunternehmer</td>
+        </tr>
+        <tr>
+          <td><strong>01.01.2027</strong></td>
+          <td>E-Rechnungen versenden</td>
+          <td>Unternehmen mit &gt; 800.000 € Jahresumsatz</td>
+        </tr>
+        <tr>
+          <td><strong>01.01.2028</strong></td>
+          <td>E-Rechnungen versenden</td>
+          <td>Alle Unternehmen, ohne Ausnahme</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Was bedeutet „empfangen können"?</h3>
+    <p>Mindestens ein <strong>E-Mail-Postfach</strong>, an das Lieferanten E-Rechnungen senden können. Sie müssen keine spezielle Software haben — aber Sie dürfen eingehende E-Rechnungen nicht ablehnen. Wenn ein Lieferant Ihnen eine XRechnung schickt, müssen Sie diese annehmen.</p>
+
+    <p>In der Praxis heißt das: Richten Sie eine Adresse wie <code>rechnung@ihrefirma.de</code> ein. Fertig. Für die Verarbeitung und Archivierung brauchen Sie dann spätestens Software.</p>
+
+    <h3>Was bedeutet „versenden können"?</h3>
+    <p>Ab dem Stichtag müssen alle B2B-Rechnungen als strukturierte E-Rechnung (XRechnung oder ZUGFeRD) verschickt werden. Ein normales PDF reicht dann nicht mehr — auch nicht per E-Mail.</p>
+
+    <p>Die gute Nachricht: Als Kleinunternehmer mit unter 800.000 € Umsatz haben Sie bis Ende 2027 Zeit. Nutzen Sie diese Übergangsfrist, um sich vorzubereiten.</p>
+
+    <h2>Welche Software brauche ich?</h2>
+    <p>Das hängt davon ab, wie viele Rechnungen Sie schreiben und wie technisch versiert Sie sind.</p>
+
+    <h3>Für wenige Rechnungen pro Monat (1–10)</h3>
+    <ul>
+      <li><strong>Kostenlose Online-Tools:</strong> Das Bundesfinanzministerium und verschiedene IHKs bieten kostenlose E-Rechnungs-Viewer und teilweise auch Erstellungstools an.</li>
+      <li><strong>ZUGFeRD-fähige Rechnungsprogramme:</strong> Viele günstige Buchhaltungsprogramme (z.B. SevDesk, Lexoffice, FastBill) unterstützen ZUGFeRD bereits.</li>
+      <li><strong>E-Rechnungs-Portale:</strong> Webbasierte Lösungen, bei denen Sie Rechnungsdaten eingeben und eine konforme E-Rechnung herunterladen.</li>
+    </ul>
+
+    <h3>Für mehr Rechnungen oder Automatisierung</h3>
+    <ul>
+      <li><strong>Buchhaltungssoftware mit E-Rechnungs-Modul:</strong> DATEV, Lexware, Sage — prüfen Sie, ob Ihr Anbieter XRechnung 3.0 und ZUGFeRD 2.3 unterstützt.</li>
+      <li><strong>API-Lösung:</strong> Wenn Sie eine eigene Website oder ein eigenes System haben, können Sie eine E-Rechnungs-API einbinden. Sie senden JSON-Daten, die API liefert eine valide E-Rechnung zurück.</li>
+    </ul>
+
+    <h2>Kostenlose vs. kostenpflichtige Lösungen</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th>Kostenlose Lösungen</th>
+          <th>Kostenpflichtige Lösungen</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Beispiele</strong></td>
+          <td>BMF-Tool, IHK-Portale, Open-Source-Software</td>
+          <td>SevDesk, Lexoffice, DATEV, FastBill</td>
+        </tr>
+        <tr>
+          <td><strong>Rechnungserstellung</strong></td>
+          <td>Manuell, einzeln</td>
+          <td>Automatisiert, Vorlagen, Serienerstellung</td>
+        </tr>
+        <tr>
+          <td><strong>Validierung</strong></td>
+          <td>Oft nur Grundprüfung</td>
+          <td>Vollständige EN 16931 + BR-DE Validierung</td>
+        </tr>
+        <tr>
+          <td><strong>Archivierung</strong></td>
+          <td>Selbst organisieren</td>
+          <td>GoBD-konform integriert</td>
+        </tr>
+        <tr>
+          <td><strong>Support</strong></td>
+          <td>Community / Selbsthilfe</td>
+          <td>Professioneller Support</td>
+        </tr>
+        <tr>
+          <td><strong>Kosten</strong></td>
+          <td>0 €</td>
+          <td>Ab 10–30 €/Monat</td>
+        </tr>
+        <tr>
+          <td><strong>Geeignet für</strong></td>
+          <td>Einzelne Rechnungen, Testen</td>
+          <td>Regelmäßige Rechnungsstellung</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p><strong>Empfehlung für Kleinunternehmer:</strong> Starten Sie mit einem kostenlosen Tool, um sich mit dem Format vertraut zu machen. Sobald Sie regelmäßig E-Rechnungen verschicken, lohnt sich ein günstiges Buchhaltungsprogramm mit integrierter E-Rechnungsfunktion.</p>
+
+    <h2>Praktische Schritte: So starten Sie heute</h2>
+
+    <p>Sie müssen nicht alles auf einmal machen. Hier ist ein realistischer Plan für Kleinunternehmer:</p>
+
+    <h3>Schritt 1: Empfang sicherstellen (Pflicht seit 01.01.2025)</h3>
+    <ul>
+      <li>Richten Sie eine dedizierte E-Mail-Adresse für Rechnungen ein (z.B. <code>rechnung@ihrefirma.de</code>)</li>
+      <li>Informieren Sie Ihre Lieferanten über diese Adresse</li>
+      <li>Installieren Sie einen kostenlosen E-Rechnungs-Viewer, um eingehende XML-Dateien lesen zu können</li>
+    </ul>
+
+    <h3>Schritt 2: Format verstehen</h3>
+    <ul>
+      <li>Laden Sie eine <strong>ZUGFeRD-Beispielrechnung</strong> herunter und öffnen Sie sie</li>
+      <li>Schauen Sie sich das eingebettete XML an — das ist die eigentliche E-Rechnung</li>
+      <li>Machen Sie sich mit den Unterschieden zwischen XRechnung und ZUGFeRD vertraut</li>
+    </ul>
+
+    <h3>Schritt 3: Software wählen (bis spätestens Q3 2027)</h3>
+    <ul>
+      <li>Prüfen Sie, ob Ihre aktuelle Buchhaltungssoftware ZUGFeRD unterstützt</li>
+      <li>Falls nicht: Vergleichen Sie Anbieter (SevDesk, Lexoffice, FastBill)</li>
+    </ul>
+
+    <h3>Schritt 4: Testlauf</h3>
+    <ul>
+      <li>Erstellen Sie eine Test-E-Rechnung mit Ihren echten Firmendaten</li>
+      <li>Validieren Sie diese gegen EN 16931</li>
+      <li>Senden Sie die Testrechnung an einen befreundeten Unternehmer und fragen Sie, ob er sie öffnen und lesen kann</li>
+    </ul>
+
+    <h3>Schritt 5: Archivierung klären</h3>
+    <ul>
+      <li>E-Rechnungen müssen <strong>10 Jahre im Originalformat</strong> aufbewahrt werden (§147 AO)</li>
+      <li>Das heißt: die XML-Datei, nicht ein Ausdruck</li>
+      <li>Legen Sie einen Ordner an oder nutzen Sie die Archivfunktion Ihrer Software</li>
+    </ul>
+
+    <h3>Zeitplan für Kleinunternehmer</h3>
+    <ul>
+      <li><strong>Jetzt:</strong> E-Mail-Empfang und Viewer einrichten</li>
+      <li><strong>2026:</strong> Software evaluieren, Testläufe</li>
+      <li><strong>H1 2027:</strong> Produktivbetrieb starten, Archivierung einrichten</li>
+      <li><strong>01.01.2028:</strong> Versandpflicht greift — alle B2B-Rechnungen als E-Rechnung</li>
+    </ul>
+
+    <h2>Häufige Fragen (FAQ)</h2>
+
+    <h3>Muss ich als Kleinunternehmer nach §19 UStG auch E-Rechnungen verschicken?</h3>
+    <p>Ja. Die E-Rechnungspflicht gilt unabhängig von der Kleinunternehmerregelung. Ob Sie Umsatzsteuer ausweisen oder nicht, spielt keine Rolle. Entscheidend ist, dass Ihr Kunde ein Unternehmen ist (B2B). Die Übergangsfrist für den Versand läuft bis Ende 2027.</p>
+
+    <h3>Ich schreibe nur 2–3 Rechnungen pro Monat. Brauche ich trotzdem Software?</h3>
+    <p>Für den <strong>Empfang</strong> reicht ein E-Mail-Postfach und ein kostenloser Viewer. Für den <strong>Versand</strong> brauchen Sie ab 2028 ein Tool, das konforme E-Rechnungen erstellt. Bei wenigen Rechnungen reicht ein kostenloses Online-Tool oder ein günstiges Buchhaltungsprogramm ab 10 €/Monat.</p>
+
+    <h3>Ist ein PDF per E-Mail eine E-Rechnung?</h3>
+    <p>Nein. Ein normales PDF ist <strong>kein</strong> strukturiertes Datenformat nach EN 16931. Ausnahme: Ein <strong>ZUGFeRD-PDF</strong>, das strukturierte XML-Daten eingebettet hat. Normales PDF per E-Mail erfüllt die Anforderungen ab 2028 nicht mehr.</p>
+
+    <h3>Was passiert, wenn ich nach 2028 keine E-Rechnungen verschicke?</h3>
+    <p>Ihre Rechnung gilt formal nicht als Rechnung im Sinne des UStG. Das hat Konsequenzen:</p>
+    <ul>
+      <li>Ihr Kunde kann keinen <strong>Vorsteuerabzug</strong> geltend machen und wird eine korrekte E-Rechnung anfordern</li>
+      <li>Bei einer <strong>Betriebsprüfung</strong> drohen Rückfragen und mögliche Beanstandungen</li>
+      <li>Geschäftspartner könnten Sie als Lieferanten <strong>ausschließen</strong></li>
+    </ul>
+
+    <h3>Gilt die Pflicht auch für Rechnungen an Privatpersonen?</h3>
+    <p>Nein. <strong>B2C-Rechnungen</strong> (an Endverbraucher) sind von der E-Rechnungspflicht ausgenommen. Hier dürfen Sie weiterhin PDF, Papier oder jedes andere Format nutzen.</p>
+
+    <h3>Wie archiviere ich E-Rechnungen richtig?</h3>
+    <p>E-Rechnungen müssen <strong>10 Jahre im Originalformat</strong> aufbewahrt werden — das ist die XML-Datei, nicht ein Ausdruck oder Screenshot. Speichern Sie die Dateien in einer klaren Ordnerstruktur oder nutzen Sie die Archivfunktion Ihrer Buchhaltungssoftware. Die Anforderungen ergeben sich aus §147 AO und den GoBD.</p>
+
+    <h3>Kann ich E-Rechnungen auch für Branchen mit Sonderanforderungen nutzen?</h3>
+    <p>Ja. Der EN 16931-Standard lässt <strong>Branchenerweiterungen</strong> zu — zusätzliche Felder für Bau, Gesundheit, Logistik oder Automotive. Diese sind im Standard als Extension Points vorgesehen.</p>
+
+    <h2>Fazit</h2>
+    <p>Die E-Rechnungspflicht ist keine Frage des „Ob", sondern des „Wann". Als Kleinunternehmer haben Sie noch etwas Zeit — aber die Empfangspflicht gilt bereits. Nutzen Sie die Übergangsfrist, um sich in Ruhe vorzubereiten.</p>
+
+    <p>Die wichtigsten Punkte:</p>
+    <ul>
+      <li><strong>Empfang:</strong> Seit 01.01.2025 Pflicht. E-Mail-Postfach reicht.</li>
+      <li><strong>Versand:</strong> Ab 01.01.2028 für alle. ZUGFeRD ist das praktischste Format.</li>
+      <li><strong>Software:</strong> Für wenige Rechnungen reichen kostenlose Tools. Ab 10 €/Monat gibt es vollwertige Lösungen.</li>
+      <li><strong>Archivierung:</strong> 10 Jahre, XML-Original aufbewahren.</li>
+    </ul>
+
+    <p>Fangen Sie heute an: Richten Sie den Empfang ein, testen Sie eine ZUGFeRD-Rechnung, und wählen Sie bis 2027 Ihre Software. Dann sind Sie rechtzeitig bereit.</p>
+  </article>
+</template>
