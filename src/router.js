@@ -25,6 +25,16 @@ export const router = createRouter({
       component: () => import('./pages/Blog.vue'),
     },
     {
+      path: '/blog/e-rechnung',
+      component: () => import('./pages/blog/CategoryPage.vue'),
+      meta: { category: 'e-rechnung' },
+    },
+    {
+      path: '/blog/ki-automatisierung',
+      component: () => import('./pages/blog/CategoryPage.vue'),
+      meta: { category: 'ki-automatisierung' },
+    },
+    {
       path: '/blog/:slug',
       component: () => import('./pages/BlogArticle.vue'),
     },
