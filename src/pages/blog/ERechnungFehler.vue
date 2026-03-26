@@ -142,5 +142,10 @@
     <p>
       Sie wollen sichergehen, dass Ihre E-Rechnungen fehlerfrei sind? <router-link to="/e-rechnung">Solytics unterstützt Sie</router-link> bei Einrichtung, Validierung und Testbetrieb — damit Ihre erste echte E-Rechnung auf Anhieb durchgeht. Starten Sie mit dem <router-link to="/e-rechnung/pflicht-check">kostenlosen Pflicht-Check</router-link>.
     </p>
+    <RelatedArticles slug="e-rechnung-fehler" />
   </article>
 </template>
+
+<script setup>
+import RelatedArticles from '../../components/RelatedArticles.vue'
+</script>

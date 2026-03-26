@@ -166,5 +166,10 @@
     <p>
       Die Technik ist ausgereift. Die Formate sind standardisiert. Was fehlt, ist in vielen Betrieben nur der erste Schritt. Machen Sie ihn jetzt.
     </p>
+    <RelatedArticles slug="e-rechnung-handwerk" />
   </article>
 </template>
+
+<script setup>
+import RelatedArticles from '../../components/RelatedArticles.vue'
+</script>

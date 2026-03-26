@@ -106,5 +106,10 @@
     <p>
       Die Wahl der richtigen E-Rechnung-Software hängt von Ihrer Unternehmensgröße, Ihrem Rechnungsvolumen und Ihrer bestehenden IT-Landschaft ab. Wer jetzt die richtige Lösung wählt, spart sich späteren Migrationsstress und profitiert sofort von effizienteren Prozessen.
     </p>
+    <RelatedArticles slug="e-rechnung-software-vergleich-2026" />
   </article>
 </template>
+
+<script setup>
+import RelatedArticles from '../../components/RelatedArticles.vue'
+</script>

@@ -103,5 +103,10 @@
     <p>
       KI-Agenten sind produktionsreif und liefern messbaren Mehrwert. Unternehmen, die jetzt einsteigen, sichern sich einen erheblichen Wettbewerbsvorteil. Starten Sie mit einem konkreten, abgegrenzten Anwendungsfall. Messen Sie die Ergebnisse. Und skalieren Sie dann schrittweise.
     </p>
+    <RelatedArticles slug="ki-agenten-fuer-unternehmen" />
   </article>
 </template>
+
+<script setup>
+import RelatedArticles from '../../components/RelatedArticles.vue'
+</script>

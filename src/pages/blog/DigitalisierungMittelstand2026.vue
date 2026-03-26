@@ -149,5 +149,10 @@
     <p>
       <router-link to="/ki-automatisierung" class="font-semibold text-primary-600 hover:text-primary-700">Erfahren Sie mehr über KI-Automatisierung bei Solytics</router-link> oder starten Sie direkt mit dem <router-link to="/ki-automatisierung/readiness-check" class="font-semibold text-primary-600 hover:text-primary-700">kostenlosen KI-Readiness-Check</router-link>.
     </p>
+    <RelatedArticles slug="digitalisierung-mittelstand-2026" />
   </article>
 </template>
+
+<script setup>
+import RelatedArticles from '../../components/RelatedArticles.vue'
+</script>

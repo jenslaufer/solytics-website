@@ -220,5 +220,10 @@
     <h2>Fazit: Extensions machen E-Rechnungen branchentauglich</h2>
     <p>EN 16931 ist das Fundament. Für branchenspezifische Anforderungen brauchen Sie Extensions nach CEN/TS 16931-5. Die gute Nachricht: Der Standard hat das von Anfang an vorgesehen. Extensions sind keine Hacks — sie sind der offizielle Erweiterungsmechanismus.</p>
     <p>Entscheidend ist die Wahl eines Systems, das Extensions als Konzept versteht und nicht nur als Freitext-Workaround. Strukturierte Erweiterungen ermöglichen automatische Validierung und Verarbeitung — genau das, was die E-Rechnungspflicht bezweckt.</p>
+    <RelatedArticles slug="en16931-branchenerweiterungen" />
   </article>
 </template>
+
+<script setup>
+import RelatedArticles from '../../components/RelatedArticles.vue'
+</script>

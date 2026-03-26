@@ -164,5 +164,10 @@
     <p>
       Starten Sie jetzt mit der Mandantensegmentierung. Identifizieren Sie die dringendsten Fälle. Und bauen Sie ein strukturiertes Beratungsangebot auf — Ihre Mandanten werden es Ihnen danken.
     </p>
+    <RelatedArticles slug="e-rechnung-steuerberater" />
   </article>
 </template>
+
+<script setup>
+import RelatedArticles from '../../components/RelatedArticles.vue'
+</script>
