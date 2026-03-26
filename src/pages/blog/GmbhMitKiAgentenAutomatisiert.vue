@@ -146,5 +146,10 @@
     <p>
       <strong>Weiterlesen:</strong> <router-link to="/blog/ki-automatisierung-kosten" class="text-primary-600 hover:text-primary-700 underline">Was kostet KI-Automatisierung? Preise, ROI und Amortisation 2026</router-link>
     </p>
+    <RelatedArticles slug="gmbh-mit-ki-agenten-automatisiert" />
   </article>
 </template>
+
+<script setup>
+import RelatedArticles from '../../components/RelatedArticles.vue'
+</script>

@@ -202,5 +202,10 @@
     <p>
       <strong>Weiterlesen:</strong> <router-link to="/blog/ki-agenten-fuer-unternehmen" class="text-primary-600 hover:text-primary-700 underline">KI-Agenten für Unternehmen — Prozesse automatisieren mit intelligenter Software</router-link>
     </p>
+    <RelatedArticles slug="ki-automatisierung-kosten" />
   </article>
 </template>
+
+<script setup>
+import RelatedArticles from '../../components/RelatedArticles.vue'
+</script>

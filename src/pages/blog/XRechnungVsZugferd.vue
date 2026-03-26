@@ -147,5 +147,10 @@
       <li><strong>Beide zusammen</strong> decken alle Szenarien ab. Investieren Sie in ein System, das beides kann.</li>
     </ul>
     <p>Die Versandpflicht greift ab 1. Januar 2027. Wer sich jetzt für eine Lösung entscheidet, die beide Formate unterstützt, ist für B2G und B2B gleichermaßen aufgestellt.</p>
+    <RelatedArticles slug="xrechnung-vs-zugferd" />
   </article>
 </template>
+
+<script setup>
+import RelatedArticles from '../../components/RelatedArticles.vue'
+</script>

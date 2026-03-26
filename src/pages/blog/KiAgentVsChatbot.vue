@@ -186,5 +186,10 @@
     <p>
       Sie sind unsicher, welche Lösung zu Ihrem Unternehmen passt? Unser <router-link to="/ki-automatisierung/readiness-check">KI-Readiness-Check</router-link> hilft Ihnen in wenigen Minuten, Ihre Ausgangslage einzuschätzen und die nächsten Schritte zu planen.
     </p>
+    <RelatedArticles slug="ki-agent-vs-chatbot" />
   </article>
 </template>
+
+<script setup>
+import RelatedArticles from '../../components/RelatedArticles.vue'
+</script>

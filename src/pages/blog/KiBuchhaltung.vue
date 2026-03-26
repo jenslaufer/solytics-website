@@ -119,5 +119,10 @@
     <p>
       Der erste Schritt ist einfach: <a href="/ki-automatisierung">Erfahren Sie mehr über unsere KI-Automatisierungslösungen</a> oder machen Sie den <a href="/ki-automatisierung/readiness-check">KI-Readiness-Check</a>, um Ihr Automatisierungspotenzial zu ermitteln.
     </p>
+    <RelatedArticles slug="ki-buchhaltung" />
   </article>
 </template>
+
+<script setup>
+import RelatedArticles from '../../components/RelatedArticles.vue'
+</script>

@@ -468,5 +468,10 @@ if __name__ == "__main__":
       <li><strong>ZUGFeRD parallel einrichten:</strong> Viele B2B-Empfänger bevorzugen das Hybridformat.</li>
       <li><strong>Fristen beachten:</strong> Die E-Rechnungspflicht 2027 betrifft alle B2B-Unternehmen.</li>
     </ul>
+    <RelatedArticles slug="xrechnung-implementieren" />
   </article>
 </template>
+
+<script setup>
+import RelatedArticles from '../../components/RelatedArticles.vue'
+</script>

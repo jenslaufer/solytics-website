@@ -215,5 +215,10 @@
     <p>
       E-Rechnungen zu erstellen ist kein Hexenwerk. Mit dem richtigen Format, vollständigen Pflichtfeldern und einer Validierung vor dem Versand sind Sie auf der sicheren Seite. Starten Sie jetzt mit einer Testrechnung — je früher Sie Routine aufbauen, desto entspannter wird die Umstellung.
     </p>
+    <RelatedArticles slug="e-rechnung-erstellen-anleitung" />
   </article>
 </template>
+
+<script setup>
+import RelatedArticles from '../../components/RelatedArticles.vue'
+</script>

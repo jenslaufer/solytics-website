@@ -266,5 +266,10 @@
     </ul>
 
     <p>Fangen Sie heute an: Richten Sie den Empfang ein, testen Sie eine ZUGFeRD-Rechnung, und wählen Sie bis 2027 Ihre Software. Dann sind Sie rechtzeitig bereit.</p>
+    <RelatedArticles slug="e-rechnung-kleinunternehmer" />
   </article>
 </template>
+
+<script setup>
+import RelatedArticles from '../../components/RelatedArticles.vue'
+</script>

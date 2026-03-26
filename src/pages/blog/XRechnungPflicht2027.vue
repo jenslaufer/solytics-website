@@ -90,5 +90,10 @@
     <p>
       Die XRechnung-Pflicht 2027 kommt. Die Übergangsfristen sind klar definiert und die technischen Standards ausgereift. Unternehmen, die jetzt beginnen, vermeiden Stress, sparen langfristig Kosten und verschaffen sich einen Wettbewerbsvorteil.
     </p>
+    <RelatedArticles slug="xrechnung-pflicht-2027" />
   </article>
 </template>
+
+<script setup>
+import RelatedArticles from '../../components/RelatedArticles.vue'
+</script>

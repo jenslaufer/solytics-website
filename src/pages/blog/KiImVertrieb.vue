@@ -138,5 +138,10 @@
       <router-link to="/blog/ki-agenten-fuer-unternehmen">KI-Agenten fuer Unternehmen</router-link> |
       <router-link to="/blog/ki-automatisierung-kosten">Was kostet KI-Automatisierung?</router-link>
     </p>
+    <RelatedArticles slug="ki-im-vertrieb" />
   </article>
 </template>
+
+<script setup>
+import RelatedArticles from '../../components/RelatedArticles.vue'
+</script>
