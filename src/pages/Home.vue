@@ -164,7 +164,7 @@ useHead({
 const trustSignals = [
   { value: 'GmbH', label: 'Deutsche Kapitalgesellschaft' },
   { value: '100%', label: 'Made in Germany' },
-  { value: '2025', label: 'Gegründet' },
+  { value: '2022', label: 'Gegründet' },
   { value: '∞', label: 'Automatisierungspotenzial' },
 ]
 </script>
