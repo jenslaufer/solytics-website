@@ -93,7 +93,6 @@ const { isDark, toggle } = useDarkMode()
 const mobileOpen = ref(false)
 
 const navItems = [
-  { label: 'E-Rechnung', to: '/e-rechnung' },
   { label: 'KI-Automatisierung', to: '/ki-automatisierung' },
   { label: 'Blog', to: '/blog' },
 ]

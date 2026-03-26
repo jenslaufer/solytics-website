@@ -7,76 +7,52 @@
       <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-28 sm:py-36 lg:py-44">
         <div class="max-w-4xl">
           <p class="inline-block px-4 py-1.5 mb-6 text-xs font-semibold uppercase tracking-widest text-accent-300 bg-accent-400/10 border border-accent-400/20 rounded-full">
-            Software made in Germany
+            KI-Agenten für Ihr Unternehmen
           </p>
           <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white tracking-tight leading-[1.1]">
-            E-Rechnung &amp; KI-Automatisierung
+            KI-Automatisierung
             <span class="block mt-2 bg-gradient-to-r from-accent-300 to-accent-400 bg-clip-text text-transparent">für Ihr Unternehmen.</span>
           </h1>
           <p class="mt-6 text-lg sm:text-xl text-primary-200 max-w-2xl leading-relaxed">
-            Solytics verbindet Compliance-Expertise in elektronischer Rechnungsstellung mit intelligenter Prozessautomatisierung durch KI-Agenten.
+            Solytics entwickelt KI-Agenten, die Ihre Geschäftsprozesse verstehen und autonom ausführen. Von der Analyse über den Workshop bis zum produktiven Einsatz.
           </p>
           <div class="mt-10 flex flex-col sm:flex-row gap-4">
             <router-link to="/kontakt" class="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-primary-950 bg-accent-400 hover:bg-accent-300 rounded-[var(--radius-button)] transition-colors shadow-lg shadow-accent-400/25">
               Termin vereinbaren
               <svg class="ml-2 w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
             </router-link>
-            <router-link to="/e-rechnung" class="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white border border-white/20 hover:bg-white/10 rounded-[var(--radius-button)] transition-colors">
-              E-Rechnung entdecken
+            <router-link to="/ki-automatisierung" class="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white border border-white/20 hover:bg-white/10 rounded-[var(--radius-button)] transition-colors">
+              Leistungen entdecken
             </router-link>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Business Areas -->
+    <!-- What KI-Agenten do -->
     <section class="py-(--spacing-section) bg-surface-50 dark:bg-surface-100">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionHeading badge="Unsere Leistungen">
-          Zwei Bereiche. Ein Ziel.
-          <template #description>Wir helfen Unternehmen, regulatorische Anforderungen zu erfüllen und Prozesse intelligent zu automatisieren.</template>
+        <SectionHeading badge="KI-Agenten">
+          Intelligente Automatisierung.
+          <template #description>KI-Agenten sind autonome Software-Systeme, die Aufgaben selbstständig planen, ausführen und aus Ergebnissen lernen.</template>
         </SectionHeading>
 
-        <div class="grid md:grid-cols-2 gap-8 fade-up">
-          <!-- E-Rechnung Card -->
-          <router-link to="/e-rechnung" class="group relative bg-white dark:bg-surface-200 rounded-[var(--radius-card)] p-10 shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-card-hover)] transition-all duration-300 overflow-hidden">
-            <div class="absolute top-0 right-0 w-40 h-40 bg-gradient-to-bl from-primary-100 dark:from-primary-950 to-transparent rounded-bl-full opacity-60"></div>
-            <div class="relative">
-              <div class="w-14 h-14 rounded-2xl bg-primary-50 dark:bg-primary-950 text-primary-500 flex items-center justify-center mb-6">
-                <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-                  <path d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/>
-                </svg>
-              </div>
-              <h3 class="text-2xl font-bold text-surface-900 dark:text-surface-950 mb-3">E-Rechnung</h3>
-              <p class="text-surface-500 leading-relaxed mb-6">
-                XRechnung &amp; ZUGFeRD Compliance. API-Integration, Beratung und Implementierung für die gesetzliche Pflicht ab 2027.
-              </p>
-              <span class="inline-flex items-center text-sm font-semibold text-primary-500 group-hover:text-primary-600 transition-colors">
-                Mehr erfahren
-                <svg class="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-              </span>
-            </div>
-          </router-link>
-
-          <!-- KI Card -->
-          <router-link to="/ki-automatisierung" class="group relative bg-white dark:bg-surface-200 rounded-[var(--radius-card)] p-10 shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-card-hover)] transition-all duration-300 overflow-hidden">
-            <div class="absolute top-0 right-0 w-40 h-40 bg-gradient-to-bl from-accent-100 dark:from-accent-900/20 to-transparent rounded-bl-full opacity-60"></div>
-            <div class="relative">
-              <div class="w-14 h-14 rounded-2xl bg-accent-50 dark:bg-accent-900/20 text-accent-500 flex items-center justify-center mb-6">
-                <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-                  <path d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z"/>
-                </svg>
-              </div>
-              <h3 class="text-2xl font-bold text-surface-900 dark:text-surface-950 mb-3">KI-Automatisierung</h3>
-              <p class="text-surface-500 leading-relaxed mb-6">
-                KI-Agenten für Geschäftsprozesse. Von der Analyse über den Workshop bis zum produktiven Einsatz autonomer Systeme.
-              </p>
-              <span class="inline-flex items-center text-sm font-semibold text-accent-500 group-hover:text-accent-600 transition-colors">
-                Mehr erfahren
-                <svg class="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-              </span>
-            </div>
-          </router-link>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 fade-up">
+          <FeatureCard title="Autonome Ausführung" description="Agenten arbeiten selbstständig an Aufgaben — ohne ständige menschliche Eingriffe.">
+            <template #icon>
+              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z"/></svg>
+            </template>
+          </FeatureCard>
+          <FeatureCard title="Tool-Nutzung" description="Agenten nutzen APIs, Datenbanken und Software-Tools genau wie ein erfahrener Mitarbeiter.">
+            <template #icon>
+              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M11.42 15.17l-5.65-5.65a8 8 0 1111.3 0l-5.65 5.65z"/><path d="M12 9v.01"/></svg>
+            </template>
+          </FeatureCard>
+          <FeatureCard title="Prozessautomatisierung" description="Wiederkehrende Geschäftsprozesse werden vollständig automatisiert.">
+            <template #icon>
+              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182"/></svg>
+            </template>
+          </FeatureCard>
         </div>
       </div>
     </section>
@@ -134,13 +110,13 @@
     <section class="py-(--spacing-section) bg-gradient-to-br from-primary-900 to-primary-950">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center fade-up">
         <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight">
-          Bereit für den nächsten Schritt?
+          KI wartet nicht. Ihr Wettbewerb auch nicht.
         </h2>
         <p class="mt-4 text-lg text-primary-200 max-w-2xl mx-auto leading-relaxed">
-          Lassen Sie uns in einem unverbindlichen Gespräch herausfinden, wie wir Ihrem Unternehmen helfen können.
+          Starten Sie mit einem Workshop und entdecken Sie, welche Prozesse in Ihrem Unternehmen sofort automatisiert werden können.
         </p>
         <router-link to="/kontakt" class="inline-flex items-center justify-center mt-10 px-8 py-4 text-base font-semibold text-primary-950 bg-accent-400 hover:bg-accent-300 rounded-[var(--radius-button)] transition-colors shadow-lg shadow-accent-400/25">
-          Kostenlos beraten lassen
+          Workshop anfragen
           <svg class="ml-2 w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
         </router-link>
       </div>
@@ -157,8 +133,8 @@ import { useHead } from '../composables/useHead.js'
 
 useScrollAnimation()
 useHead({
-  title: 'Solytics GmbH — E-Rechnung & KI-Automatisierung',
-  description: 'Solytics verbindet Compliance-Expertise in elektronischer Rechnungsstellung (XRechnung, ZUGFeRD) mit intelligenter Prozessautomatisierung durch KI-Agenten.',
+  title: 'Solytics GmbH — KI-Automatisierung für Ihr Unternehmen',
+  description: 'Solytics entwickelt KI-Agenten, die Ihre Geschäftsprozesse verstehen und autonom ausführen. Von der Analyse über den Workshop bis zum produktiven Einsatz.',
 })
 
 const trustSignals = [
