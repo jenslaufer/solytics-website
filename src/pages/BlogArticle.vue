@@ -113,11 +113,14 @@ watchEffect(() => {
   jsonLdScript.type = 'application/ld+json'
   jsonLdScript.textContent = JSON.stringify({
     '@context': 'https://schema.org',
-    '@type': 'Article',
+    '@type': 'BlogPosting',
     headline: post.value.title,
     description: post.value.excerpt,
     datePublished: post.value.date,
-    author: { '@type': 'Organization', name: 'Solytics GmbH' },
+    url: `https://solytics.de/blog/${post.value.slug}`,
+    mainEntityOfPage: { '@type': 'WebPage', '@id': `https://solytics.de/blog/${post.value.slug}` },
+    author: { '@type': 'Organization', name: 'Solytics GmbH', url: 'https://solytics.de' },
+    publisher: { '@type': 'Organization', name: 'Solytics GmbH', url: 'https://solytics.de' },
   })
   document.head.appendChild(jsonLdScript)
 })
