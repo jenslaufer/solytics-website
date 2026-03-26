@@ -41,12 +41,12 @@
               </a>
             </li>
             <li>
-              <a href="https://www.linkedin.com/company/solytics-gmbh" target="_blank" rel="noopener" class="hover:text-white dark:hover:text-surface-950 transition-colors">
+              <a href="https://www.linkedin.com/in/jenslaufer" target="_blank" rel="noopener" class="hover:text-white dark:hover:text-surface-950 transition-colors">
                 LinkedIn
               </a>
             </li>
             <li>
-              <a href="https://github.com/solytics" target="_blank" rel="noopener" class="hover:text-white dark:hover:text-surface-950 transition-colors">
+              <a href="https://github.com/jenslaufer" target="_blank" rel="noopener" class="hover:text-white dark:hover:text-surface-950 transition-colors">
                 GitHub
               </a>
             </li>
