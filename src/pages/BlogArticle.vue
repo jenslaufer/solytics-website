@@ -30,7 +30,7 @@
       <!-- Article content -->
       <section class="py-(--spacing-section) bg-surface-50 dark:bg-surface-100">
         <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <component :is="post.component" />
+          <component :is="asyncComponent" />
 
           <!-- CTA -->
           <div class="mt-16 bg-gradient-to-br from-primary-900 to-primary-950 rounded-[var(--radius-card)] p-8 sm:p-12 text-center">
@@ -72,7 +72,7 @@
 </template>
 
 <script setup>
-import { computed, watchEffect, onUnmounted } from 'vue'
+import { computed, defineAsyncComponent, watchEffect, onUnmounted } from 'vue'
 import { useRoute } from 'vue-router'
 import MainLayout from '../layouts/MainLayout.vue'
 import { useHead } from '../composables/useHead.js'
@@ -81,6 +81,7 @@ import { blogPosts } from '../data/blogPosts.js'
 const route = useRoute()
 
 const post = computed(() => blogPosts.find(p => p.slug === route.params.slug))
+const asyncComponent = computed(() => post.value ? defineAsyncComponent(post.value.component) : null)
 const postIndex = computed(() => blogPosts.findIndex(p => p.slug === route.params.slug))
 const prevPost = computed(() => postIndex.value > 0 ? blogPosts[postIndex.value - 1] : null)
 const nextPost = computed(() => postIndex.value < blogPosts.length - 1 ? blogPosts[postIndex.value + 1] : null)
