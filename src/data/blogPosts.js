@@ -72,6 +72,15 @@ export const blogPosts = [
     component: () => import('../pages/blog/ERechnungKleinunternehmer.vue'),
   },
   {
+    slug: 'digitalisierung-mittelstand-2026',
+    title: 'Digitalisierung im Mittelstand 2026: Wo KI wirklich Kosten spart',
+    excerpt: 'Wo spart KI im Mittelstand tatsächlich Geld? Rechnungsverarbeitung, Kundenservice, Reporting, Dateneingabe — mit ROI-Rechnung und konkreten Praxisbeispielen.',
+    date: '2026-03-26',
+    category: 'ki-automatisierung',
+    readingTime: '11 Min.',
+    component: () => import('../pages/blog/DigitalisierungMittelstand2026.vue'),
+  },
+  {
     slug: 'e-rechnung-steuerberater',
     title: 'E-Rechnung für Steuerberater: Mandanten richtig beraten',
     excerpt: 'Die E-Rechnungspflicht betrifft jeden Mandanten. Erfahren Sie, wie Steuerberater ihre Mandanten bei Formatwahl, DATEV-Integration, GoBD-Archivierung und Umstellung kompetent begleiten.',
