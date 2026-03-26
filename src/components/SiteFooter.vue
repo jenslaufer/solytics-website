@@ -6,7 +6,7 @@
         <div class="md:col-span-1">
           <div class="font-bold text-xl text-white dark:text-surface-950 mb-3">Solytics</div>
           <p class="text-sm text-surface-400 dark:text-surface-500 leading-relaxed">
-            KI-Automatisierung.<br>
+            E-Rechnung &amp; KI-Automatisierung.<br>
             Software made in Germany.
           </p>
         </div>
@@ -15,6 +15,7 @@
         <div>
           <h4 class="text-sm font-semibold text-white dark:text-surface-950 uppercase tracking-wider mb-4">Leistungen</h4>
           <ul class="space-y-2 text-sm">
+            <li><router-link to="/e-rechnung" class="hover:text-white dark:hover:text-surface-950 transition-colors">E-Rechnung</router-link></li>
             <li><router-link to="/ki-automatisierung" class="hover:text-white dark:hover:text-surface-950 transition-colors">KI-Automatisierung</router-link></li>
             <li><router-link to="/blog" class="hover:text-white dark:hover:text-surface-950 transition-colors">Blog</router-link></li>
           </ul>

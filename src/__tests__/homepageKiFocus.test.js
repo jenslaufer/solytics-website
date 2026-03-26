@@ -63,8 +63,8 @@ describe('e-invoice routes still resolve', () => {
   })
 })
 
-describe('NavBar does not contain E-Rechnung', () => {
-  it('navItems excludes E-Rechnung', async () => {
+describe('NavBar contains E-Rechnung', () => {
+  it('navItems includes E-Rechnung', async () => {
     const { default: NavBar } = await import('../components/NavBar.vue')
     const router = createTestRouter()
     router.push('/')
@@ -74,12 +74,12 @@ describe('NavBar does not contain E-Rechnung', () => {
       global: { plugins: [router] },
     })
     const text = wrapper.text()
-    expect(text).not.toContain('E-Rechnung')
+    expect(text).toContain('E-Rechnung')
   })
 })
 
-describe('Footer does not contain E-Rechnung', () => {
-  it('footer excludes E-Rechnung link', async () => {
+describe('Footer contains E-Rechnung', () => {
+  it('footer includes E-Rechnung link', async () => {
     const { default: SiteFooter } = await import('../components/SiteFooter.vue')
     const router = createTestRouter()
     router.push('/')
@@ -89,6 +89,6 @@ describe('Footer does not contain E-Rechnung', () => {
       global: { plugins: [router] },
     })
     const text = wrapper.text()
-    expect(text).not.toContain('E-Rechnung')
+    expect(text).toContain('E-Rechnung')
   })
 })
