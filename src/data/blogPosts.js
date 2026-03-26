@@ -33,7 +33,7 @@ export const blogPosts = [
     date: '2026-03-25',
     category: 'e-rechnung',
     readingTime: '9 Min.',
-    component: defineAsyncComponent(() => import('../pages/blog/ERechnungHandwerk.vue')),
+    component: () => import('../pages/blog/ERechnungHandwerk.vue'),
   },
   {
     slug: 'xrechnung-vs-zugferd',
@@ -42,7 +42,7 @@ export const blogPosts = [
     date: '2026-03-22',
     category: 'e-rechnung',
     readingTime: '7 Min.',
-    component: defineAsyncComponent(() => import('../pages/blog/XRechnungVsZugferd.vue')),
+    component: () => import('../pages/blog/XRechnungVsZugferd.vue'),
   },
   {
     slug: 'en16931-branchenerweiterungen',
@@ -51,7 +51,7 @@ export const blogPosts = [
     date: '2026-03-22',
     category: 'e-rechnung',
     readingTime: '9 Min.',
-    component: defineAsyncComponent(() => import('../pages/blog/EN16931Branchenerweiterungen.vue')),
+    component: () => import('../pages/blog/EN16931Branchenerweiterungen.vue'),
   },
   {
     slug: 'xrechnung-implementieren',
@@ -60,7 +60,7 @@ export const blogPosts = [
     date: '2026-03-22',
     category: 'e-rechnung',
     readingTime: '12 Min.',
-    component: defineAsyncComponent(() => import('../pages/blog/XRechnungImplementieren.vue')),
+    component: () => import('../pages/blog/XRechnungImplementieren.vue'),
   },
   {
     slug: 'e-rechnung-kleinunternehmer',
@@ -69,7 +69,8 @@ export const blogPosts = [
     date: '2026-03-23',
     category: 'e-rechnung',
     readingTime: '10 Min.',
-    component: defineAsyncComponent(() => import('../pages/blog/ERechnungKleinunternehmer.vue')),},
+    component: () => import('../pages/blog/ERechnungKleinunternehmer.vue'),
+  },
   {
     slug: 'e-rechnung-steuerberater',
     title: 'E-Rechnung für Steuerberater: Mandanten richtig beraten',
@@ -77,6 +78,6 @@ export const blogPosts = [
     date: '2026-03-25',
     category: 'e-rechnung',
     readingTime: '10 Min.',
-    component: defineAsyncComponent(() => import('../pages/blog/ERechnungSteuerberater.vue')),
+    component: () => import('../pages/blog/ERechnungSteuerberater.vue'),
   },
 ]
