@@ -28,15 +28,6 @@
               : 'bg-white dark:bg-surface-200 text-surface-600 dark:text-surface-500 hover:bg-primary-50 dark:hover:bg-surface-300'">
             {{ cat.label }}
           </button>
-          <span class="border-l border-surface-200 dark:border-surface-300 mx-1"></span>
-          <router-link to="/blog/e-rechnung"
-            class="px-4 py-2 text-sm font-medium rounded-full bg-white dark:bg-surface-200 text-surface-600 dark:text-surface-500 hover:bg-primary-50 dark:hover:bg-surface-300 transition-colors">
-            E-Rechnung →
-          </router-link>
-          <router-link to="/blog/ki-automatisierung"
-            class="px-4 py-2 text-sm font-medium rounded-full bg-white dark:bg-surface-200 text-surface-600 dark:text-surface-500 hover:bg-primary-50 dark:hover:bg-surface-300 transition-colors">
-            KI-Automatisierung →
-          </router-link>
         </div>
 
         <!-- Post cards -->
