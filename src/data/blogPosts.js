@@ -80,4 +80,13 @@ export const blogPosts = [
     readingTime: '10 Min.',
     component: () => import('../pages/blog/ERechnungSteuerberater.vue'),
   },
+  {
+    slug: 'ki-buchhaltung',
+    title: 'KI in der Buchhaltung: So automatisieren Sie Ihre Finanzbuchhaltung',
+    excerpt: 'KI revolutioniert die Buchhaltung: automatische Belegerfassung, Kontierung, Bankabgleich und Reporting. Erfahren Sie, wie Sie Ihre Finanzbuchhaltung mit KI automatisieren und welchen ROI Sie erwarten können.',
+    date: '2026-03-26',
+    category: 'ki-automatisierung',
+    readingTime: '10 Min.',
+    component: () => import('../pages/blog/KiBuchhaltung.vue'),
+  },
 ]
