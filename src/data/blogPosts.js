@@ -1,5 +1,3 @@
-import { defineAsyncComponent } from 'vue'
-
 export const blogPosts = [
   {
     slug: 'xrechnung-pflicht-2027',
@@ -8,7 +6,7 @@ export const blogPosts = [
     date: '2026-03-21',
     category: 'e-rechnung',
     readingTime: '8 Min.',
-    component: defineAsyncComponent(() => import('../pages/blog/XRechnungPflicht2027.vue')),
+    component: () => import('../pages/blog/XRechnungPflicht2027.vue'),
   },
   {
     slug: 'ki-agenten-fuer-unternehmen',
@@ -17,7 +15,7 @@ export const blogPosts = [
     date: '2026-03-24',
     category: 'ki-automatisierung',
     readingTime: '9 Min.',
-    component: defineAsyncComponent(() => import('../pages/blog/KiAgentenFuerUnternehmen.vue')),
+    component: () => import('../pages/blog/KiAgentenFuerUnternehmen.vue'),
   },
   {
     slug: 'e-rechnung-software-vergleich-2026',
@@ -26,7 +24,7 @@ export const blogPosts = [
     date: '2026-03-24',
     category: 'e-rechnung',
     readingTime: '10 Min.',
-    component: defineAsyncComponent(() => import('../pages/blog/ERechnungSoftwareVergleich2026.vue')),
+    component: () => import('../pages/blog/ERechnungSoftwareVergleich2026.vue'),
   },
   {
     slug: 'e-rechnung-handwerk',
