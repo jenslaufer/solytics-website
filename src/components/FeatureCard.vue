@@ -7,8 +7,8 @@
         </svg>
       </slot>
     </div>
-    <h3 class="text-lg font-semibold text-surface-900 dark:text-surface-950 mb-2">{{ title }}</h3>
-    <p class="text-sm text-surface-500 leading-relaxed">{{ description }}</p>
+    <h3 class="text-lg font-semibold text-primary-900 dark:text-surface-950 mb-2">{{ title }}</h3>
+    <p class="text-sm text-surface-600 dark:text-surface-700 leading-relaxed">{{ description }}</p>
   </div>
 </template>
 

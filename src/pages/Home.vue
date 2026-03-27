@@ -34,9 +34,9 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid sm:grid-cols-3 gap-8 lg:gap-12 fade-up">
           <div v-for="(step, i) in processSteps" :key="step.title" class="relative text-center">
-            <div class="inline-flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-accent-400/10 text-accent-500 font-bold text-lg">{{ i + 1 }}</div>
-            <h3 class="text-lg font-semibold text-surface-900 dark:text-white">{{ step.title }}</h3>
-            <p class="mt-2 text-sm text-surface-500 leading-relaxed">{{ step.description }}</p>
+            <div class="inline-flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-primary-100 dark:bg-primary-900/30 text-primary-600 dark:text-primary-400 font-bold text-lg">{{ i + 1 }}</div>
+            <h3 class="text-lg font-semibold text-primary-900 dark:text-white">{{ step.title }}</h3>
+            <p class="mt-2 text-sm text-surface-600 dark:text-surface-700 leading-relaxed">{{ step.description }}</p>
             <div v-if="i < 2" class="hidden sm:block absolute top-6 -right-6 lg:-right-8 text-surface-300 dark:text-surface-500">
               <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
             </div>
@@ -84,8 +84,8 @@
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 fade-up">
           <div v-for="useCase in useCases" :key="useCase.title" class="relative p-6 bg-surface-50 dark:bg-surface-100 rounded-[var(--radius-card)] border border-surface-200 dark:border-surface-300">
             <div class="inline-flex items-center justify-center w-10 h-10 mb-4 rounded-lg bg-primary-100 dark:bg-primary-900/30 text-primary-600 dark:text-primary-400" v-html="useCase.icon"></div>
-            <h3 class="text-lg font-semibold text-surface-900 dark:text-white">{{ useCase.title }}</h3>
-            <p class="mt-2 text-sm text-surface-500 leading-relaxed">{{ useCase.description }}</p>
+            <h3 class="text-lg font-semibold text-primary-900 dark:text-white">{{ useCase.title }}</h3>
+            <p class="mt-2 text-sm text-surface-600 dark:text-surface-700 leading-relaxed">{{ useCase.description }}</p>
             <p class="mt-3 text-sm font-semibold text-accent-500">{{ useCase.metric }}</p>
           </div>
         </div>
