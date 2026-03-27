@@ -6,7 +6,7 @@
     <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-surface-900 dark:text-surface-950 tracking-tight">
       <slot />
     </h2>
-    <p v-if="$slots.description" class="mt-4 text-lg text-surface-500 dark:text-surface-500 leading-relaxed">
+    <p v-if="$slots.description" class="mt-4 text-lg text-surface-500 dark:text-surface-700 leading-relaxed">
       <slot name="description" />
     </p>
   </div>
