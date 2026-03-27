@@ -93,6 +93,16 @@ const relationshipMap = {
     'ki-agent-vs-chatbot',
     'ki-buchhaltung',
   ],
+  'ki-roi-berechnen': [
+    'ki-automatisierung-kosten',
+    'ki-buchhaltung',
+    'digitalisierung-mittelstand-2026',
+  ],
+  'ki-fuer-steuerberater': [
+    'e-rechnung-steuerberater',
+    'ki-buchhaltung',
+    'ki-roi-berechnen',
+  ],
 }
 
 export function getRelatedArticles(slug) {
