@@ -93,6 +93,16 @@ const relationshipMap = {
     'ki-agent-vs-chatbot',
     'ki-buchhaltung',
   ],
+  'ki-kundenservice-agent': [
+    'ki-agent-vs-chatbot',
+    'ki-automatisierung-kosten',
+    'ki-agenten-fuer-unternehmen',
+  ],
+  'ki-agenten-dsgvo-datenschutz': [
+    'ki-agenten-fuer-unternehmen',
+    'ki-automatisierung-kosten',
+    'ki-kundenservice-agent',
+  ],
   'ki-roi-berechnen': [
     'ki-automatisierung-kosten',
     'ki-buchhaltung',
