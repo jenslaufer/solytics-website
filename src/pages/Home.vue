@@ -30,8 +30,12 @@
     </section>
 
     <!-- 3-Step Process -->
-    <section class="py-(--spacing-section) bg-white dark:bg-surface-200">
+    <section class="py-(--spacing-section) bg-white dark:bg-surface-200 border-t border-surface-200 dark:border-surface-300">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <SectionHeading badge="So funktioniert's">
+          In drei Schritten zur KI-Automatisierung.
+        </SectionHeading>
+
         <div class="grid sm:grid-cols-3 gap-8 lg:gap-12 fade-up">
           <div v-for="(step, i) in processSteps" :key="step.title" class="relative text-center">
             <div class="inline-flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-primary-100 dark:bg-primary-900/30 text-primary-600 dark:text-primary-400 font-bold text-lg">{{ i + 1 }}</div>
@@ -46,7 +50,7 @@
     </section>
 
     <!-- What KI-Agenten do -->
-    <section class="py-(--spacing-section) bg-surface-50 dark:bg-surface-100">
+    <section class="py-(--spacing-section) bg-surface-50 dark:bg-surface-100 border-t border-surface-200 dark:border-surface-300">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading badge="KI-Agenten">
           Intelligente Automatisierung.
@@ -74,7 +78,7 @@
     </section>
 
     <!-- Use Cases -->
-    <section class="py-(--spacing-section) bg-white dark:bg-surface-200">
+    <section class="py-(--spacing-section) bg-white dark:bg-surface-200 border-t border-surface-200 dark:border-surface-300">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading badge="Einsatzbereiche">
           KI-Automatisierung in der Praxis.
@@ -93,7 +97,7 @@
     </section>
 
     <!-- Trust Signals -->
-    <section class="py-(--spacing-section) bg-white dark:bg-surface-200">
+    <section class="py-(--spacing-section) bg-white dark:bg-surface-200 border-t border-surface-200 dark:border-surface-300">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 fade-up">
           <div v-for="signal in trustSignals" :key="signal.label" class="text-center">
@@ -105,7 +109,7 @@
     </section>
 
     <!-- Why Solytics -->
-    <section class="py-(--spacing-section) bg-surface-50 dark:bg-surface-100">
+    <section class="py-(--spacing-section) bg-surface-50 dark:bg-surface-100 border-t border-surface-200 dark:border-surface-300">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading badge="Warum Solytics">
           Technologie trifft Beratung.
