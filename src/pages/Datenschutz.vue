@@ -4,7 +4,7 @@
       <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <h1 class="text-3xl font-bold text-surface-900 dark:text-surface-950 mb-8">Datenschutzerklärung</h1>
 
-        <div class="bg-white dark:bg-surface-200 rounded-[var(--radius-card)] p-8 shadow-[var(--shadow-card)] prose prose-surface dark:prose-invert max-w-none text-surface-700 dark:text-surface-700">
+        <div class="bg-white dark:bg-surface-200 rounded-[var(--radius-card)] p-8 shadow-[var(--shadow-card)] prose prose-surface dark:prose-invert max-w-none text-surface-700 dark:text-surface-800">
           <h2 class="text-lg font-semibold text-surface-900 dark:text-surface-950">1. Verantwortlicher</h2>
           <p>
             Solytics GmbH<br>

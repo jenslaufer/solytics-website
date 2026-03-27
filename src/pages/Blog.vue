@@ -25,7 +25,7 @@
             class="px-4 py-2 text-sm font-medium rounded-full transition-colors"
             :class="activeCategory === cat.value
               ? 'bg-primary-500 text-white'
-              : 'bg-white dark:bg-surface-200 text-surface-600 dark:text-surface-500 hover:bg-primary-50 dark:hover:bg-surface-300'">
+              : 'bg-white dark:bg-surface-200 text-surface-600 dark:text-surface-800 hover:bg-primary-50 dark:hover:bg-surface-300'">
             {{ cat.label }}
           </button>
         </div>
@@ -42,10 +42,10 @@
               <h2 class="text-lg font-bold text-surface-900 dark:text-surface-950 group-hover:text-primary-600 transition-colors leading-snug">
                 {{ post.title }}
               </h2>
-              <p class="mt-3 text-sm text-surface-500 leading-relaxed line-clamp-3">
+              <p class="mt-3 text-sm text-surface-500 dark:text-surface-700 leading-relaxed line-clamp-3">
                 {{ post.excerpt }}
               </p>
-              <div class="mt-4 flex items-center gap-4 text-xs text-surface-400">
+              <div class="mt-4 flex items-center gap-4 text-xs text-surface-400 dark:text-surface-600">
                 <span>{{ formatDate(post.date) }}</span>
                 <span>{{ post.readingTime }}</span>
               </div>

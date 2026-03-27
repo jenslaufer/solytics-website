@@ -1,11 +1,11 @@
 <template>
-  <footer class="bg-surface-900 dark:bg-surface-100 text-surface-300 dark:text-surface-600">
+  <footer class="bg-surface-900 dark:bg-surface-100 text-surface-300 dark:text-surface-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
         <!-- Brand -->
         <div class="md:col-span-1">
           <div class="font-bold text-xl text-white dark:text-surface-950 mb-3">Solytics</div>
-          <p class="text-sm text-surface-400 dark:text-surface-500 leading-relaxed">
+          <p class="text-sm text-surface-400 dark:text-surface-700 leading-relaxed">
             E-Rechnung &amp; KI-Automatisierung.<br>
             Software made in Germany.
           </p>
@@ -54,7 +54,7 @@
         </div>
       </div>
 
-      <div class="mt-12 pt-8 border-t border-surface-800 dark:border-surface-200 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-surface-500">
+      <div class="mt-12 pt-8 border-t border-surface-800 dark:border-surface-200 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-surface-500 dark:text-surface-700">
         <p>&copy; {{ new Date().getFullYear() }} Solytics GmbH. Alle Rechte vorbehalten.</p>
         <div class="flex gap-6">
           <router-link to="/impressum" class="hover:text-white dark:hover:text-surface-950 transition-colors">Impressum</router-link>
