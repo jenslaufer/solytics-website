@@ -113,6 +113,11 @@ const relationshipMap = {
     'ki-buchhaltung',
     'ki-roi-berechnen',
   ],
+  'e-rechnung-lexoffice': [
+    'e-rechnung-kleinunternehmer',
+    'e-rechnung-software-vergleich-2026',
+    'xrechnung-vs-zugferd',
+  ],
 }
 
 export function getRelatedArticles(slug) {
