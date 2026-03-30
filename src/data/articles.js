@@ -56,6 +56,11 @@ const relationshipMap = {
     'e-rechnung-steuerberater',
     'xrechnung-implementieren',
   ],
+  'e-rechnung-datev': [
+    'e-rechnung-software-vergleich-2026',
+    'xrechnung-implementieren',
+    'e-rechnung-steuerberater',
+  ],
 
   // === KI-Automatisierung ===
   'ki-agenten-fuer-unternehmen': [

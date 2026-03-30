@@ -180,6 +180,15 @@ export const blogPosts = [
     component: () => import('../pages/blog/KiAgentenDsgvoDatenschutz.vue'),
   },
   {
+    slug: 'e-rechnung-datev',
+    title: 'E-Rechnung mit DATEV: So richten Sie XRechnung ein',
+    excerpt: 'XRechnung in DATEV einrichten: Module, Schritt-für-Schritt Konfiguration, GoBD-konforme Archivierung und häufige Fehler bei der Umstellung auf E-Rechnung.',
+    date: '2026-03-29',
+    category: 'e-rechnung',
+    readingTime: '10 Min.',
+    component: () => import('../pages/blog/ERechnungDatev.vue'),
+  },
+  {
     slug: 'gmbh-mit-ki-agenten-automatisiert',
     title: 'Wie ich meine GmbH mit KI-Agenten automatisiert habe',
     excerpt: 'Mein AI-Assistent hat heute Nacht 5 Pull Requests reviewed, einen Blog geschrieben und eine Landing Page gebaut. Ich habe geschlafen.',
