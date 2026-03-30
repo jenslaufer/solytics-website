@@ -95,6 +95,7 @@ const mobileOpen = ref(false)
 const navItems = [
   { label: 'E-Rechnung', to: '/e-rechnung' },
   { label: 'KI-Automatisierung', to: '/ki-automatisierung' },
+  { label: 'Website-Redesign', to: '/website-redesign' },
   { label: 'Blog', to: '/blog' },
 ]
 </script>
