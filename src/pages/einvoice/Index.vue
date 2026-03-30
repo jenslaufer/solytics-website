@@ -153,9 +153,9 @@
       <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center fade-up">
         <SectionHeading badge="Förderung">
           Digitalbonus Bayern: 50 % sparen.
-          <template #description>Der Freistaat übernimmt bis zu die Hälfte Ihrer E-Rechnungs-Kosten — maximal 7.500 €. Gilt bis Ende 2027.</template>
+          <template #description>Der Freistaat übernimmt bis zu die Hälfte Ihrer Digitalisierungskosten — maximal 7.500 €. Gilt bis Ende 2027.</template>
         </SectionHeading>
-        <router-link to="/e-rechnung/digitalbonus"
+        <router-link to="/digitalbonus"
           class="mt-8 inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white bg-green-600 hover:bg-green-500 rounded-[var(--radius-button)] transition-colors shadow-lg shadow-green-600/25">
           Mehr zur Förderung
         </router-link>

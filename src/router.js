@@ -47,8 +47,8 @@ export const router = createRouter({
       component: () => import('./pages/einvoice/PflichtCheck.vue'),
     },
     {
-      path: '/e-rechnung/digitalbonus',
-      component: () => import('./pages/einvoice/Digitalbonus.vue'),
+      path: '/digitalbonus',
+      component: () => import('./pages/Digitalbonus.vue'),
     },
     {
       path: '/kontakt',
