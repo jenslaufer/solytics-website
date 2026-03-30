@@ -180,6 +180,15 @@ export const blogPosts = [
     component: () => import('../pages/blog/KiAgentenDsgvoDatenschutz.vue'),
   },
   {
+    slug: 'e-rechnung-datev',
+    title: 'E-Rechnung mit DATEV: So richten Sie XRechnung ein',
+    excerpt: 'XRechnung in DATEV einrichten: Module, Schritt-für-Schritt Konfiguration, GoBD-konforme Archivierung und häufige Fehler bei der Umstellung auf E-Rechnung.',
+    date: '2026-03-29',
+    category: 'e-rechnung',
+    readingTime: '10 Min.',
+    component: () => import('../pages/blog/ERechnungDatev.vue'),
+  },
+  {
     slug: 'gmbh-mit-ki-agenten-automatisiert',
     title: 'Wie ich meine GmbH mit KI-Agenten automatisiert habe',
     excerpt: 'Mein AI-Assistent hat heute Nacht 5 Pull Requests reviewed, einen Blog geschrieben und eine Landing Page gebaut. Ich habe geschlafen.',
@@ -196,5 +205,14 @@ export const blogPosts = [
     category: 'e-rechnung',
     readingTime: '9 Min.',
     component: () => import('../pages/blog/ERechnungLexoffice.vue'),
+  },
+  {
+    slug: 'e-rechnung-sevdesk',
+    title: 'E-Rechnung mit sevDesk: XRechnung automatisch erstellen und versenden',
+    excerpt: 'sevDesk für E-Rechnungen nutzen: XRechnung und ZUGFeRD einrichten, Rechnungsversand per API automatisieren, DATEV-Export integrieren und komplexe Szenarien meistern.',
+    date: '2026-03-29',
+    category: 'e-rechnung',
+    readingTime: '9 Min.',
+    component: () => import('../pages/blog/ERechnungSevdesk.vue'),
   },
 ]

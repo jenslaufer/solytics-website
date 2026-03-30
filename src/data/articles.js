@@ -56,6 +56,11 @@ const relationshipMap = {
     'e-rechnung-steuerberater',
     'xrechnung-implementieren',
   ],
+  'e-rechnung-datev': [
+    'e-rechnung-software-vergleich-2026',
+    'xrechnung-implementieren',
+    'e-rechnung-steuerberater',
+  ],
 
   // === KI-Automatisierung ===
   'ki-agenten-fuer-unternehmen': [
@@ -117,6 +122,11 @@ const relationshipMap = {
     'e-rechnung-kleinunternehmer',
     'e-rechnung-software-vergleich-2026',
     'xrechnung-vs-zugferd',
+  ],
+  'e-rechnung-sevdesk': [
+    'xrechnung-vs-zugferd',
+    'e-rechnung-software-vergleich-2026',
+    'e-rechnung-erstellen-anleitung',
   ],
 }
 
