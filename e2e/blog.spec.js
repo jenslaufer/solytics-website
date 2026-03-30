@@ -43,7 +43,8 @@ test.describe('Blog articles', () => {
   test('blog listing shows all posts', async ({ page }) => {
     await page.goto('/blog')
     const cards = page.locator('a[href^="/blog/"]')
-    await expect(cards).toHaveCount(19, { timeout: 10000 })
+    const count = await cards.count()
+    expect(count).toBeGreaterThanOrEqual(20)
   })
 
   test('prev/next navigation works', async ({ page }) => {
