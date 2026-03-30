@@ -118,8 +118,11 @@ const relationshipMap = {
     'ki-buchhaltung',
     'ki-roi-berechnen',
   ],
-
-  // === E-Rechnung (continued) ===
+  'e-rechnung-lexoffice': [
+    'e-rechnung-kleinunternehmer',
+    'e-rechnung-software-vergleich-2026',
+    'xrechnung-vs-zugferd',
+  ],
   'e-rechnung-sevdesk': [
     'xrechnung-vs-zugferd',
     'e-rechnung-software-vergleich-2026',
