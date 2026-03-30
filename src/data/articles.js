@@ -113,6 +113,13 @@ const relationshipMap = {
     'ki-buchhaltung',
     'ki-roi-berechnen',
   ],
+
+  // === E-Rechnung (continued) ===
+  'e-rechnung-sevdesk': [
+    'xrechnung-vs-zugferd',
+    'e-rechnung-software-vergleich-2026',
+    'e-rechnung-erstellen-anleitung',
+  ],
 }
 
 export function getRelatedArticles(slug) {
