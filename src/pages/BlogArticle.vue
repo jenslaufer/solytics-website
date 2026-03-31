@@ -108,7 +108,7 @@ useHead({
 // JSON-LD
 let jsonLdScript = null
 watchEffect(() => {
-  if (!post.value) return
+  if (!post.value || typeof document === 'undefined') return
   if (jsonLdScript) jsonLdScript.remove()
   jsonLdScript = document.createElement('script')
   jsonLdScript.type = 'application/ld+json'
