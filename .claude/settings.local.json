@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "Skill(quality-gate)",
+      "Bash(git checkout:*)",
+      "Bash(git rebase:*)",
+      "Bash(git add:*)",
+      "Bash(git branch:*)",
+      "Bash(git push:*)",
+      "Bash(git commit:*)",
+      "Bash(git merge:*)",
+      "Bash(git fetch:*)",
+      "Bash(find /home/jens/repos/e-invoice -type f -name *blog* -o -name *post* -o -name *article*)",
+      "Bash(find /home/jens/repos/ai-consulting -type f -name *blog* -o -name *post* -o -name *article*)",
+      "Bash(find /home/jens/repos/e-invoice/docs/blog -type f -name *.md -o -name *.mdx)",
+      "Bash(find /home/jens/repos/e-invoice/docs -type f -name *index* -o -name *.js)",
+      "Bash(find /home/jens/repos/e-invoice/application -type f -name *blog* -o -name *post*)",
+      "Bash(find /home/jens/repos/solytics-website -name *.vue -path *blog* -type f)",
+      "Bash(find /home/jens/repos/solytics-website -type f \\\\\\(-name *.md -o -name *.json -o -name package.json \\\\\\) -not -path */node_modules/*)",
+      "Bash(gh repo:*)",
+      "Bash(gh pr:*)",
+      "Bash(git pull:*)",
+      "Bash(gh issue:*)"
+    ]
+  }
+}
