@@ -21,6 +21,10 @@ export const router = createRouter({
       component: () => import('./pages/ai/Index.vue'),
     },
     {
+      path: '/website-redesign',
+      component: () => import('./pages/WebsiteRedesign.vue'),
+    },
+    {
       path: '/blog',
       component: () => import('./pages/Blog.vue'),
     },
