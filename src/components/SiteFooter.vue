@@ -17,6 +17,7 @@
           <ul class="space-y-2 text-sm">
             <li><router-link to="/e-rechnung" class="hover:text-white dark:hover:text-surface-950 transition-colors">E-Rechnung</router-link></li>
             <li><router-link to="/ki-automatisierung" class="hover:text-white dark:hover:text-surface-950 transition-colors">KI-Automatisierung</router-link></li>
+            <li><router-link to="/website-redesign" class="hover:text-white dark:hover:text-surface-950 transition-colors">Website-Redesign</router-link></li>
             <li><router-link to="/blog" class="hover:text-white dark:hover:text-surface-950 transition-colors">Blog</router-link></li>
           </ul>
         </div>
