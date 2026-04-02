@@ -26,7 +26,7 @@
       Konkret: Ich sage dem Agenten nicht "Öffne Datei X, lies Zeile Y, schreibe Wert Z in Tabelle A". Ich sage: "Analysiere die Serverkosten der letzten drei Monate und erstelle eine Zusammenfassung mit Optimierungsvorschlägen." Der Rest ist seine Aufgabe.
     </p>
     <p>
-      Mehr zum Thema lesen Sie in unserem Artikel <router-link to="/blog/ki-agenten-fuer-unternehmen" class="text-primary-600 hover:text-primary-700 underline">KI-Agenten für Unternehmen</router-link>.
+      Mehr zum Thema lesen Sie in unserem Artikel <router-link to="/blog/ki-agenten-fuer-unternehmen" class="text-accent hover:text-accent-hover underline">KI-Agenten für Unternehmen</router-link>.
     </p>
 
     <h2>6 konkrete Automatisierungen in meiner GmbH</h2>
@@ -63,7 +63,7 @@
       Eingangsrechnungen landen per E-Mail oder Upload im System. Der Buchhaltungs-Agent extrahiert alle relevanten Daten (Lieferant, Betrag, Steuersatz, Fälligkeit), ordnet sie Kostenstellen zu, prüft auf Duplikate und bereitet alles für den Export zum Steuerberater vor.
     </p>
     <p>
-      Das Gleiche gilt für Ausgangsrechnungen: Auf Basis von Projektdaten im CRM erstellt der Agent Rechnungsentwürfe, die ich nur noch freigeben muss. Zusammen mit der kommenden E-Rechnungspflicht — mehr dazu in unserem Artikel zur <router-link to="/blog/xrechnung-pflicht-2027" class="text-primary-600 hover:text-primary-700 underline">XRechnung-Pflicht 2027</router-link> — wird dieser Prozess vollständig automatisierbar.
+      Das Gleiche gilt für Ausgangsrechnungen: Auf Basis von Projektdaten im CRM erstellt der Agent Rechnungsentwürfe, die ich nur noch freigeben muss. Zusammen mit der kommenden E-Rechnungspflicht — mehr dazu in unserem Artikel zur <router-link to="/blog/xrechnung-pflicht-2027" class="text-accent hover:text-accent-hover underline">XRechnung-Pflicht 2027</router-link> — wird dieser Prozess vollständig automatisierbar.
     </p>
 
     <h3>5. Kundenkommunikation und Follow-ups</h3>
@@ -138,13 +138,13 @@
       Besonders lohnend ist die Automatisierung, wenn Sie: wiederkehrende, gut definierbare Aufgaben haben, bereits digitale Prozesse und strukturierte Daten nutzen und bereit sind, Agenten schrittweise zu vertrauen — mit klaren Eskalationspfaden.
     </p>
     <p>
-      Sie wollen wissen, welche Prozesse in Ihrem Unternehmen das höchste Automatisierungspotenzial haben? Unser <router-link to="/ki-automatisierung/readiness-check" class="text-primary-600 hover:text-primary-700 underline">KI-Readiness-Check</router-link> hilft Ihnen in wenigen Minuten, Ihre Ausgangslage einzuschätzen.
+      Sie wollen wissen, welche Prozesse in Ihrem Unternehmen das höchste Automatisierungspotenzial haben? Unser <router-link to="/ki-automatisierung/readiness-check" class="text-accent hover:text-accent-hover underline">KI-Readiness-Check</router-link> hilft Ihnen in wenigen Minuten, Ihre Ausgangslage einzuschätzen.
     </p>
     <p>
-      <strong>Nächster Schritt:</strong> <router-link to="/kontakt" class="text-primary-600 hover:text-primary-700 underline">Vereinbaren Sie ein kostenloses Erstgespräch</router-link> — wir zeigen Ihnen, welche Agenten für Ihre spezifische Situation sinnvoll sind und wie ein realistischer Zeitplan aussieht.
+      <strong>Nächster Schritt:</strong> <router-link to="/kontakt" class="text-accent hover:text-accent-hover underline">Vereinbaren Sie ein kostenloses Erstgespräch</router-link> — wir zeigen Ihnen, welche Agenten für Ihre spezifische Situation sinnvoll sind und wie ein realistischer Zeitplan aussieht.
     </p>
     <p>
-      <strong>Weiterlesen:</strong> <router-link to="/blog/ki-automatisierung-kosten" class="text-primary-600 hover:text-primary-700 underline">Was kostet KI-Automatisierung? Preise, ROI und Amortisation 2026</router-link>
+      <strong>Weiterlesen:</strong> <router-link to="/blog/ki-automatisierung-kosten" class="text-accent hover:text-accent-hover underline">Was kostet KI-Automatisierung? Preise, ROI und Amortisation 2026</router-link>
     </p>
     <RelatedArticles slug="gmbh-mit-ki-agenten-automatisiert" />
   </article>

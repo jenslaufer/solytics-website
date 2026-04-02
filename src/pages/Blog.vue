@@ -1,54 +1,46 @@
 <template>
   <MainLayout>
-    <section class="relative overflow-hidden bg-gradient-to-br from-primary-950 via-primary-900 to-primary-800">
-      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(251,191,36,0.1),transparent_60%)]"></div>
-      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-28 sm:py-36">
+    <!-- Hero -->
+    <section class="pt-32 pb-20 md:pt-44 md:pb-32 px-6 md:px-10">
+      <div class="max-w-[var(--max-width-content)] mx-auto">
         <div class="max-w-3xl">
-          <p class="inline-block px-4 py-1.5 mb-6 text-xs font-semibold uppercase tracking-widest text-accent-300 bg-accent-400/10 border border-accent-400/20 rounded-full">
-            Blog
-          </p>
-          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-[1.1]">
-            Aktuelles von Solytics.
-          </h1>
-          <p class="mt-6 text-lg text-primary-200 max-w-2xl leading-relaxed">
-            Insights zu E-Rechnung, KI-Automatisierung und digitaler Transformation.
-          </p>
+          <p class="label text-muted mb-6">Blog</p>
+          <h1 class="heading-xl text-ink mb-4">Aktuelles von Solytics.</h1>
+          <p class="body-lg text-muted">Insights zu E-Rechnung, KI-Automatisierung und digitaler Transformation.</p>
         </div>
       </div>
     </section>
 
-    <section class="py-(--spacing-section) bg-surface-50 dark:bg-surface-100">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section class="pb-20 md:pb-32 px-6 md:px-10">
+      <div class="max-w-[var(--max-width-content)] mx-auto">
         <!-- Category filter -->
         <div class="flex flex-wrap gap-3 mb-12 fade-up">
           <button v-for="cat in categories" :key="cat.value" @click="activeCategory = cat.value"
-            class="px-4 py-2 text-sm font-medium rounded-full transition-colors"
+            class="px-4 py-2 text-sm font-medium rounded-md transition-colors"
             :class="activeCategory === cat.value
-              ? 'bg-primary-500 text-white'
-              : 'bg-white dark:bg-surface-200 text-surface-600 dark:text-surface-800 hover:bg-primary-50 dark:hover:bg-surface-300'">
+              ? 'bg-accent text-white'
+              : 'bg-warm-gray text-muted hover:text-ink'">
             {{ cat.label }}
           </button>
         </div>
 
         <!-- Post cards -->
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 fade-up">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-border rounded-md overflow-hidden fade-up">
           <router-link v-for="post in filteredPosts" :key="post.slug" :to="`/blog/${post.slug}`"
-            class="block bg-white dark:bg-surface-200 rounded-[var(--radius-card)] shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-card-hover)] transition-shadow overflow-hidden group">
-            <div class="p-6">
-              <span class="inline-block px-3 py-1 text-xs font-semibold uppercase tracking-wider rounded-full mb-4"
-                :class="post.category === 'e-rechnung' ? 'bg-primary-100 text-primary-700 dark:bg-primary-900 dark:text-primary-300' : 'bg-accent-100 text-accent-700 dark:bg-accent-900 dark:text-accent-300'">
-                {{ categoryLabel(post.category) }}
-              </span>
-              <h2 class="text-lg font-bold text-surface-900 dark:text-surface-950 group-hover:text-primary-600 transition-colors leading-snug">
-                {{ post.title }}
-              </h2>
-              <p class="mt-3 text-sm text-surface-500 dark:text-surface-700 leading-relaxed line-clamp-3">
-                {{ post.excerpt }}
-              </p>
-              <div class="mt-4 flex items-center gap-4 text-xs text-surface-400 dark:text-surface-600">
-                <span>{{ formatDate(post.date) }}</span>
-                <span>{{ post.readingTime }}</span>
-              </div>
+            class="block bg-surface p-6 hover:bg-warm-gray transition-colors group">
+            <span class="label mb-4 inline-block"
+              :class="post.category === 'e-rechnung' ? 'text-urgency' : 'text-accent'">
+              {{ categoryLabel(post.category) }}
+            </span>
+            <h2 class="heading-md text-ink group-hover:text-accent transition-colors leading-snug">
+              {{ post.title }}
+            </h2>
+            <p class="mt-3 body-md text-muted line-clamp-3">
+              {{ post.excerpt }}
+            </p>
+            <div class="mt-4 flex items-center gap-4 text-xs text-muted">
+              <span>{{ formatDate(post.date) }}</span>
+              <span>{{ post.readingTime }}</span>
             </div>
           </router-link>
         </div>

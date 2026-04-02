@@ -147,7 +147,7 @@
       Die Technologie ist reif, die Kosten sind überschaubar, und die Ergebnisse sind innerhalb weniger Wochen messbar. Der erste Schritt: Finden Sie heraus, wo in Ihrem Unternehmen das größte Potenzial liegt.
     </p>
     <p>
-      <router-link to="/ki-automatisierung" class="font-semibold text-primary-600 hover:text-primary-700">Erfahren Sie mehr über KI-Automatisierung bei Solytics</router-link> oder starten Sie direkt mit dem <router-link to="/ki-automatisierung/readiness-check" class="font-semibold text-primary-600 hover:text-primary-700">kostenlosen KI-Readiness-Check</router-link>.
+      <router-link to="/ki-automatisierung" class="font-semibold text-accent hover:text-accent-hover">Erfahren Sie mehr über KI-Automatisierung bei Solytics</router-link> oder starten Sie direkt mit dem <router-link to="/ki-automatisierung/readiness-check" class="font-semibold text-accent hover:text-accent-hover">kostenlosen KI-Readiness-Check</router-link>.
     </p>
     <RelatedArticles slug="digitalisierung-mittelstand-2026" />
   </article>
