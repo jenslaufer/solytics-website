@@ -4,6 +4,8 @@ export function useScrollAnimation() {
   let observer = null
 
   onMounted(() => {
+    document.documentElement.classList.add('js-ready')
+
     observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {

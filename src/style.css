@@ -91,30 +91,30 @@ body {
   outline-offset: 3px;
 }
 
-/* Scroll-triggered animations */
-.fade-up {
+/* Scroll-triggered animations — only when JS is active */
+.js-ready .fade-up {
   opacity: 0;
   transform: translateY(16px);
   transition: opacity 600ms cubic-bezier(0.25, 0.1, 0.25, 1),
               transform 600ms cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
-.fade-up-fast {
+.js-ready .fade-up-fast {
   opacity: 0;
   transform: translateY(12px);
   transition: opacity 400ms cubic-bezier(0.25, 0.1, 0.25, 1),
               transform 400ms cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
-.fade-up.visible,
-.fade-up-fast.visible {
+.js-ready .fade-up.visible,
+.js-ready .fade-up-fast.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .fade-up,
-  .fade-up-fast {
+  .js-ready .fade-up,
+  .js-ready .fade-up-fast {
     opacity: 1;
     transform: none;
     transition: none;
