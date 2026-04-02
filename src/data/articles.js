@@ -128,6 +128,11 @@ const relationshipMap = {
     'e-rechnung-software-vergleich-2026',
     'e-rechnung-erstellen-anleitung',
   ],
+  'e-rechnung-checkliste-2026': [
+    'e-rechnung-erstellen-anleitung',
+    'e-rechnung-kleinunternehmer',
+    'e-rechnung-fehler',
+  ],
 }
 
 export function getRelatedArticles(slug) {
