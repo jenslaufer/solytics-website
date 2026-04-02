@@ -1,25 +1,23 @@
 <template>
   <MainLayout>
     <!-- Hero -->
-    <section class="relative overflow-hidden bg-gradient-to-br from-primary-950 via-primary-900 to-primary-800">
-      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(30,64,175,0.2),transparent_60%)]"></div>
-      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-28 sm:py-36">
+    <section class="pt-32 pb-20 md:pt-44 md:pb-32 px-6 md:px-10">
+      <div class="max-w-[var(--max-width-content)] mx-auto">
         <div class="max-w-3xl">
-          <p class="inline-block px-4 py-1.5 mb-6 text-xs font-semibold uppercase tracking-widest text-green-300 bg-green-400/10 border border-green-400/20 rounded-full">
-            Bis zu 50 % Förderung durch den Freistaat Bayern
-          </p>
-          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-[1.1]">
-            Digitalisierung.<br>
-            <span class="text-green-300">Halb so teuer mit Digitalbonus.</span>
+          <p class="label text-success mb-6">Bis zu 50 % Förderung durch den Freistaat Bayern</p>
+          <h1 class="heading-xl text-ink mb-8">
+            Digitalisierung. Halb so teuer mit Digitalbonus.
           </h1>
-          <p class="mt-6 text-lg text-primary-200 max-w-2xl leading-relaxed">
+          <p class="body-lg text-muted max-w-prose mb-10">
             Der Digitalbonus Bayern übernimmt bis zu 50 % Ihrer Digitalisierungskosten — maximal 7.500 €. Ob E-Rechnung oder KI-Automatisierung: Nutzen Sie die Förderung, bevor sie ausläuft.
           </p>
-          <div class="mt-10 flex flex-col sm:flex-row gap-4">
-            <router-link to="/kontakt" class="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-primary-950 bg-accent-400 hover:bg-accent-300 rounded-[var(--radius-button)] transition-colors shadow-lg shadow-accent-400/25">
+          <div class="flex flex-col sm:flex-row gap-4">
+            <router-link to="/kontakt"
+              class="cta-button bg-accent text-white px-8 py-4 text-base rounded-md hover:bg-accent-hover text-center">
               Kostenloses Erstgespräch
             </router-link>
-            <a href="#pakete" class="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white border border-white/20 hover:bg-white/10 rounded-[var(--radius-button)] transition-colors">
+            <a href="#pakete"
+              class="inline-block px-8 py-4 text-base font-semibold text-ink border border-border hover:bg-warm-gray rounded-md transition-colors text-center">
               Förderfähige Pakete
             </a>
           </div>
@@ -27,95 +25,84 @@
       </div>
     </section>
 
-    <!-- What is Digitalbonus -->
-    <section class="py-(--spacing-section) bg-surface-50 dark:bg-surface-100">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Key Numbers -->
+    <section class="py-20 md:py-32 px-6 md:px-10 bg-warm-gray fade-up">
+      <div class="max-w-[var(--max-width-content)] mx-auto">
         <SectionHeading badge="Digitalbonus Bayern">
           So funktioniert die Förderung.
           <template #description>Der Freistaat Bayern fördert die Digitalisierung kleiner und mittlerer Unternehmen — E-Rechnung, KI-Automatisierung und mehr.</template>
         </SectionHeading>
 
-        <div class="grid sm:grid-cols-3 gap-6 fade-up">
-          <div class="bg-white dark:bg-surface-200 rounded-[var(--radius-card)] p-8 shadow-[var(--shadow-card)] text-center">
-            <div class="text-3xl font-bold text-green-600">50 %</div>
-            <div class="mt-2 text-sm font-semibold text-surface-900 dark:text-surface-950">Zuschuss</div>
-            <p class="mt-2 text-sm text-surface-500">Der Freistaat übernimmt die Hälfte Ihrer Digitalisierungskosten.</p>
+        <div class="grid sm:grid-cols-3 gap-px bg-border rounded-md overflow-hidden">
+          <div class="bg-surface p-8 text-center">
+            <div class="text-3xl font-bold text-success">50 %</div>
+            <div class="mt-2 heading-md text-ink">Zuschuss</div>
+            <p class="mt-2 body-md text-muted">Der Freistaat übernimmt die Hälfte Ihrer Digitalisierungskosten.</p>
           </div>
-          <div class="bg-white dark:bg-surface-200 rounded-[var(--radius-card)] p-8 shadow-[var(--shadow-card)] text-center">
-            <div class="text-3xl font-bold text-green-600">7.500 €</div>
-            <div class="mt-2 text-sm font-semibold text-surface-900 dark:text-surface-950">Maximalförderung</div>
-            <p class="mt-2 text-sm text-surface-500">Bis zu 7.500 € Zuschuss für den Digitalbonus Standard.</p>
+          <div class="bg-surface p-8 text-center">
+            <div class="text-3xl font-bold text-success">7.500 €</div>
+            <div class="mt-2 heading-md text-ink">Maximalförderung</div>
+            <p class="mt-2 body-md text-muted">Bis zu 7.500 € Zuschuss für den Digitalbonus Standard.</p>
           </div>
-          <div class="bg-white dark:bg-surface-200 rounded-[var(--radius-card)] p-8 shadow-[var(--shadow-card)] text-center ring-2 ring-red-500">
-            <div class="text-3xl font-bold text-red-500">31.12.2027</div>
-            <div class="mt-2 text-sm font-semibold text-surface-900 dark:text-surface-950">Förderende</div>
-            <p class="mt-2 text-sm text-surface-500">Antragstellung nur noch bis Ende 2027 möglich.</p>
+          <div class="bg-surface p-8 text-center ring-2 ring-inset ring-urgency">
+            <div class="text-3xl font-bold text-urgency">31.12.2027</div>
+            <div class="mt-2 heading-md text-ink">Förderende</div>
+            <p class="mt-2 body-md text-muted">Antragstellung nur noch bis Ende 2027 möglich.</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Two areas -->
-    <section class="py-(--spacing-section) bg-white dark:bg-surface-200">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section class="py-20 md:py-32 px-6 md:px-10 fade-up">
+      <div class="max-w-[var(--max-width-content)] mx-auto">
         <SectionHeading badge="Förderfähige Bereiche">
           Was der Digitalbonus abdeckt.
           <template #description>Beide Solytics-Leistungsbereiche fallen unter "Digitalisierung von Geschäftsprozessen".</template>
         </SectionHeading>
 
-        <div class="grid md:grid-cols-2 gap-8 fade-up">
-          <!-- E-Rechnung -->
-          <div class="bg-surface-50 dark:bg-surface-100 rounded-[var(--radius-card)] p-8 shadow-[var(--shadow-card)]">
-            <div class="flex items-center gap-3 mb-4">
-              <div class="w-10 h-10 rounded-full bg-red-100 dark:bg-red-900/30 flex items-center justify-center">
-                <svg class="w-5 h-5 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/></svg>
-              </div>
-              <h3 class="text-xl font-bold text-surface-900 dark:text-surface-950">E-Rechnung</h3>
-            </div>
-            <p class="text-sm text-surface-500 mb-4">Pflicht ab 2027. XRechnung, ZUGFeRD, API-Integration — wir machen Sie compliant.</p>
+        <div class="grid md:grid-cols-2 gap-px bg-border rounded-md overflow-hidden">
+          <div class="bg-surface p-8 md:p-10">
+            <p class="label text-urgency mb-3">Pflicht ab 2027</p>
+            <h3 class="heading-md text-ink mb-3">E-Rechnung</h3>
+            <p class="body-md text-muted mb-4">XRechnung, ZUGFeRD, API-Integration — wir machen Sie compliant.</p>
             <ul class="space-y-2 mb-6">
-              <li class="flex items-center gap-2 text-sm text-surface-600">
-                <svg class="w-4 h-4 text-green-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
-                Compliance-Check ab <span class="font-semibold text-green-600">750 €</span>
+              <li class="flex items-center gap-3 body-md text-muted">
+                <span class="block w-1.5 h-1.5 rounded-full bg-success shrink-0"></span>
+                Compliance-Check ab <span class="font-semibold text-success">750 €</span>
               </li>
-              <li class="flex items-center gap-2 text-sm text-surface-600">
-                <svg class="w-4 h-4 text-green-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
-                Implementierung ab <span class="font-semibold text-green-600">2.500 €</span>
+              <li class="flex items-center gap-3 body-md text-muted">
+                <span class="block w-1.5 h-1.5 rounded-full bg-success shrink-0"></span>
+                Implementierung ab <span class="font-semibold text-success">2.500 €</span>
               </li>
-              <li class="flex items-center gap-2 text-sm text-surface-600">
-                <svg class="w-4 h-4 text-green-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
-                Komplettmigration ab <span class="font-semibold text-green-600">5.000 €</span>
+              <li class="flex items-center gap-3 body-md text-muted">
+                <span class="block w-1.5 h-1.5 rounded-full bg-success shrink-0"></span>
+                Komplettmigration ab <span class="font-semibold text-success">5.000 €</span>
               </li>
             </ul>
-            <router-link to="/e-rechnung" class="text-sm font-semibold text-primary-600 hover:text-primary-500 transition-colors">
+            <router-link to="/e-rechnung" class="label text-accent hover:text-accent-hover transition-colors">
               Mehr zu E-Rechnung &rarr;
             </router-link>
           </div>
-
-          <!-- KI-Automatisierung -->
-          <div class="bg-surface-50 dark:bg-surface-100 rounded-[var(--radius-card)] p-8 shadow-[var(--shadow-card)]">
-            <div class="flex items-center gap-3 mb-4">
-              <div class="w-10 h-10 rounded-full bg-accent-100 dark:bg-accent-900/30 flex items-center justify-center">
-                <svg class="w-5 h-5 text-accent-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z"/></svg>
-              </div>
-              <h3 class="text-xl font-bold text-surface-900 dark:text-surface-950">KI-Automatisierung</h3>
-            </div>
-            <p class="text-sm text-surface-500 mb-4">KI-Agenten für Ihre Geschäftsprozesse. Autonom, lernfähig, integriert in Ihre Systeme.</p>
+          <div class="bg-surface p-8 md:p-10">
+            <p class="label text-accent mb-3">Autonome Prozesse</p>
+            <h3 class="heading-md text-ink mb-3">KI-Automatisierung</h3>
+            <p class="body-md text-muted mb-4">KI-Agenten für Ihre Geschäftsprozesse. Autonom, lernfähig, integriert in Ihre Systeme.</p>
             <ul class="space-y-2 mb-6">
-              <li class="flex items-center gap-2 text-sm text-surface-600">
-                <svg class="w-4 h-4 text-green-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
-                Discovery Workshop ab <span class="font-semibold text-green-600">1.250 €</span>
+              <li class="flex items-center gap-3 body-md text-muted">
+                <span class="block w-1.5 h-1.5 rounded-full bg-success shrink-0"></span>
+                Discovery Workshop ab <span class="font-semibold text-success">1.250 €</span>
               </li>
-              <li class="flex items-center gap-2 text-sm text-surface-600">
-                <svg class="w-4 h-4 text-green-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
-                Agent Setup ab <span class="font-semibold text-green-600">2.500 €</span>
+              <li class="flex items-center gap-3 body-md text-muted">
+                <span class="block w-1.5 h-1.5 rounded-full bg-success shrink-0"></span>
+                Agent Setup ab <span class="font-semibold text-success">2.500 €</span>
               </li>
-              <li class="flex items-center gap-2 text-sm text-surface-600">
-                <svg class="w-4 h-4 text-green-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
-                Retainer ab <span class="font-semibold text-green-600">1.000 €/Monat</span>
+              <li class="flex items-center gap-3 body-md text-muted">
+                <span class="block w-1.5 h-1.5 rounded-full bg-success shrink-0"></span>
+                Retainer ab <span class="font-semibold text-success">1.000 €/Monat</span>
               </li>
             </ul>
-            <router-link to="/ki-automatisierung" class="text-sm font-semibold text-primary-600 hover:text-primary-500 transition-colors">
+            <router-link to="/ki-automatisierung" class="label text-accent hover:text-accent-hover transition-colors">
               Mehr zu KI-Automatisierung &rarr;
             </router-link>
           </div>
@@ -124,58 +111,57 @@
     </section>
 
     <!-- How it works -->
-    <section class="py-(--spacing-section) bg-surface-50 dark:bg-surface-100">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section class="py-20 md:py-32 px-6 md:px-10 bg-warm-gray fade-up">
+      <div class="max-w-[var(--max-width-content)] mx-auto">
         <SectionHeading badge="In 3 Schritten">
           So nutzen Sie den Digitalbonus.
         </SectionHeading>
 
-        <div class="grid sm:grid-cols-3 gap-6 fade-up">
-          <div class="bg-white dark:bg-surface-200 rounded-[var(--radius-card)] p-8 shadow-[var(--shadow-card)]">
-            <div class="w-10 h-10 rounded-full bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center text-primary-600 dark:text-primary-400 font-bold text-lg mb-4">1</div>
-            <h3 class="text-lg font-bold text-surface-900 dark:text-surface-950">Erstgespräch</h3>
-            <p class="mt-2 text-sm text-surface-500">Wir analysieren Ihren Bedarf — ob E-Rechnung, KI oder beides — und erstellen ein förderfähiges Angebot.</p>
+        <div class="grid sm:grid-cols-3 gap-px bg-border rounded-md overflow-hidden">
+          <div class="bg-surface p-8">
+            <p class="label text-accent mb-4">Schritt 1</p>
+            <h3 class="heading-md text-ink mb-2">Erstgespräch</h3>
+            <p class="body-md text-muted">Wir analysieren Ihren Bedarf — ob E-Rechnung, KI oder beides — und erstellen ein förderfähiges Angebot.</p>
           </div>
-          <div class="bg-white dark:bg-surface-200 rounded-[var(--radius-card)] p-8 shadow-[var(--shadow-card)]">
-            <div class="w-10 h-10 rounded-full bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center text-primary-600 dark:text-primary-400 font-bold text-lg mb-4">2</div>
-            <h3 class="text-lg font-bold text-surface-900 dark:text-surface-950">Antrag stellen</h3>
-            <p class="mt-2 text-sm text-surface-500">Sie stellen den Digitalbonus-Antrag bei der IHK. Wir helfen Ihnen bei der Dokumentation.</p>
+          <div class="bg-surface p-8">
+            <p class="label text-accent mb-4">Schritt 2</p>
+            <h3 class="heading-md text-ink mb-2">Antrag stellen</h3>
+            <p class="body-md text-muted">Sie stellen den Digitalbonus-Antrag bei der IHK. Wir helfen Ihnen bei der Dokumentation.</p>
           </div>
-          <div class="bg-white dark:bg-surface-200 rounded-[var(--radius-card)] p-8 shadow-[var(--shadow-card)]">
-            <div class="w-10 h-10 rounded-full bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center text-primary-600 dark:text-primary-400 font-bold text-lg mb-4">3</div>
-            <h3 class="text-lg font-bold text-surface-900 dark:text-surface-950">Umsetzung</h3>
-            <p class="mt-2 text-sm text-surface-500">Nach Bewilligung starten wir die Implementierung. Sie zahlen nur Ihren Eigenanteil.</p>
+          <div class="bg-surface p-8">
+            <p class="label text-accent mb-4">Schritt 3</p>
+            <h3 class="heading-md text-ink mb-2">Umsetzung</h3>
+            <p class="body-md text-muted">Nach Bewilligung starten wir die Implementierung. Sie zahlen nur Ihren Eigenanteil.</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- FAQ -->
-    <section id="pakete" class="py-(--spacing-section) bg-white dark:bg-surface-200">
-      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="pakete" class="py-20 md:py-32 px-6 md:px-10 fade-up">
+      <div class="max-w-3xl mx-auto">
         <SectionHeading badge="FAQ">
           Häufige Fragen zum Digitalbonus.
         </SectionHeading>
 
-        <div class="space-y-6 fade-up">
-          <div v-for="faq in faqs" :key="faq.q" class="bg-surface-50 dark:bg-surface-100 rounded-[var(--radius-card)] p-6">
-            <h3 class="font-bold text-surface-900 dark:text-surface-950">{{ faq.q }}</h3>
-            <p class="mt-2 text-sm text-surface-500 leading-relaxed">{{ faq.a }}</p>
+        <div class="space-y-px">
+          <div v-for="faq in faqs" :key="faq.q" class="bg-warm-gray p-6">
+            <h3 class="font-bold text-ink">{{ faq.q }}</h3>
+            <p class="mt-2 body-md text-muted">{{ faq.a }}</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- CTA -->
-    <section class="py-(--spacing-section) bg-gradient-to-br from-primary-900 to-primary-950">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center fade-up">
-        <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">
-          50 % sparen. Jetzt handeln.
-        </h2>
-        <p class="mt-4 text-lg text-primary-200 max-w-2xl mx-auto">
+    <section class="py-24 md:py-40 px-6 md:px-10 border-t border-border fade-up">
+      <div class="max-w-2xl mx-auto text-center">
+        <h2 class="heading-lg text-ink mb-8">50 % sparen. Jetzt handeln.</h2>
+        <p class="body-lg text-muted mb-12">
           Der Digitalbonus endet 2027. Wer jetzt startet, spart die Hälfte — ob bei E-Rechnung, KI-Automatisierung oder beidem.
         </p>
-        <router-link to="/kontakt" class="inline-flex items-center justify-center mt-10 px-8 py-4 text-base font-semibold text-primary-950 bg-accent-400 hover:bg-accent-300 rounded-[var(--radius-button)] transition-colors shadow-lg shadow-accent-400/25">
+        <router-link to="/kontakt"
+          class="cta-button bg-accent text-white px-10 py-5 text-lg rounded-md hover:bg-accent-hover">
           Kostenloses Erstgespräch vereinbaren
         </router-link>
       </div>

@@ -122,9 +122,9 @@
         <tr><td>1</td><td>12.500 €</td><td>5.000 €</td><td>−7.500 €</td></tr>
         <tr><td>2</td><td>14.500 €</td><td>10.000 €</td><td>−4.500 €</td></tr>
         <tr><td>3</td><td>16.500 €</td><td>15.000 €</td><td>−1.500 €</td></tr>
-        <tr><td>4</td><td>18.500 €</td><td>20.000 €</td><td class="font-semibold text-green-700">+1.500 €</td></tr>
-        <tr><td>6</td><td>22.500 €</td><td>30.000 €</td><td class="font-semibold text-green-700">+7.500 €</td></tr>
-        <tr><td>12</td><td>34.500 €</td><td>60.000 €</td><td class="font-semibold text-green-700">+25.500 €</td></tr>
+        <tr><td>4</td><td>18.500 €</td><td>20.000 €</td><td class="font-semibold text-success">+1.500 €</td></tr>
+        <tr><td>6</td><td>22.500 €</td><td>30.000 €</td><td class="font-semibold text-success">+7.500 €</td></tr>
+        <tr><td>12</td><td>34.500 €</td><td>60.000 €</td><td class="font-semibold text-success">+25.500 €</td></tr>
       </tbody>
     </table>
     <p>
@@ -159,7 +159,7 @@
       <li><strong>Zeitkritische Prozesse:</strong> Schnellere Bearbeitung verschafft Ihnen einen Wettbewerbsvorteil — etwa bei Kundenanfragen oder Marktanalysen.</li>
     </ul>
     <p>
-      <strong>Faustregel:</strong> Wenn drei oder mehr Punkte auf einen Prozess zutreffen, lohnt sich eine genauere Analyse. Unser <router-link to="/ki-automatisierung/readiness-check" class="text-primary-600 hover:text-primary-700 underline">KI-Readiness-Check</router-link> hilft Ihnen, das Potenzial schnell einzuschätzen.
+      <strong>Faustregel:</strong> Wenn drei oder mehr Punkte auf einen Prozess zutreffen, lohnt sich eine genauere Analyse. Unser <router-link to="/ki-automatisierung/readiness-check" class="text-accent hover:text-accent-hover underline">KI-Readiness-Check</router-link> hilft Ihnen, das Potenzial schnell einzuschätzen.
     </p>
 
     <h2>KI-Automatisierung vs. klassische Softwareentwicklung</h2>
@@ -185,7 +185,7 @@
     </p>
     <ol>
       <li><strong>Prozess identifizieren:</strong> Wählen Sie einen konkreten, abgegrenzten Prozess mit hohem manuellem Aufwand.</li>
-      <li><strong>Workshop buchen:</strong> In einem 1–2-tägigen <router-link to="/ki-automatisierung" class="text-primary-600 hover:text-primary-700 underline">Workshop</router-link> analysieren wir gemeinsam die Machbarkeit und definieren den MVP.</li>
+      <li><strong>Workshop buchen:</strong> In einem 1–2-tägigen <router-link to="/ki-automatisierung" class="text-accent hover:text-accent-hover underline">Workshop</router-link> analysieren wir gemeinsam die Machbarkeit und definieren den MVP.</li>
       <li><strong>Pilot umsetzen:</strong> Innerhalb weniger Wochen haben Sie einen funktionierenden KI-Agenten im Einsatz — mit messbaren Ergebnissen.</li>
     </ol>
 
@@ -197,10 +197,10 @@
       Entscheidend ist nicht die Frage, ob Sie sich KI-Automatisierung leisten können — sondern ob Sie es sich leisten können, darauf zu verzichten. Jeder Monat ohne Automatisierung ist ein Monat, in dem manuelle Arbeit Ressourcen bindet, die Ihr Unternehmen für Wachstum und Innovation nutzen könnte.
     </p>
     <p>
-      <strong>Nächster Schritt:</strong> <router-link to="/kontakt" class="text-primary-600 hover:text-primary-700 underline">Vereinbaren Sie ein kostenloses Erstgespräch</router-link> und erfahren Sie, welches Einsparpotenzial in Ihren Prozessen steckt.
+      <strong>Nächster Schritt:</strong> <router-link to="/kontakt" class="text-accent hover:text-accent-hover underline">Vereinbaren Sie ein kostenloses Erstgespräch</router-link> und erfahren Sie, welches Einsparpotenzial in Ihren Prozessen steckt.
     </p>
     <p>
-      <strong>Weiterlesen:</strong> <router-link to="/blog/ki-agenten-fuer-unternehmen" class="text-primary-600 hover:text-primary-700 underline">KI-Agenten für Unternehmen — Prozesse automatisieren mit intelligenter Software</router-link>
+      <strong>Weiterlesen:</strong> <router-link to="/blog/ki-agenten-fuer-unternehmen" class="text-accent hover:text-accent-hover underline">KI-Agenten für Unternehmen — Prozesse automatisieren mit intelligenter Software</router-link>
     </p>
     <RelatedArticles slug="ki-automatisierung-kosten" />
   </article>

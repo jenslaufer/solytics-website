@@ -31,7 +31,7 @@
 
     <h3>Praxisbeispiel: Buchhaltung</h3>
     <p>
-      Ein typisches Szenario: Zwei Buchhalter verbringen zusammen 50 Stunden pro Monat mit Belegerfassung, Kontierung und Bankabgleich. Nach Einführung einer <router-link to="/blog/ki-buchhaltung" class="text-primary-600 hover:text-primary-700 underline">KI-gestützten Buchhaltungslösung</router-link> sinkt der Aufwand auf 5 Stunden pro Monat — für Kontrolle und Sonderfälle.
+      Ein typisches Szenario: Zwei Buchhalter verbringen zusammen 50 Stunden pro Monat mit Belegerfassung, Kontierung und Bankabgleich. Nach Einführung einer <router-link to="/blog/ki-buchhaltung" class="text-accent hover:text-accent-hover underline">KI-gestützten Buchhaltungslösung</router-link> sinkt der Aufwand auf 5 Stunden pro Monat — für Kontrolle und Sonderfälle.
     </p>
     <table>
       <thead>
@@ -41,7 +41,7 @@
         <tr><td>Monatlicher Aufwand</td><td>50 Stunden</td><td>5 Stunden</td></tr>
         <tr><td>Stundensatz (Brutto)</td><td colspan="2">55 €</td></tr>
         <tr><td>Monatliche Kosten</td><td>2.750 €</td><td>275 €</td></tr>
-        <tr><td class="font-semibold">Monatliche Einsparung</td><td colspan="2" class="font-semibold text-green-700">2.475 €</td></tr>
+        <tr><td class="font-semibold">Monatliche Einsparung</td><td colspan="2" class="font-semibold text-success">2.475 €</td></tr>
       </tbody>
     </table>
     <p>
@@ -61,7 +61,7 @@
         <tr><td>Bearbeitungszeit/Rechnung</td><td>8 Min.</td><td>1 Min.</td></tr>
         <tr><td>Monatlicher Aufwand</td><td>80 Stunden</td><td>10 Stunden</td></tr>
         <tr><td>Stundensatz (Brutto)</td><td colspan="2">45 €</td></tr>
-        <tr><td class="font-semibold">Monatliche Einsparung</td><td colspan="2" class="font-semibold text-green-700">3.150 €</td></tr>
+        <tr><td class="font-semibold">Monatliche Einsparung</td><td colspan="2" class="font-semibold text-success">3.150 €</td></tr>
       </tbody>
     </table>
 
@@ -78,7 +78,7 @@
         <tr><td>Bearbeitungszeit/Ticket</td><td>12 Min.</td><td>0 Min. (automatisch)</td></tr>
         <tr><td>Monatlicher Aufwand</td><td>104 Stunden</td><td>0 Stunden</td></tr>
         <tr><td>Stundensatz (Brutto)</td><td colspan="2">40 €</td></tr>
-        <tr><td class="font-semibold">Monatliche Einsparung</td><td colspan="2" class="font-semibold text-green-700">4.160 €</td></tr>
+        <tr><td class="font-semibold">Monatliche Einsparung</td><td colspan="2" class="font-semibold text-success">4.160 €</td></tr>
       </tbody>
     </table>
     <p>
@@ -118,7 +118,7 @@
       <li><strong>Ist-Aufwand messen:</strong> Erfassen Sie den monatlichen Zeitaufwand in Stunden und den zugehörigen Stundensatz.</li>
       <li><strong>Fehlerkosten schätzen:</strong> Wie viele Fehler treten monatlich auf? Was kostet jeder Fehler an Nacharbeit?</li>
       <li><strong>Soll-Aufwand schätzen:</strong> Wie viel Restaufwand bleibt nach Automatisierung? Realistisch: 10–20 % des Ist-Aufwands für Kontrolle und Sonderfälle.</li>
-      <li><strong>KI-Kosten ermitteln:</strong> Initialkosten (Workshop + Setup) und laufende Kosten (Retainer, API-Kosten, Infrastruktur). Transparente Anbieter wie Solytics nennen diese im Voraus — mehr dazu in <router-link to="/blog/ki-automatisierung-kosten" class="text-primary-600 hover:text-primary-700 underline">Was kostet KI-Automatisierung?</router-link></li>
+      <li><strong>KI-Kosten ermitteln:</strong> Initialkosten (Workshop + Setup) und laufende Kosten (Retainer, API-Kosten, Infrastruktur). Transparente Anbieter wie Solytics nennen diese im Voraus — mehr dazu in <router-link to="/blog/ki-automatisierung-kosten" class="text-accent hover:text-accent-hover underline">Was kostet KI-Automatisierung?</router-link></li>
       <li><strong>Break-even berechnen:</strong> Ab welchem Monat übersteigt die kumulierte Einsparung die kumulierten Kosten?</li>
       <li><strong>ROI auf 12 Monate berechnen:</strong> (Gesamteinsparung Jahr 1 − Gesamtkosten Jahr 1) / Gesamtkosten Jahr 1 × 100 %.</li>
     </ol>
@@ -132,19 +132,19 @@
         <tr><th>Position</th><th>Betrag</th></tr>
       </thead>
       <tbody>
-        <tr><td colspan="2" class="font-semibold bg-surface-100">Kosten Jahr 1</td></tr>
+        <tr><td colspan="2" class="font-semibold bg-warm-gray">Kosten Jahr 1</td></tr>
         <tr><td>Workshop (Potenzialanalyse)</td><td>2.500 €</td></tr>
         <tr><td>Setup (Entwicklung & Integration)</td><td>12.000 €</td></tr>
         <tr><td>Retainer (12 × 2.000 €)</td><td>24.000 €</td></tr>
         <tr><td class="font-semibold">Gesamtkosten Jahr 1</td><td class="font-semibold">38.500 €</td></tr>
-        <tr><td colspan="2" class="font-semibold bg-surface-100">Einsparungen Jahr 1</td></tr>
+        <tr><td colspan="2" class="font-semibold bg-warm-gray">Einsparungen Jahr 1</td></tr>
         <tr><td>Zeiteinsparung Rechnungsverarbeitung (12 × 3.150 €)</td><td>37.800 €</td></tr>
         <tr><td>Zeiteinsparung Buchhaltung (12 × 2.475 €)</td><td>29.700 €</td></tr>
         <tr><td>Fehlerreduktion (geschätzt)</td><td>6.000 €</td></tr>
-        <tr><td class="font-semibold">Gesamteinsparung Jahr 1</td><td class="font-semibold text-green-700">73.500 €</td></tr>
-        <tr><td colspan="2" class="font-semibold bg-surface-100">Ergebnis</td></tr>
-        <tr><td class="font-semibold">Netto-Gewinn Jahr 1</td><td class="font-semibold text-green-700">35.000 €</td></tr>
-        <tr><td class="font-semibold">ROI Jahr 1</td><td class="font-semibold text-green-700">91 %</td></tr>
+        <tr><td class="font-semibold">Gesamteinsparung Jahr 1</td><td class="font-semibold text-success">73.500 €</td></tr>
+        <tr><td colspan="2" class="font-semibold bg-warm-gray">Ergebnis</td></tr>
+        <tr><td class="font-semibold">Netto-Gewinn Jahr 1</td><td class="font-semibold text-success">35.000 €</td></tr>
+        <tr><td class="font-semibold">ROI Jahr 1</td><td class="font-semibold text-success">91 %</td></tr>
         <tr><td class="font-semibold">Break-even</td><td class="font-semibold">Monat 7</td></tr>
       </tbody>
     </table>
@@ -176,14 +176,14 @@
       Jedes Unternehmen ist anders. Die Beispiele in diesem Artikel geben Ihnen eine Orientierung, aber Ihre tatsächlichen Einsparungen hängen von Ihren spezifischen Prozessen, Volumina und Kostenstrukturen ab.
     </p>
     <p>
-      <strong><router-link to="/kontakt" class="text-primary-600 hover:text-primary-700 underline">Buchen Sie einen kostenlosen Potenzial-Check</router-link></strong> — in 30 Minuten analysieren wir gemeinsam Ihre Prozesse und berechnen den erwartbaren ROI für Ihre KI-Investition. Keine Verpflichtung, keine Verkaufsgespräche — nur Zahlen.
+      <strong><router-link to="/kontakt" class="text-accent hover:text-accent-hover underline">Buchen Sie einen kostenlosen Potenzial-Check</router-link></strong> — in 30 Minuten analysieren wir gemeinsam Ihre Prozesse und berechnen den erwartbaren ROI für Ihre KI-Investition. Keine Verpflichtung, keine Verkaufsgespräche — nur Zahlen.
     </p>
     <p>
       <strong>Weiterlesen:</strong>
     </p>
     <ul>
-      <li><router-link to="/blog/ki-automatisierung-kosten" class="text-primary-600 hover:text-primary-700 underline">Was kostet KI-Automatisierung? Preise, ROI und Amortisation</router-link></li>
-      <li><router-link to="/blog/ki-buchhaltung" class="text-primary-600 hover:text-primary-700 underline">KI in der Buchhaltung: So automatisieren Sie Ihre Finanzbuchhaltung</router-link></li>
+      <li><router-link to="/blog/ki-automatisierung-kosten" class="text-accent hover:text-accent-hover underline">Was kostet KI-Automatisierung? Preise, ROI und Amortisation</router-link></li>
+      <li><router-link to="/blog/ki-buchhaltung" class="text-accent hover:text-accent-hover underline">KI in der Buchhaltung: So automatisieren Sie Ihre Finanzbuchhaltung</router-link></li>
     </ul>
     <RelatedArticles slug="ki-roi-berechnen" />
   </article>

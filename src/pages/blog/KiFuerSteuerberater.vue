@@ -2,7 +2,7 @@
   <article class="prose-article">
     <h2>Warum KI für Steuerberater kein Luxus mehr ist</h2>
     <p>
-      Die Steuerberatung steht vor einem Umbruch. Fachkräftemangel, steigende regulatorische Anforderungen und die <router-link to="/blog/xrechnung-pflicht-2027" class="text-primary-600 hover:text-primary-700 underline">XRechnung-Pflicht ab 2027</router-link> erhöhen den Druck auf Kanzleien. Gleichzeitig verbringen Steuerberater und ihre Mitarbeiter den Großteil ihrer Arbeitszeit mit wiederkehrenden Routineaufgaben — Zeit, die für die qualifizierte Beratung fehlt.
+      Die Steuerberatung steht vor einem Umbruch. Fachkräftemangel, steigende regulatorische Anforderungen und die <router-link to="/blog/xrechnung-pflicht-2027" class="text-accent hover:text-accent-hover underline">XRechnung-Pflicht ab 2027</router-link> erhöhen den Druck auf Kanzleien. Gleichzeitig verbringen Steuerberater und ihre Mitarbeiter den Großteil ihrer Arbeitszeit mit wiederkehrenden Routineaufgaben — Zeit, die für die qualifizierte Beratung fehlt.
     </p>
     <p>
       KI-Automatisierung löst dieses Dilemma. Sie übernimmt die repetitiven Aufgaben und gibt Steuerberatern die Kapazität zurück, die sie für ihre Kernkompetenz brauchen: individuelle, strategische Mandantenberatung.
@@ -51,12 +51,12 @@
 
     <h3>5. Vorbereitende Buchhaltung</h3>
     <p>
-      Viele Kanzleien bieten die vorbereitende <router-link to="/blog/ki-buchhaltung" class="text-primary-600 hover:text-primary-700 underline">Buchhaltung</router-link> als Dienstleistung an. KI automatisiert den gesamten Vorbereitungsprozess: Belege erfassen, sortieren, kontieren, Bankabgleich durchführen und offene Posten identifizieren. Der Steuerberater prüft nur noch das Ergebnis.
+      Viele Kanzleien bieten die vorbereitende <router-link to="/blog/ki-buchhaltung" class="text-accent hover:text-accent-hover underline">Buchhaltung</router-link> als Dienstleistung an. KI automatisiert den gesamten Vorbereitungsprozess: Belege erfassen, sortieren, kontieren, Bankabgleich durchführen und offene Posten identifizieren. Der Steuerberater prüft nur noch das Ergebnis.
     </p>
 
     <h2>E-Rechnung als Katalysator</h2>
     <p>
-      Die <router-link to="/blog/e-rechnung-steuerberater" class="text-primary-600 hover:text-primary-700 underline">E-Rechnungspflicht</router-link> verändert die Spielregeln grundlegend. Ab 2027 müssen alle B2B-Rechnungen als strukturierte elektronische Rechnungen (XRechnung oder ZUGFeRD) versendet werden. Für Kanzleien bedeutet das:
+      Die <router-link to="/blog/e-rechnung-steuerberater" class="text-accent hover:text-accent-hover underline">E-Rechnungspflicht</router-link> verändert die Spielregeln grundlegend. Ab 2027 müssen alle B2B-Rechnungen als strukturierte elektronische Rechnungen (XRechnung oder ZUGFeRD) versendet werden. Für Kanzleien bedeutet das:
     </p>
     <ul>
       <li><strong>Strukturierte Daten:</strong> E-Rechnungen liefern maschinenlesbare Daten — keine OCR-Erkennung mehr nötig. Die KI kann Rechnungsdaten direkt und fehlerfrei verarbeiten.</li>
@@ -81,7 +81,7 @@
         <tr><td>Zeitaufwand Belegverarbeitung</td><td>120 Std./Monat</td><td>20 Std./Monat</td></tr>
         <tr><td>Fehlerquote Kontierung</td><td>5–8 %</td><td>unter 1 %</td></tr>
         <tr><td>Durchlaufzeit pro Mandant</td><td>5 Arbeitstage</td><td>1–2 Arbeitstage</td></tr>
-        <tr><td class="font-semibold">Monatliche Einsparung</td><td colspan="2" class="font-semibold text-green-700">5.500 €</td></tr>
+        <tr><td class="font-semibold">Monatliche Einsparung</td><td colspan="2" class="font-semibold text-success">5.500 €</td></tr>
       </tbody>
     </table>
     <p>
@@ -116,14 +116,14 @@
       Die E-Rechnungspflicht ab 2027 macht den Einstieg besonders attraktiv: Strukturierte Rechnungsdaten und KI-Automatisierung ergänzen sich ideal. Wer beides zusammen einführt, automatisiert seine Kanzlei-Buchhaltung weitgehend.
     </p>
     <p>
-      <strong><router-link to="/kontakt" class="text-primary-600 hover:text-primary-700 underline">Buchen Sie einen kostenlosen Potenzial-Check</router-link></strong> — wir analysieren Ihre Kanzlei-Prozesse und zeigen Ihnen, wo KI den größten Hebel hat. 30 Minuten, keine Verpflichtung.
+      <strong><router-link to="/kontakt" class="text-accent hover:text-accent-hover underline">Buchen Sie einen kostenlosen Potenzial-Check</router-link></strong> — wir analysieren Ihre Kanzlei-Prozesse und zeigen Ihnen, wo KI den größten Hebel hat. 30 Minuten, keine Verpflichtung.
     </p>
     <p>
       <strong>Weiterlesen:</strong>
     </p>
     <ul>
-      <li><router-link to="/blog/e-rechnung-steuerberater" class="text-primary-600 hover:text-primary-700 underline">E-Rechnung für Steuerberater: Mandanten richtig beraten</router-link></li>
-      <li><router-link to="/blog/ki-buchhaltung" class="text-primary-600 hover:text-primary-700 underline">KI in der Buchhaltung: So automatisieren Sie Ihre Finanzbuchhaltung</router-link></li>
+      <li><router-link to="/blog/e-rechnung-steuerberater" class="text-accent hover:text-accent-hover underline">E-Rechnung für Steuerberater: Mandanten richtig beraten</router-link></li>
+      <li><router-link to="/blog/ki-buchhaltung" class="text-accent hover:text-accent-hover underline">KI in der Buchhaltung: So automatisieren Sie Ihre Finanzbuchhaltung</router-link></li>
     </ul>
     <RelatedArticles slug="ki-fuer-steuerberater" />
   </article>

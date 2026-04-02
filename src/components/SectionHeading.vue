@@ -1,12 +1,10 @@
 <template>
-  <div class="text-center max-w-3xl mx-auto mb-16">
-    <p v-if="badge" class="inline-block px-4 py-1.5 mb-4 text-xs font-semibold uppercase tracking-widest text-primary-600 dark:text-primary-400 bg-primary-50 dark:bg-primary-950 rounded-full">
-      {{ badge }}
-    </p>
-    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-surface-900 dark:text-surface-950 tracking-tight">
+  <div class="mb-16" :class="center ? 'text-center max-w-2xl mx-auto' : 'max-w-2xl'">
+    <p v-if="badge" class="label text-muted mb-4">{{ badge }}</p>
+    <h2 class="heading-lg text-ink">
       <slot />
     </h2>
-    <p v-if="$slots.description" class="mt-4 text-lg text-surface-500 dark:text-surface-700 leading-relaxed">
+    <p v-if="$slots.description" class="body-lg text-muted mt-4 max-w-prose">
       <slot name="description" />
     </p>
   </div>
@@ -14,6 +12,7 @@
 
 <script setup>
 defineProps({
-  badge: { type: String, default: '' }
+  badge: { type: String, default: '' },
+  center: { type: Boolean, default: false },
 })
 </script>

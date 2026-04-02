@@ -1,25 +1,23 @@
 <template>
   <MainLayout>
     <!-- Hero -->
-    <section class="relative overflow-hidden bg-gradient-to-br from-primary-950 via-primary-900 to-primary-800">
-      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(251,191,36,0.1),transparent_60%)]"></div>
-      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-28 sm:py-36">
+    <section class="pt-32 pb-20 md:pt-44 md:pb-32 px-6 md:px-10">
+      <div class="max-w-[var(--max-width-content)] mx-auto">
         <div class="max-w-3xl">
-          <p class="inline-block px-4 py-1.5 mb-6 text-xs font-semibold uppercase tracking-widest text-accent-300 bg-accent-400/10 border border-accent-400/20 rounded-full">
-            KI-Agenten für Ihr Unternehmen
-          </p>
-          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-[1.1]">
-            KI-Automatisierung.<br>
-            <span class="text-accent-300">Intelligent. Autonom.</span>
+          <p class="label text-accent mb-6">KI-Agenten für Ihr Unternehmen</p>
+          <h1 class="heading-xl text-ink mb-8">
+            KI-Automatisierung. Intelligent. Autonom.
           </h1>
-          <p class="mt-6 text-lg text-primary-200 max-w-2xl leading-relaxed">
+          <p class="body-lg text-muted max-w-prose mb-10">
             Wir entwickeln KI-Agenten, die Ihre Geschäftsprozesse verstehen und autonom ausführen. Von der Datenverarbeitung über Kundenservice bis zur Entscheidungsvorbereitung.
           </p>
-          <div class="mt-10 flex flex-col sm:flex-row gap-4">
-            <router-link to="/kontakt" class="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-primary-950 bg-accent-400 hover:bg-accent-300 rounded-[var(--radius-button)] transition-colors shadow-lg shadow-accent-400/25">
+          <div class="flex flex-col sm:flex-row gap-4">
+            <router-link to="/kontakt"
+              class="cta-button bg-accent text-white px-8 py-4 text-base rounded-md hover:bg-accent-hover text-center">
               Workshop buchen
             </router-link>
-            <a href="#pakete" class="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white border border-white/20 hover:bg-white/10 rounded-[var(--radius-button)] transition-colors">
+            <a href="#pakete"
+              class="inline-block px-8 py-4 text-base font-semibold text-ink border border-border hover:bg-warm-gray rounded-md transition-colors text-center">
               Pakete ansehen
             </a>
           </div>
@@ -28,45 +26,45 @@
     </section>
 
     <!-- What are AI Agents -->
-    <section class="py-(--spacing-section) bg-surface-50 dark:bg-surface-100">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section class="py-20 md:py-32 px-6 md:px-10 bg-warm-gray fade-up">
+      <div class="max-w-[var(--max-width-content)] mx-auto">
         <SectionHeading badge="KI-Agenten">
           Was sind KI-Agenten?
           <template #description>KI-Agenten sind autonome Software-Systeme, die Aufgaben selbstständig planen, ausführen und aus Ergebnissen lernen.</template>
         </SectionHeading>
 
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 fade-up">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-border rounded-md overflow-hidden">
           <FeatureCard title="Autonome Ausführung" description="Agenten arbeiten selbstständig an Aufgaben — ohne ständige menschliche Eingriffe.">
-            <template #icon><svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z"/></svg></template>
+            <template #icon><svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z"/></svg></template>
           </FeatureCard>
           <FeatureCard title="Tool-Nutzung" description="Agenten nutzen APIs, Datenbanken und Software-Tools genau wie ein erfahrener Mitarbeiter.">
-            <template #icon><svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M11.42 15.17l-5.65-5.65a8 8 0 1111.3 0l-5.65 5.65z"/><path d="M12 9v.01"/></svg></template>
+            <template #icon><svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M11.42 15.17l-5.65-5.65a8 8 0 1111.3 0l-5.65 5.65z"/><path d="M12 9v.01"/></svg></template>
           </FeatureCard>
           <FeatureCard title="Kontinuierliches Lernen" description="Durch Feedback und Ergebnisanalyse verbessern sich Agenten kontinuierlich.">
-            <template #icon><svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M4.26 10.147a60.438 60.438 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342"/></svg></template>
+            <template #icon><svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M4.26 10.147a60.438 60.438 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342"/></svg></template>
           </FeatureCard>
           <FeatureCard title="Prozessautomatisierung" description="Wiederkehrende Geschäftsprozesse werden vollständig automatisiert.">
-            <template #icon><svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182"/></svg></template>
+            <template #icon><svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182"/></svg></template>
           </FeatureCard>
           <FeatureCard title="Multi-Agent-Systeme" description="Mehrere spezialisierte Agenten arbeiten koordiniert an komplexen Aufgaben.">
-            <template #icon><svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z"/></svg></template>
+            <template #icon><svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z"/></svg></template>
           </FeatureCard>
           <FeatureCard title="Sicherheit & Kontrolle" description="Volle Transparenz über Agentenaktionen mit konfigurierbaren Genehmigungsstufen.">
-            <template #icon><svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg></template>
+            <template #icon><svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg></template>
           </FeatureCard>
         </div>
       </div>
     </section>
 
     <!-- Pricing -->
-    <section id="pakete" class="py-(--spacing-section) bg-white dark:bg-surface-200">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="pakete" class="py-20 md:py-32 px-6 md:px-10 fade-up">
+      <div class="max-w-[var(--max-width-content)] mx-auto">
         <SectionHeading badge="Pakete">
           Ihr Weg zur KI-Automatisierung.
           <template #description>Strukturiert und begleitet — vom ersten Workshop bis zum produktiven Einsatz.</template>
         </SectionHeading>
 
-        <div class="grid md:grid-cols-3 gap-8 fade-up">
+        <div class="grid md:grid-cols-3 gap-px bg-border rounded-md overflow-hidden">
           <PricingCard
             title="Discovery Workshop"
             description="Gemeinsame Analyse Ihrer Prozesse und Identifikation von Automatisierungspotenzial."
@@ -111,43 +109,39 @@
     </section>
 
     <!-- Readiness Check -->
-    <section class="py-(--spacing-section) bg-surface-50 dark:bg-surface-100">
-      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center fade-up">
-        <SectionHeading badge="Kostenlos">
-          KI-Readiness-Check
-          <template #description>Finden Sie in 2 Minuten heraus, wie bereit Ihr Unternehmen für KI-Automatisierung ist.</template>
-        </SectionHeading>
+    <section class="py-16 md:py-24 px-6 md:px-10 border-t border-b border-border fade-up">
+      <div class="max-w-2xl mx-auto text-center">
+        <p class="label text-muted mb-4">Kostenlos</p>
+        <h2 class="heading-lg text-ink mb-4">KI-Readiness-Check</h2>
+        <p class="body-lg text-muted mb-8">Finden Sie in 2 Minuten heraus, wie bereit Ihr Unternehmen für KI-Automatisierung ist.</p>
         <router-link to="/ki-automatisierung/readiness-check"
-          class="mt-8 inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-primary-950 bg-accent-400 hover:bg-accent-300 rounded-[var(--radius-button)] transition-colors shadow-lg shadow-accent-400/25">
+          class="cta-button bg-accent text-white px-8 py-4 text-base rounded-md hover:bg-accent-hover">
           Jetzt Check starten
         </router-link>
       </div>
     </section>
 
     <!-- Digitalbonus -->
-    <section class="py-(--spacing-section) bg-green-50 dark:bg-green-950/20">
-      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center fade-up">
-        <SectionHeading badge="Förderung">
-          Digitalbonus Bayern: 50 % sparen.
-          <template #description>Der Freistaat übernimmt bis zu die Hälfte Ihrer Digitalisierungskosten — maximal 7.500 €. Gilt bis Ende 2027.</template>
-        </SectionHeading>
-        <router-link to="/digitalbonus"
-          class="mt-8 inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white bg-green-600 hover:bg-green-500 rounded-[var(--radius-button)] transition-colors shadow-lg shadow-green-600/25">
-          Mehr zur Förderung
+    <section class="py-16 md:py-24 px-6 md:px-10 bg-success-light fade-up">
+      <div class="max-w-2xl mx-auto text-center">
+        <p class="label text-success mb-4">Förderung</p>
+        <h2 class="heading-lg text-ink mb-4">Digitalbonus Bayern: 50 % sparen.</h2>
+        <p class="body-lg text-muted mb-8">Der Freistaat übernimmt bis zu die Hälfte Ihrer Digitalisierungskosten — maximal 7.500 €. Gilt bis Ende 2027.</p>
+        <router-link to="/digitalbonus" class="label text-accent hover:text-accent-hover transition-colors">
+          Mehr zur Förderung &rarr;
         </router-link>
       </div>
     </section>
 
     <!-- CTA -->
-    <section class="py-(--spacing-section) bg-gradient-to-br from-primary-900 to-primary-950">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center fade-up">
-        <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">
-          KI wartet nicht. Ihr Wettbewerb auch nicht.
-        </h2>
-        <p class="mt-4 text-lg text-primary-200 max-w-2xl mx-auto">
+    <section class="py-24 md:py-40 px-6 md:px-10 fade-up">
+      <div class="max-w-2xl mx-auto text-center">
+        <h2 class="heading-lg text-ink mb-8">KI wartet nicht. Ihr Wettbewerb auch nicht.</h2>
+        <p class="body-lg text-muted mb-12">
           Starten Sie mit einem Workshop und entdecken Sie, welche Prozesse in Ihrem Unternehmen sofort automatisiert werden können.
         </p>
-        <router-link to="/kontakt" class="inline-flex items-center justify-center mt-10 px-8 py-4 text-base font-semibold text-primary-950 bg-accent-400 hover:bg-accent-300 rounded-[var(--radius-button)] transition-colors shadow-lg shadow-accent-400/25">
+        <router-link to="/kontakt"
+          class="cta-button bg-accent text-white px-10 py-5 text-lg rounded-md hover:bg-accent-hover">
           Workshop anfragen
         </router-link>
       </div>

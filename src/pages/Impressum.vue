@@ -1,12 +1,12 @@
 <template>
   <MainLayout>
-    <section class="py-(--spacing-section) bg-surface-50 dark:bg-surface-100">
-      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 class="text-3xl font-bold text-surface-900 dark:text-surface-950 mb-8">Impressum</h1>
+    <section class="pt-32 pb-20 md:pt-44 md:pb-32 px-6 md:px-10">
+      <div class="max-w-3xl mx-auto">
+        <h1 class="heading-lg text-ink mb-8">Impressum</h1>
 
-        <div class="bg-white dark:bg-surface-200 rounded-[var(--radius-card)] p-8 shadow-[var(--shadow-card)] space-y-6 text-surface-700 dark:text-surface-800">
+        <div class="space-y-6 body-md text-muted">
           <div>
-            <h2 class="text-lg font-semibold text-surface-900 dark:text-surface-950 mb-2">Angaben gemäß § 5 TMG</h2>
+            <h2 class="heading-md text-ink mb-2">Angaben gemäß § 5 TMG</h2>
             <p>
               Solytics GmbH<br>
               Hörsteiner Str. 20a<br>
@@ -16,17 +16,17 @@
           </div>
 
           <div>
-            <h2 class="text-lg font-semibold text-surface-900 dark:text-surface-950 mb-2">Vertreten durch</h2>
+            <h2 class="heading-md text-ink mb-2">Vertreten durch</h2>
             <p>Jens Laufer (Geschäftsführer)</p>
           </div>
 
           <div>
-            <h2 class="text-lg font-semibold text-surface-900 dark:text-surface-950 mb-2">Kontakt</h2>
-            <p>E-Mail: <a href="mailto:jens.laufer@solytics.de" class="text-primary-600 dark:text-primary-400 hover:underline">jens.laufer@solytics.de</a></p>
+            <h2 class="heading-md text-ink mb-2">Kontakt</h2>
+            <p>E-Mail: <a href="mailto:jens.laufer@solytics.de" class="text-accent hover:text-accent-hover underline">jens.laufer@solytics.de</a></p>
           </div>
 
           <div>
-            <h2 class="text-lg font-semibold text-surface-900 dark:text-surface-950 mb-2">Registereintrag</h2>
+            <h2 class="heading-md text-ink mb-2">Registereintrag</h2>
             <p>
               Registergericht: Amtsgericht Aschaffenburg<br>
               Registernummer: HRB 16879
@@ -34,7 +34,7 @@
           </div>
 
           <div>
-            <h2 class="text-lg font-semibold text-surface-900 dark:text-surface-950 mb-2">Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
+            <h2 class="heading-md text-ink mb-2">Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
             <p>
               Jens Laufer<br>
               Hörsteiner Str. 20a<br>
@@ -43,15 +43,15 @@
           </div>
 
           <div>
-            <h2 class="text-lg font-semibold text-surface-900 dark:text-surface-950 mb-2">Haftungsausschluss</h2>
-            <h3 class="font-medium text-surface-900 dark:text-surface-950 mt-4 mb-1">Haftung für Inhalte</h3>
+            <h2 class="heading-md text-ink mb-2">Haftungsausschluss</h2>
+            <h3 class="font-medium text-ink mt-4 mb-1">Haftung für Inhalte</h3>
             <p class="text-sm leading-relaxed">
               Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen.
               Als Diensteanbieter sind wir gemäß § 7 Abs. 1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich.
               Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen.
             </p>
 
-            <h3 class="font-medium text-surface-900 dark:text-surface-950 mt-4 mb-1">Haftung für Links</h3>
+            <h3 class="font-medium text-ink mt-4 mb-1">Haftung für Links</h3>
             <p class="text-sm leading-relaxed">
               Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben.
               Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen.
