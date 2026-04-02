@@ -53,7 +53,7 @@
           <template #description>KI-Agenten sind autonome Software-Systeme, die Aufgaben selbstständig planen, ausführen und aus Ergebnissen lernen.</template>
         </SectionHeading>
 
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-border rounded-md overflow-hidden fade-up">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-border rounded-md overflow-hidden fade-up-fast">
           <FeatureCard title="Autonome Ausführung" description="Agenten arbeiten selbstständig an Aufgaben — ohne ständige menschliche Eingriffe.">
             <template #icon>
               <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z"/></svg>
@@ -93,12 +93,19 @@
     </section>
 
     <!-- Trust Signals -->
-    <section class="py-16 md:py-24 px-6 md:px-10 border-t border-b border-border fade-up">
+    <section class="py-20 md:py-32 px-6 md:px-10 border-t border-border fade-up">
       <div class="max-w-[var(--max-width-content)] mx-auto">
-        <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
-          <div v-for="signal in trustSignals" :key="signal.label" class="text-center">
-            <div class="text-3xl sm:text-4xl font-bold text-accent">{{ signal.value }}</div>
-            <div class="mt-2 body-md text-muted">{{ signal.label }}</div>
+        <div class="md:grid md:grid-cols-12 md:gap-16">
+          <div class="md:col-span-4 mb-10 md:mb-0">
+            <p class="text-7xl sm:text-8xl font-bold text-accent/10 leading-none">seit 2022</p>
+          </div>
+          <div class="md:col-span-7 md:col-start-6">
+            <div class="grid grid-cols-2 gap-8">
+              <div v-for="signal in trustSignals" :key="signal.label">
+                <div class="text-2xl sm:text-3xl font-bold text-ink">{{ signal.value }}</div>
+                <div class="mt-1 body-md text-muted">{{ signal.label }}</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

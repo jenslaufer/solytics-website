@@ -4,7 +4,7 @@
     <h2 class="heading-lg text-ink">
       <slot />
     </h2>
-    <p v-if="$slots.description" class="body-lg text-muted mt-4 max-w-prose">
+    <p v-if="$slots.description" class="body-lg text-muted mt-6 max-w-prose">
       <slot name="description" />
     </p>
   </div>

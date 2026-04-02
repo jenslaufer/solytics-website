@@ -25,7 +25,7 @@
         </div>
 
         <!-- Post cards -->
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-border rounded-md overflow-hidden fade-up">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-border rounded-md overflow-hidden fade-up-fast">
           <router-link v-for="post in filteredPosts" :key="post.slug" :to="`/blog/${post.slug}`"
             class="block bg-surface p-6 hover:bg-warm-gray transition-colors group">
             <span class="label mb-4 inline-block"

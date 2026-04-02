@@ -83,7 +83,7 @@
           <template #description>Beispiele für Website-Transformationen unserer Kunden.</template>
         </SectionHeading>
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-border rounded-md overflow-hidden fade-up">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-border rounded-md overflow-hidden fade-up-fast">
           <div v-for="(example, i) in beforeAfterExamples" :key="i" class="bg-surface p-6">
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
