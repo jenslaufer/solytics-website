@@ -1,5 +1,5 @@
 <template>
-  <footer class="py-12 px-6 md:px-10 border-t border-border">
+  <footer class="py-12 px-6 md:px-10 bg-warm-gray border-t border-border">
     <div class="max-w-[var(--max-width-content)] mx-auto">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
         <!-- Brand -->
