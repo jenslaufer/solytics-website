@@ -26,7 +26,7 @@
     </section>
 
     <!-- 3-Step Process -->
-    <section class="py-20 md:py-32 px-6 md:px-10 bg-warm-gray fade-up">
+    <section class="py-16 md:py-24 px-6 md:px-10 bg-warm-gray border-t border-border fade-up">
       <div class="max-w-[var(--max-width-content)] mx-auto">
         <SectionHeading badge="So funktioniert's">
           In drei Schritten zur KI-Automatisierung.
@@ -46,7 +46,7 @@
     </section>
 
     <!-- What KI-Agenten do -->
-    <section class="py-20 md:py-32 px-6 md:px-10 fade-up">
+    <section class="py-24 md:py-40 px-6 md:px-10 fade-up">
       <div class="max-w-[var(--max-width-content)] mx-auto">
         <SectionHeading badge="KI-Agenten">
           Intelligente Automatisierung.
@@ -74,7 +74,7 @@
     </section>
 
     <!-- Use Cases -->
-    <section class="py-20 md:py-32 px-6 md:px-10 bg-warm-gray fade-up">
+    <section class="py-20 md:py-32 px-6 md:px-10 bg-warm-gray border-t border-b border-border fade-up">
       <div class="max-w-[var(--max-width-content)] mx-auto">
         <SectionHeading badge="Einsatzbereiche">
           KI-Automatisierung in der Praxis.
@@ -93,7 +93,7 @@
     </section>
 
     <!-- Trust Signals -->
-    <section class="py-20 md:py-32 px-6 md:px-10 border-t border-border fade-up">
+    <section class="py-16 md:py-24 px-6 md:px-10 fade-up">
       <div class="max-w-[var(--max-width-content)] mx-auto">
         <div class="md:grid md:grid-cols-12 md:gap-16">
           <div class="md:col-span-4 mb-10 md:mb-0">
@@ -112,7 +112,7 @@
     </section>
 
     <!-- Why Solytics -->
-    <section class="py-20 md:py-32 px-6 md:px-10 fade-up">
+    <section class="py-20 md:py-32 px-6 md:px-10 border-t border-border fade-up">
       <div class="max-w-[var(--max-width-content)] mx-auto">
         <SectionHeading badge="Warum Solytics">
           Technologie trifft Beratung.
@@ -149,9 +149,9 @@
     </section>
 
     <!-- CTA -->
-    <section class="py-24 md:py-40 px-6 md:px-10 fade-up">
+    <section class="section-dark py-24 md:py-40 px-6 md:px-10 fade-up">
       <div class="max-w-2xl mx-auto text-center">
-        <h2 class="heading-lg text-ink mb-8">KI wartet nicht. Ihr Wettbewerb auch nicht.</h2>
+        <h2 class="heading-lg mb-8">KI wartet nicht. Ihr Wettbewerb auch nicht.</h2>
         <p class="body-lg text-muted mb-12">
           Starten Sie mit einem Workshop und entdecken Sie, welche Prozesse in Ihrem Unternehmen sofort automatisiert werden können.
         </p>

@@ -26,7 +26,7 @@
     </section>
 
     <!-- Key Numbers -->
-    <section class="py-20 md:py-32 px-6 md:px-10 bg-warm-gray fade-up">
+    <section class="py-16 md:py-24 px-6 md:px-10 bg-warm-gray border-t border-border fade-up">
       <div class="max-w-[var(--max-width-content)] mx-auto">
         <SectionHeading badge="Digitalbonus Bayern">
           So funktioniert die Förderung.
@@ -54,7 +54,7 @@
     </section>
 
     <!-- Two areas -->
-    <section class="py-20 md:py-32 px-6 md:px-10 fade-up">
+    <section class="py-24 md:py-40 px-6 md:px-10 fade-up">
       <div class="max-w-[var(--max-width-content)] mx-auto">
         <SectionHeading badge="Förderfähige Bereiche">
           Was der Digitalbonus abdeckt.
@@ -111,7 +111,7 @@
     </section>
 
     <!-- How it works -->
-    <section class="py-20 md:py-32 px-6 md:px-10 bg-warm-gray fade-up">
+    <section class="py-20 md:py-32 px-6 md:px-10 bg-warm-gray border-t border-b border-border fade-up">
       <div class="max-w-[var(--max-width-content)] mx-auto">
         <SectionHeading badge="In 3 Schritten">
           So nutzen Sie den Digitalbonus.
@@ -138,7 +138,7 @@
     </section>
 
     <!-- FAQ -->
-    <section id="pakete" class="py-20 md:py-32 px-6 md:px-10 fade-up">
+    <section id="pakete" class="py-16 md:py-24 px-6 md:px-10 fade-up">
       <div class="max-w-3xl mx-auto">
         <SectionHeading badge="FAQ">
           Häufige Fragen zum Digitalbonus.
@@ -154,9 +154,9 @@
     </section>
 
     <!-- CTA -->
-    <section class="py-24 md:py-40 px-6 md:px-10 border-t border-border fade-up">
+    <section class="section-dark py-24 md:py-40 px-6 md:px-10 fade-up">
       <div class="max-w-2xl mx-auto text-center">
-        <h2 class="heading-lg text-ink mb-8">50 % sparen. Jetzt handeln.</h2>
+        <h2 class="heading-lg mb-8">50 % sparen. Jetzt handeln.</h2>
         <p class="body-lg text-muted mb-12">
           Der Digitalbonus endet 2027. Wer jetzt startet, spart die Hälfte — ob bei E-Rechnung, KI-Automatisierung oder beidem.
         </p>

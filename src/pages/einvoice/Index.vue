@@ -26,7 +26,7 @@
     </section>
 
     <!-- Timeline -->
-    <section class="py-20 md:py-32 px-6 md:px-10 bg-warm-gray fade-up">
+    <section class="py-16 md:py-24 px-6 md:px-10 bg-warm-gray border-t border-border fade-up">
       <div class="max-w-[var(--max-width-content)] mx-auto">
         <SectionHeading badge="Zeitplan">
           Die E-Rechnungspflicht kommt.
@@ -54,7 +54,7 @@
     </section>
 
     <!-- Features -->
-    <section class="py-20 md:py-32 px-6 md:px-10 fade-up">
+    <section class="py-24 md:py-40 px-6 md:px-10 fade-up">
       <div class="max-w-[var(--max-width-content)] mx-auto">
         <SectionHeading badge="Leistungen">
           Alles für Ihre E-Rechnung.
@@ -84,7 +84,7 @@
     </section>
 
     <!-- Pricing -->
-    <section id="pakete" class="py-20 md:py-32 px-6 md:px-10 bg-warm-gray fade-up">
+    <section id="pakete" class="py-20 md:py-32 px-6 md:px-10 bg-warm-gray border-t border-b border-border fade-up">
       <div class="max-w-[var(--max-width-content)] mx-auto">
         <SectionHeading badge="Pakete">
           Transparent. Fair.
@@ -133,10 +133,10 @@
     </section>
 
     <!-- Pflicht-Check -->
-    <section class="py-16 md:py-24 px-6 md:px-10 border-t border-b border-border fade-up">
+    <section class="section-dark py-16 md:py-24 px-6 md:px-10 fade-up">
       <div class="max-w-2xl mx-auto text-center">
         <p class="label text-muted mb-4">Kostenlos</p>
-        <h2 class="heading-lg text-ink mb-4">Sind Sie bereit für die E-Rechnungspflicht?</h2>
+        <h2 class="heading-lg mb-4">Sind Sie bereit für die E-Rechnungspflicht?</h2>
         <p class="body-lg text-muted mb-8">Finden Sie in 4 Schritten heraus, ob und wann Ihr Unternehmen betroffen ist.</p>
         <router-link to="/e-rechnung/pflicht-check"
           class="cta-button bg-accent text-white px-8 py-4 text-base rounded-md hover:bg-accent-hover">
@@ -158,7 +158,7 @@
     </section>
 
     <!-- CTA -->
-    <section class="py-24 md:py-40 px-6 md:px-10 fade-up">
+    <section class="py-24 md:py-40 px-6 md:px-10 border-t border-border fade-up">
       <div class="max-w-2xl mx-auto text-center">
         <h2 class="heading-lg text-ink mb-8">Warten Sie nicht bis 2027.</h2>
         <p class="body-lg text-muted mb-12">

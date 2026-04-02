@@ -26,7 +26,7 @@
     </section>
 
     <!-- Problem -->
-    <section class="py-20 md:py-32 px-6 md:px-10 bg-warm-gray fade-up">
+    <section class="py-20 md:py-32 px-6 md:px-10 bg-warm-gray border-t border-border fade-up">
       <div class="max-w-[var(--max-width-content)] mx-auto">
         <SectionHeading badge="Das Problem">
           Eine veraltete Website kostet Sie Kunden.
@@ -48,7 +48,7 @@
     </section>
 
     <!-- Process -->
-    <section id="ablauf" class="py-20 md:py-32 px-6 md:px-10 fade-up">
+    <section id="ablauf" class="py-24 md:py-40 px-6 md:px-10 fade-up">
       <div class="max-w-[var(--max-width-content)] mx-auto">
         <SectionHeading badge="Ablauf">
           In 3 Schritten zur neuen Website.
@@ -76,7 +76,7 @@
     </section>
 
     <!-- Before / After -->
-    <section class="py-20 md:py-32 px-6 md:px-10 bg-warm-gray fade-up">
+    <section class="py-20 md:py-32 px-6 md:px-10 bg-warm-gray border-t border-b border-border fade-up">
       <div class="max-w-[var(--max-width-content)] mx-auto">
         <SectionHeading badge="Vorher / Nachher">
           So sieht der Unterschied aus.
@@ -114,7 +114,7 @@
     </section>
 
     <!-- Pricing -->
-    <section id="preise" class="py-20 md:py-32 px-6 md:px-10 fade-up">
+    <section id="preise" class="py-16 md:py-24 px-6 md:px-10 fade-up">
       <div class="max-w-[var(--max-width-content)] mx-auto">
         <SectionHeading badge="Preise" :center="true">
           Transparente Preise. Keine versteckten Kosten.
@@ -147,7 +147,7 @@
     </section>
 
     <!-- FAQ -->
-    <section class="py-20 md:py-32 px-6 md:px-10 bg-warm-gray fade-up">
+    <section class="py-20 md:py-32 px-6 md:px-10 bg-warm-gray border-t border-border fade-up">
       <div class="max-w-3xl mx-auto">
         <SectionHeading badge="FAQ">
           Häufige Fragen.
@@ -163,9 +163,9 @@
     </section>
 
     <!-- CTA -->
-    <section class="py-24 md:py-40 px-6 md:px-10 fade-up">
+    <section class="section-dark py-24 md:py-40 px-6 md:px-10 fade-up">
       <div class="max-w-2xl mx-auto text-center">
-        <h2 class="heading-lg text-ink mb-8">Lassen Sie uns Ihre Website analysieren.</h2>
+        <h2 class="heading-lg mb-8">Lassen Sie uns Ihre Website analysieren.</h2>
         <p class="body-lg text-muted mb-12">
           Fordern Sie jetzt eine kostenlose Analyse an und erfahren Sie, wie Ihre Website in 48 Stunden modern aussehen kann.
         </p>
