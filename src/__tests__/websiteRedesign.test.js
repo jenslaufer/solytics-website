@@ -12,6 +12,18 @@ beforeAll(() => {
   }
 })
 
+function createTestRouter() {
+  return createRouter({
+    history: createMemoryHistory(),
+    routes: appRouter.getRoutes().map(r => ({
+      path: r.path,
+      component: { template: '<div>stub</div>' },
+      redirect: r.redirect,
+      meta: r.meta,
+    })),
+  })
+}
+
 describe('Website-Redesign route', () => {
   it('has /website-redesign route', () => {
     const paths = appRouter.getRoutes().map(r => r.path)
@@ -85,5 +97,41 @@ describe('WebsiteRedesign page', () => {
   it('renders CTA linking to /kontakt', () => {
     const ctaLinks = wrapper.findAll('a[href="/kontakt"]')
     expect(ctaLinks.length).toBeGreaterThan(0)
+  })
+
+  it('renders pricing features list', () => {
+    const text = wrapper.text()
+    expect(text).toContain('Komplettes Redesign Ihrer Website')
+    expect(text).toContain('Mobile-optimiert')
+    expect(text).toContain('SEO-Grundoptimierung')
+    expect(text).toContain('48 Stunden Lieferzeit')
+  })
+})
+
+describe('NavBar contains Website-Redesign', () => {
+  it('navItems includes Website-Redesign link', async () => {
+    const { default: NavBar } = await import('../components/NavBar.vue')
+    const router = createTestRouter()
+    router.push('/')
+    await router.isReady()
+
+    const wrapper = mount(NavBar, {
+      global: { plugins: [router] },
+    })
+    expect(wrapper.text()).toContain('Website-Redesign')
+  })
+})
+
+describe('Footer contains Website-Redesign', () => {
+  it('footer includes Website-Redesign link', async () => {
+    const { default: SiteFooter } = await import('../components/SiteFooter.vue')
+    const router = createTestRouter()
+    router.push('/')
+    await router.isReady()
+
+    const wrapper = mount(SiteFooter, {
+      global: { plugins: [router] },
+    })
+    expect(wrapper.text()).toContain('Website-Redesign')
   })
 })
