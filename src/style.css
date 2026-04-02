@@ -159,6 +159,15 @@ body {
   width: 100%;
   border-collapse: collapse;
   margin-bottom: 1.5rem;
+  display: block;
+  overflow-x: auto;
+}
+
+@media (min-width: 640px) {
+  .prose-article table {
+    display: table;
+    overflow-x: visible;
+  }
 }
 .prose-article th {
   background-color: var(--color-warm-gray);

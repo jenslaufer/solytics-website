@@ -85,7 +85,7 @@
 
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-border rounded-md overflow-hidden fade-up">
           <div v-for="(example, i) in beforeAfterExamples" :key="i" class="bg-surface p-6">
-            <div class="grid grid-cols-2 gap-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
                 <p class="label text-urgency mb-2">Vorher</p>
                 <div class="aspect-[4/3] rounded bg-border flex items-center justify-center">

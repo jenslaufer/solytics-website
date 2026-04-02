@@ -44,7 +44,7 @@
           </div>
 
           <!-- Prev/Next -->
-          <div class="mt-12 grid grid-cols-2 gap-px bg-border rounded-md overflow-hidden">
+          <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-px bg-border rounded-md overflow-hidden">
             <router-link v-if="prevPost" :to="`/blog/${prevPost.slug}`" class="bg-surface p-4 hover:bg-warm-gray transition-colors">
               <span class="label text-muted">Vorheriger Artikel</span>
               <p class="mt-1 body-md font-semibold text-ink">{{ prevPost.title }}</p>

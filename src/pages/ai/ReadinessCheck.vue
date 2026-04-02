@@ -61,7 +61,7 @@
             <div class="flex justify-between mt-4">
               <button @click="step = 2" class="text-sm text-muted hover:text-ink">&larr; Zurück</button>
               <button @click="step = 4" :disabled="answers.prozesse.length === 0"
-                class="cta-button bg-accent hover:bg-accent-hover disabled:bg-border text-white font-semibold py-2 px-6 rounded-md transition">
+                class="cta-button bg-accent hover:bg-accent-hover disabled:bg-border text-white font-semibold py-3 px-6 rounded-md transition">
                 Weiter &rarr;
               </button>
             </div>

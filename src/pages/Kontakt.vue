@@ -12,7 +12,7 @@
           <!-- Calendly Embed -->
           <div class="md:col-span-7 mb-10 md:mb-0">
             <h3 class="heading-md text-ink mb-4">Termin buchen</h3>
-            <div class="bg-warm-gray rounded-md overflow-hidden min-h-[500px]">
+            <div class="bg-warm-gray rounded-md overflow-hidden min-h-[400px] sm:min-h-[500px]">
               <div
                 class="calendly-inline-widget"
                 data-url="https://calendly.com/jens-laufer-solytics/30min"
