@@ -1,0 +1,272 @@
+<template>
+  <article class="prose-article">
+    <h2>Warum eine E-Rechnung Checkliste?</h2>
+    <p>Die <strong>E-Rechnungspflicht</strong> ist in Deutschland angekommen. Seit dem <strong>1. Januar 2025</strong> müssen alle Unternehmen im B2B-Bereich elektronische Rechnungen empfangen können. Ab 2027 beginnt die Pflicht zum Versand — gestaffelt nach Unternehmensgröße. Trotzdem haben viele kleine und mittlere Unternehmen (KMU) die Umstellung noch nicht angegangen.</p>
+
+    <p>Das Ergebnis: Hektik kurz vor dem Stichtag, fehlerhafte Implementierungen und unnötige Kosten. Diese <strong>E-Rechnung Checkliste</strong> gibt Ihnen einen klaren Fahrplan. 15 Punkte, die Sie systematisch abarbeiten können — von den Grundlagen bis zur vollständigen Umstellung.</p>
+
+    <h2>Die rechtlichen Fristen im Überblick</h2>
+    <p>Bevor Sie mit der Checkliste starten, müssen Sie die Fristen kennen. Das <strong>Wachstumschancengesetz</strong> (verabschiedet März 2024) hat den §14 UStG grundlegend geändert. Eine „Rechnung" im Sinne des Umsatzsteuergesetzes ist künftig nur noch eine <em>strukturierte elektronische Rechnung</em> nach der europäischen Norm EN 16931.</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Stichtag</th>
+          <th>Pflicht</th>
+          <th>Betrifft</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>01.01.2025</strong></td>
+          <td>E-Rechnungen empfangen</td>
+          <td>Alle Unternehmen im B2B-Bereich</td>
+        </tr>
+        <tr>
+          <td><strong>01.01.2027</strong></td>
+          <td>E-Rechnungen versenden</td>
+          <td>Unternehmen mit &gt; 800.000 € Jahresumsatz</td>
+        </tr>
+        <tr>
+          <td><strong>01.01.2028</strong></td>
+          <td>E-Rechnungen versenden</td>
+          <td>Alle Unternehmen, ohne Ausnahme</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p><strong>Wichtig:</strong> Die Empfangspflicht gilt bereits. Wenn Ihr Lieferant Ihnen eine XRechnung schickt, dürfen Sie diese nicht ablehnen. Die Versandpflicht kommt gestaffelt — aber wer erst 2027 anfängt, hat ein Problem.</p>
+
+    <h2>Die E-Rechnung Pflicht Checkliste: 15 Punkte für Ihre Umstellung</h2>
+
+    <h3>Phase 1: Grundlagen klären (sofort)</h3>
+
+    <h4>1. Betroffenheit prüfen</h4>
+    <p>Stellen Sie B2B-Rechnungen aus oder empfangen Sie solche? Dann betrifft Sie die E-Rechnungspflicht. Es spielt keine Rolle, ob Sie Kleinunternehmer nach §19 UStG sind, als Freiberufler arbeiten oder nur wenige Rechnungen pro Monat schreiben. Entscheidend ist: <strong>Ist Ihr Rechnungsempfänger ein Unternehmen?</strong> Dann gelten die neuen Regeln.</p>
+    <p>Ausgenommen sind lediglich B2C-Rechnungen an Privatpersonen, Kleinbetragsrechnungen unter 250 € sowie Fahrausweise.</p>
+
+    <h4>2. Formate verstehen: XRechnung vs. ZUGFeRD</h4>
+    <p>Zwei Formate erfüllen die EN-16931-Anforderungen:</p>
+    <ul>
+      <li><strong>XRechnung:</strong> Reine XML-Datei. Nur maschinell lesbar. Standard für Behörden (B2G).</li>
+      <li><strong>ZUGFeRD 2.3:</strong> PDF mit eingebettetem XML. Menschenlesbar und maschinenlesbar. Ideal für den B2B-Bereich.</li>
+    </ul>
+    <p>Ein normales PDF per E-Mail ist <strong>keine</strong> E-Rechnung. Auch nicht, wenn es per E-Mail verschickt wird. Die strukturierten XML-Daten sind der entscheidende Unterschied.</p>
+
+    <h4>3. Internen Verantwortlichen benennen</h4>
+    <p>Bestimmen Sie eine Person, die das Thema E-Rechnung verantwortet. In kleinen Unternehmen ist das oft der Geschäftsführer selbst, im Mittelstand die Leitung Rechnungswesen oder IT. Ohne klare Zuständigkeit bleibt die Umstellung liegen.</p>
+
+    <h3>Phase 2: Empfang sicherstellen (Pflicht seit 01.01.2025)</h3>
+
+    <h4>4. Dediziertes E-Mail-Postfach einrichten</h4>
+    <p>Richten Sie eine E-Mail-Adresse ein, an die Lieferanten E-Rechnungen senden können — z.B. <code>rechnung@ihrefirma.de</code> oder <code>eingangsrechnung@ihrefirma.de</code>. Diese Adresse muss zuverlässig erreichbar sein und regelmäßig geprüft werden. Informieren Sie alle aktiven Lieferanten über die neue Adresse.</p>
+
+    <h4>5. E-Rechnungs-Viewer installieren</h4>
+    <p>XRechnung-Dateien sind reines XML — ohne Viewer sehen Sie nur Code. Installieren Sie einen kostenlosen Viewer (z.B. den KoSIT-Viewer oder das Tool des BMF), um eingehende E-Rechnungen lesen und prüfen zu können. Für ZUGFeRD-Rechnungen reicht ein normaler PDF-Reader.</p>
+
+    <h4>6. Eingangsrechnungsprozess dokumentieren</h4>
+    <p>Halten Sie schriftlich fest, wie eingehende E-Rechnungen verarbeitet werden: Wer prüft sie? Wo werden sie gespeichert? Wie erfolgt die Freigabe? Dieser Prozess ist nicht nur für die Praxis wichtig, sondern auch für die <strong>GoBD-Konformität</strong> bei einer Betriebsprüfung.</p>
+
+    <h3>Phase 3: Versand vorbereiten (bis spätestens Q3 2027)</h3>
+
+    <h4>7. Bestehende Rechnungssoftware prüfen</h4>
+    <p>Prüfen Sie, ob Ihre aktuelle Software E-Rechnungen nach EN 16931 erstellen kann. Viele Anbieter wie DATEV, Lexoffice, sevDesk oder FastBill haben E-Rechnungsfunktionen bereits integriert oder als Update verfügbar. Fragen Sie konkret: <strong>Unterstützt die Software XRechnung 3.0 und ZUGFeRD 2.3?</strong></p>
+
+    <h4>8. Stammdaten bereinigen</h4>
+    <p>E-Rechnungen erfordern vollständige und korrekte Stammdaten. Prüfen und aktualisieren Sie:</p>
+    <ul>
+      <li>Ihre eigene <strong>Steuernummer und USt-IdNr.</strong></li>
+      <li><strong>Leitweg-IDs</strong> für Kunden im öffentlichen Sektor</li>
+      <li>Korrekte <strong>Adressen und Bankverbindungen</strong> aller Geschäftspartner</li>
+      <li><strong>Artikelnummern und Einheiten</strong> nach den gültigen Codelisten (z.B. UN/CEFACT)</li>
+    </ul>
+    <p>Fehlende oder falsche Stammdaten sind der häufigste Grund für ungültige E-Rechnungen.</p>
+
+    <h4>9. Format festlegen</h4>
+    <p>Entscheiden Sie sich für ein Standardformat. Für die meisten B2B-Unternehmen ist <strong>ZUGFeRD 2.3</strong> die beste Wahl: Ihr Kunde sieht ein normales PDF, die maschinenlesbaren Daten stecken unsichtbar drin. Für Rechnungen an öffentliche Auftraggeber (B2G) benötigen Sie <strong>XRechnung</strong>.</p>
+
+    <h4>10. Testrechnungen erstellen und validieren</h4>
+    <p>Erstellen Sie Testrechnungen mit Ihren echten Firmendaten und validieren Sie diese gegen die EN-16931-Schematron-Regeln. Nutzen Sie dafür den <strong>KoSIT-Validator</strong> oder Online-Validierungstools. Typische Fehlerquellen:</p>
+    <ul>
+      <li>Fehlende Pflichtfelder (Rechnungsnummer, Lieferdatum, Zahlungsbedingungen)</li>
+      <li>Falsche Codes für Einheiten oder Steuerkategorien</li>
+      <li>Inkonsistenzen zwischen XML-Daten und PDF-Darstellung (bei ZUGFeRD)</li>
+    </ul>
+
+    <h3>Phase 4: Archivierung und Compliance</h3>
+
+    <h4>11. GoBD-konforme Archivierung einrichten</h4>
+    <p>E-Rechnungen müssen <strong>10 Jahre im Originalformat</strong> aufbewahrt werden (§147 AO). Das bedeutet: die XML-Datei, nicht ein Ausdruck oder Screenshot. Anforderungen nach den GoBD:</p>
+    <ul>
+      <li><strong>Unveränderbarkeit:</strong> Die Datei darf nach dem Eingang nicht verändert werden</li>
+      <li><strong>Nachvollziehbarkeit:</strong> Jede Rechnung muss einem Geschäftsvorfall zugeordnet werden können</li>
+      <li><strong>Verfügbarkeit:</strong> Maschinelle Auswertbarkeit für die Finanzverwaltung</li>
+      <li><strong>Ordnung:</strong> Systematische Ablage mit klarer Struktur</li>
+    </ul>
+
+    <h4>12. Verfahrensdokumentation erstellen</h4>
+    <p>Die GoBD verlangen eine <strong>Verfahrensdokumentation</strong>, die beschreibt, wie Sie E-Rechnungen empfangen, verarbeiten und archivieren. Dokumentieren Sie mindestens: den Eingangskanal, den Prüfprozess, die Freigabekette, das Archivierungssystem und die Zugriffsberechtigungen. Ein Finanzbeamter muss bei einer Betriebsprüfung nachvollziehen können, wie Rechnungen von Eingang bis Archivierung behandelt werden.</p>
+
+    <h3>Phase 5: Rollout und Optimierung</h3>
+
+    <h4>13. Pilotphase mit ausgewählten Geschäftspartnern</h4>
+    <p>Starten Sie nicht sofort mit allen Kunden. Wählen Sie 3–5 Geschäftspartner für eine Pilotphase. Senden Sie ihnen Testrechnungen im neuen Format und bitten Sie um Feedback: Können sie die Rechnung empfangen und verarbeiten? Stimmen alle Daten? Gibt es Kompatibilitätsprobleme mit deren Software?</p>
+
+    <h4>14. Mitarbeiter schulen</h4>
+    <p>Schulen Sie alle Mitarbeiter, die mit Rechnungen arbeiten. Der Fokus liegt auf:</p>
+    <ul>
+      <li>Unterschied zwischen E-Rechnung und PDF</li>
+      <li>Bedienung der neuen Software oder Module</li>
+      <li>Prüfung eingehender E-Rechnungen auf Vollständigkeit</li>
+      <li>Korrekte Archivierung</li>
+    </ul>
+    <p>Planen Sie für die Schulung 2–4 Stunden ein. Erstellen Sie eine kurze Anleitung als Referenz für den Arbeitsalltag.</p>
+
+    <h4>15. Vollständige Umstellung und Monitoring</h4>
+    <p>Nach erfolgreicher Pilotphase stellen Sie den gesamten Rechnungsversand auf E-Rechnung um. Überwachen Sie in den ersten Wochen:</p>
+    <ul>
+      <li>Validierungsfehler bei ausgehenden Rechnungen</li>
+      <li>Rückfragen von Kunden oder Lieferanten</li>
+      <li>Vollständigkeit der Archivierung</li>
+      <li>Performance der Software bei höherem Volumen</li>
+    </ul>
+
+    <h2>Zeitplan: E-Rechnung Umstellung nach Unternehmensgröße</h2>
+    <p>Die Dringlichkeit hängt von Ihrer Unternehmensgröße ab. Aber unabhängig vom Umsatz gilt: Die Empfangspflicht ist bereits aktiv.</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Zeitraum</th>
+          <th>Unternehmen &gt; 800.000 € Umsatz</th>
+          <th>Unternehmen ≤ 800.000 € Umsatz</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Sofort</strong></td>
+          <td>Empfang aktiv, Versand vorbereiten</td>
+          <td>Empfang sicherstellen</td>
+        </tr>
+        <tr>
+          <td><strong>Q2 2026</strong></td>
+          <td>Software auswählen, Stammdaten bereinigen</td>
+          <td>Formate verstehen, Software evaluieren</td>
+        </tr>
+        <tr>
+          <td><strong>Q4 2026</strong></td>
+          <td>Pilotphase, Testrechnungen, Schulung</td>
+          <td>Testrechnungen erstellen</td>
+        </tr>
+        <tr>
+          <td><strong>Q1 2027</strong></td>
+          <td>Vollständige Umstellung (Pflicht ab 01.01.2027)</td>
+          <td>Pilotphase starten</td>
+        </tr>
+        <tr>
+          <td><strong>H2 2027</strong></td>
+          <td>Monitoring, Optimierung</td>
+          <td>Schulung, Rollout vorbereiten</td>
+        </tr>
+        <tr>
+          <td><strong>01.01.2028</strong></td>
+          <td>—</td>
+          <td>Vollständige Umstellung (Pflicht)</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Häufige Fehler bei der E-Rechnung Umstellung</h2>
+    <p>Aus unserer Projekterfahrung sehen wir immer wieder dieselben Stolpersteine:</p>
+
+    <h3>1. „PDF per E-Mail reicht doch"</h3>
+    <p>Nein. Ein normales PDF ist kein strukturiertes Datenformat nach EN 16931. Ab 2028 gilt eine solche Rechnung formal nicht als Rechnung im Sinne des UStG. Ihr Kunde kann keinen Vorsteuerabzug geltend machen und wird eine korrekte E-Rechnung anfordern.</p>
+
+    <h3>2. Stammdaten nicht gepflegt</h3>
+    <p>Fehlende Steuernummern, falsche Adressen, ungültige Einheitscodes — das sind die häufigsten Gründe für Validierungsfehler. Investieren Sie <em>vor</em> dem Go-live Zeit in die Datenqualität.</p>
+
+    <h3>3. Archivierung vergessen</h3>
+    <p>Viele Unternehmen konzentrieren sich auf die Erstellung und vergessen die Archivierung. E-Rechnungen müssen 10 Jahre im XML-Original aufbewahrt werden. Ein Ausdruck oder Screenshot reicht nicht.</p>
+
+    <h3>4. Keine Verfahrensdokumentation</h3>
+    <p>Die GoBD verlangen eine schriftliche Dokumentation Ihrer Rechnungsprozesse. Fehlt diese bei einer Betriebsprüfung, drohen Beanstandungen — unabhängig davon, ob Ihre E-Rechnungen technisch korrekt sind.</p>
+
+    <h3>5. Zu spät angefangen</h3>
+    <p>Die Einführung einer E-Rechnungslösung braucht erfahrungsgemäß 2–6 Monate — von der Softwareauswahl über die Stammdatenbereinigung bis zum produktiven Einsatz. Wer erst im Dezember 2027 beginnt, wird den Stichtag nicht schaffen.</p>
+
+    <h2>Was kostet die E-Rechnung Umstellung?</h2>
+    <p>Die Kosten variieren stark je nach Ausgangslage und Anforderungen:</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Ansatz</th>
+          <th>Kosten</th>
+          <th>Geeignet für</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Kostenlose Tools</strong></td>
+          <td>0 €</td>
+          <td>Einzelrechnungen, erste Tests</td>
+        </tr>
+        <tr>
+          <td><strong>SaaS-Buchhaltung</strong></td>
+          <td>10–50 €/Monat</td>
+          <td>Kleinunternehmen, wenige Rechnungen</td>
+        </tr>
+        <tr>
+          <td><strong>ERP-Integration</strong></td>
+          <td>1.500–5.000 € einmalig</td>
+          <td>Mittelstand, bestehende Systeme</td>
+        </tr>
+        <tr>
+          <td><strong>Enterprise-Lösung</strong></td>
+          <td>10.000+ €</td>
+          <td>Großunternehmen, komplexe Anforderungen</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>Für die meisten KMU liegt der Sweet Spot bei einer professionellen Implementierung im Bereich von <strong>1.500 bis 5.000 €</strong>. Das umfasst Softwareauswahl, Konfiguration, Stammdatenmigration, Testphase und Schulung.</p>
+
+    <h2>E-Rechnung Checkliste als Zusammenfassung</h2>
+    <p>Hier die 15 Punkte nochmal kompakt:</p>
+
+    <ol>
+      <li>Betroffenheit prüfen — B2B-Rechnungen? Dann ja.</li>
+      <li>Formate verstehen — XRechnung vs. ZUGFeRD</li>
+      <li>Verantwortlichen benennen</li>
+      <li>E-Mail-Postfach für Rechnungsempfang einrichten</li>
+      <li>E-Rechnungs-Viewer installieren</li>
+      <li>Eingangsrechnungsprozess dokumentieren</li>
+      <li>Rechnungssoftware auf E-Rechnungsfähigkeit prüfen</li>
+      <li>Stammdaten bereinigen</li>
+      <li>Format für den Versand festlegen</li>
+      <li>Testrechnungen erstellen und validieren</li>
+      <li>GoBD-konforme Archivierung einrichten</li>
+      <li>Verfahrensdokumentation erstellen</li>
+      <li>Pilotphase mit 3–5 Partnern starten</li>
+      <li>Mitarbeiter schulen</li>
+      <li>Vollständig umstellen und überwachen</li>
+    </ol>
+
+    <h2>Professionelle Unterstützung bei der Umstellung</h2>
+    <p>Sie möchten die E-Rechnung Umstellung nicht allein stemmen? Solytics begleitet Unternehmen von der Analyse über die Implementierung bis zum produktiven Betrieb. Unsere Pakete umfassen Softwareauswahl, EN-16931-Validierung, Stammdatenmigration, GoBD-konforme Archivierung und Mitarbeiterschulung.</p>
+
+    <p>
+      <router-link to="/e-rechnung" class="font-semibold text-primary-600 hover:text-primary-700 underline">
+        Mehr zu unseren E-Rechnung-Implementierungspaketen →
+      </router-link>
+    </p>
+
+    <p>Oder <router-link to="/kontakt" class="font-semibold text-primary-600 hover:text-primary-700 underline">vereinbaren Sie ein kostenloses Erstgespräch</router-link> — wir zeigen Ihnen, wo Ihr Unternehmen steht und was als Nächstes zu tun ist.</p>
+
+    <RelatedArticles slug="e-rechnung-checkliste-2026" />
+  </article>
+</template>
+
+<script setup>
+import RelatedArticles from '../../components/RelatedArticles.vue'
+</script>
