@@ -1,139 +1,26 @@
 import { blogPosts } from './blogPosts.js'
 
-/**
- * Manual relationship map: slug → array of related slugs (2-3 per article).
- * Primary: same category. Cross-category where thematically close.
- */
-const relationshipMap = {
-  // === E-Rechnung ===
-  'xrechnung-pflicht-2027': [
-    'xrechnung-vs-zugferd',
-    'e-rechnung-erstellen-anleitung',
-    'e-rechnung-kleinunternehmer',
-  ],
-  'e-rechnung-software-vergleich-2026': [
-    'e-rechnung-erstellen-anleitung',
-    'xrechnung-vs-zugferd',
-    'e-rechnung-kleinunternehmer',
-  ],
-  'e-rechnung-handwerk': [
-    'xrechnung-pflicht-2027',
-    'e-rechnung-erstellen-anleitung',
-    'e-rechnung-fehler',
-  ],
-  'xrechnung-vs-zugferd': [
-    'xrechnung-pflicht-2027',
-    'en16931-branchenerweiterungen',
-    'xrechnung-implementieren',
-  ],
-  'en16931-branchenerweiterungen': [
-    'xrechnung-implementieren',
-    'xrechnung-vs-zugferd',
-    'e-rechnung-handwerk',
-  ],
-  'xrechnung-implementieren': [
-    'en16931-branchenerweiterungen',
-    'e-rechnung-fehler',
-    'xrechnung-vs-zugferd',
-  ],
-  'e-rechnung-kleinunternehmer': [
-    'xrechnung-pflicht-2027',
-    'e-rechnung-steuerberater',
-    'e-rechnung-erstellen-anleitung',
-  ],
-  'e-rechnung-steuerberater': [
-    'e-rechnung-kleinunternehmer',
-    'e-rechnung-fehler',
-    'e-rechnung-software-vergleich-2026',
-  ],
-  'e-rechnung-erstellen-anleitung': [
-    'e-rechnung-fehler',
-    'xrechnung-vs-zugferd',
-    'e-rechnung-software-vergleich-2026',
-  ],
-  'e-rechnung-fehler': [
-    'e-rechnung-erstellen-anleitung',
-    'e-rechnung-steuerberater',
-    'xrechnung-implementieren',
-  ],
-  'e-rechnung-datev': [
-    'e-rechnung-software-vergleich-2026',
-    'xrechnung-implementieren',
-    'e-rechnung-steuerberater',
-  ],
-
-  // === KI-Automatisierung ===
-  'ki-agenten-fuer-unternehmen': [
-    'ki-agent-vs-chatbot',
-    'ki-automatisierung-kosten',
-    'gmbh-mit-ki-agenten-automatisiert',
-  ],
-  'digitalisierung-mittelstand-2026': [
-    'ki-automatisierung-kosten',
-    'ki-buchhaltung',
-    'ki-im-vertrieb',
-  ],
-  'ki-im-vertrieb': [
-    'ki-agenten-fuer-unternehmen',
-    'ki-automatisierung-kosten',
-    'digitalisierung-mittelstand-2026',
-  ],
-  'ki-automatisierung-kosten': [
-    'ki-agenten-fuer-unternehmen',
-    'digitalisierung-mittelstand-2026',
-    'ki-im-vertrieb',
-  ],
-  'ki-buchhaltung': [
-    'e-rechnung-fehler',
-    'ki-automatisierung-kosten',
-    'digitalisierung-mittelstand-2026',
-  ],
-  'ki-agent-vs-chatbot': [
-    'ki-agenten-fuer-unternehmen',
-    'gmbh-mit-ki-agenten-automatisiert',
-    'ki-automatisierung-kosten',
-  ],
-  'gmbh-mit-ki-agenten-automatisiert': [
-    'ki-agenten-fuer-unternehmen',
-    'ki-agent-vs-chatbot',
-    'ki-buchhaltung',
-  ],
-  'ki-kundenservice-agent': [
-    'ki-agent-vs-chatbot',
-    'ki-automatisierung-kosten',
-    'ki-agenten-fuer-unternehmen',
-  ],
-  'ki-agenten-dsgvo-datenschutz': [
-    'ki-agenten-fuer-unternehmen',
-    'ki-automatisierung-kosten',
-    'ki-kundenservice-agent',
-  ],
-  'ki-roi-berechnen': [
-    'ki-automatisierung-kosten',
-    'ki-buchhaltung',
-    'digitalisierung-mittelstand-2026',
-  ],
-  'ki-fuer-steuerberater': [
-    'e-rechnung-steuerberater',
-    'ki-buchhaltung',
-    'ki-roi-berechnen',
-  ],
-  'e-rechnung-lexoffice': [
-    'e-rechnung-kleinunternehmer',
-    'e-rechnung-software-vergleich-2026',
-    'xrechnung-vs-zugferd',
-  ],
-  'e-rechnung-sevdesk': [
-    'xrechnung-vs-zugferd',
-    'e-rechnung-software-vergleich-2026',
-    'e-rechnung-erstellen-anleitung',
-  ],
-  'e-rechnung-checkliste-2026': [
-    'e-rechnung-erstellen-anleitung',
-    'e-rechnung-kleinunternehmer',
-    'e-rechnung-fehler',
-  ],
+function countSharedTags(tagsA, tagsB) {
+  return tagsA.filter(t => tagsB.includes(t)).length
 }
+
+function computeRelationships(posts) {
+  const map = {}
+  for (const post of posts) {
+    const scored = posts
+      .filter(p => p.slug !== post.slug)
+      .map(p => ({
+        slug: p.slug,
+        score: (p.category === post.category ? 3 : 0) + countSharedTags(post.tags || [], p.tags || []),
+      }))
+      .sort((a, b) => b.score - a.score || a.slug.localeCompare(b.slug))
+      .slice(0, 3)
+    map[post.slug] = scored.map(s => s.slug)
+  }
+  return map
+}
+
+export const relationshipMap = computeRelationships(blogPosts)
 
 export function getRelatedArticles(slug) {
   const relatedSlugs = relationshipMap[slug] || []
@@ -141,5 +28,3 @@ export function getRelatedArticles(slug) {
     .map(s => blogPosts.find(p => p.slug === s))
     .filter(Boolean)
 }
-
-export { relationshipMap }
