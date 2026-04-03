@@ -1,30 +1,42 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import tailwindcss from '@tailwindcss/vite'
-import { readFileSync } from 'fs'
+import { readdirSync, readFileSync } from 'node:fs'
+import { join } from 'node:path'
 
-const staticRoutes = [
-  '/',
-  '/e-rechnung',
-  '/ki-automatisierung',
-  '/blog',
-  '/kontakt',
-  '/impressum',
-  '/datenschutz',
-  '/blog/e-rechnung',
-  '/blog/ki-automatisierung',
-  '/ki-automatisierung/readiness-check',
-  '/e-rechnung/pflicht-check',
-  '/digitalbonus',
-  '/website-redesign',
-  '/privacy_policy_recipe_radar',
-  '/privacy_policy_xg_goals_calculator',
-]
+// Auto-discover blog slugs from .meta.js files
+const blogDir = './src/pages/blog'
+const blogRoutes = readdirSync(blogDir)
+  .filter(f => f.endsWith('.meta.js'))
+  .map(f => {
+    const content = readFileSync(join(blogDir, f), 'utf-8')
+    const match = content.match(/slug:\s*'([^']+)'/)
+    return match ? `/blog/${match[1]}` : null
+  })
+  .filter(Boolean)
 
-// Extract blog slugs from blogPosts.js without importing (avoids .vue loader issue)
-const blogPostsSrc = readFileSync('./src/data/blogPosts.js', 'utf-8')
-const slugMatches = [...blogPostsSrc.matchAll(/slug:\s*'([^']+)'/g)]
-const blogRoutes = slugMatches.map((m) => `/blog/${m[1]}`)
+// Auto-discover static routes from .route.js files
+function findRouteFiles(dir) {
+  const entries = readdirSync(dir, { withFileTypes: true })
+  let files = []
+  for (const entry of entries) {
+    const fullPath = join(dir, entry.name)
+    if (entry.isDirectory()) {
+      files = files.concat(findRouteFiles(fullPath))
+    } else if (entry.name.endsWith('.route.js')) {
+      files.push(fullPath)
+    }
+  }
+  return files
+}
+
+const staticRoutes = findRouteFiles('./src/pages')
+  .map(f => {
+    const content = readFileSync(f, 'utf-8')
+    const match = content.match(/path:\s*'([^']+)'/)
+    return match ? match[1] : null
+  })
+  .filter(p => p && !p.includes(':'))
 
 // https://vite.dev/config/
 export default defineConfig({

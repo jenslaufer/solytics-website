@@ -15,10 +15,9 @@
         <div>
           <h4 class="label text-muted mb-4">Leistungen</h4>
           <ul class="space-y-2 text-sm">
-            <li><router-link to="/e-rechnung" class="text-muted hover:text-ink transition-colors">E-Rechnung</router-link></li>
-            <li><router-link to="/ki-automatisierung" class="text-muted hover:text-ink transition-colors">KI-Automatisierung</router-link></li>
-            <li><router-link to="/website-redesign" class="text-muted hover:text-ink transition-colors">Website-Redesign</router-link></li>
-            <li><router-link to="/blog" class="text-muted hover:text-ink transition-colors">Blog</router-link></li>
+            <li v-for="item in footerServices" :key="item.to">
+              <router-link :to="item.to" class="text-muted hover:text-ink transition-colors">{{ item.label }}</router-link>
+            </li>
           </ul>
         </div>
 
@@ -26,9 +25,9 @@
         <div>
           <h4 class="label text-muted mb-4">Unternehmen</h4>
           <ul class="space-y-2 text-sm">
-            <li><router-link to="/kontakt" class="text-muted hover:text-ink transition-colors">Kontakt</router-link></li>
-            <li><router-link to="/impressum" class="text-muted hover:text-ink transition-colors">Impressum</router-link></li>
-            <li><router-link to="/datenschutz" class="text-muted hover:text-ink transition-colors">Datenschutz</router-link></li>
+            <li v-for="item in footerCompany" :key="item.to">
+              <router-link :to="item.to" class="text-muted hover:text-ink transition-colors">{{ item.label }}</router-link>
+            </li>
           </ul>
         </div>
 
@@ -65,3 +64,7 @@
     </div>
   </footer>
 </template>
+
+<script setup>
+import { footerServices, footerCompany } from '../data/navigation.js'
+</script>

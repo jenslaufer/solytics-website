@@ -1,86 +1,40 @@
 import { createRouter, createMemoryHistory, createWebHistory } from 'vue-router'
 
+// Auto-discover routes from co-located .route.js files
+const routeModules = import.meta.glob('./pages/**/*.route.js', { eager: true })
+const componentModules = import.meta.glob('./pages/**/*.vue')
+
+function resolveComponent(routeFilePath, config) {
+  if (config.redirect) return undefined
+
+  if (config.component) {
+    const dir = routeFilePath.substring(0, routeFilePath.lastIndexOf('/') + 1)
+    return componentModules[dir + config.component.replace('./', '')]
+  }
+
+  return componentModules[routeFilePath.replace('.route.js', '.vue')]
+}
+
+const discoveredRoutes = Object.entries(routeModules)
+  .map(([path, mod]) => {
+    const config = mod.default
+    const component = resolveComponent(path, config)
+    return {
+      path: config.path,
+      ...(component && { component }),
+      ...(config.meta && { meta: config.meta }),
+      ...(config.name && { name: config.name }),
+    }
+  })
+
 export const routes = [
-  {
-    path: '/',
-    component: () => import('./pages/Home.vue'),
-  },
-  {
-    path: '/e-rechnung',
-    component: () => import('./pages/einvoice/Index.vue'),
-  },
-  {
-    path: '/ki-automatisierung',
-    component: () => import('./pages/ai/Index.vue'),
-  },
-  {
-    path: '/website-redesign',
-    component: () => import('./pages/WebsiteRedesign.vue'),
-  },
-  {
-    path: '/blog',
-    component: () => import('./pages/Blog.vue'),
-  },
-  {
-    path: '/blog/e-rechnung',
-    component: () => import('./pages/blog/CategoryPage.vue'),
-    meta: { category: 'e-rechnung' },
-  },
-  {
-    path: '/blog/ki-automatisierung',
-    component: () => import('./pages/blog/CategoryPage.vue'),
-    meta: { category: 'ki-automatisierung' },
-  },
-  {
-    path: '/blog/:slug',
-    component: () => import('./pages/BlogArticle.vue'),
-  },
-  {
-    path: '/ki-automatisierung/readiness-check',
-    component: () => import('./pages/ai/ReadinessCheck.vue'),
-  },
-  {
-    path: '/e-rechnung/pflicht-check',
-    component: () => import('./pages/einvoice/PflichtCheck.vue'),
-  },
-  {
-    path: '/digitalbonus',
-    component: () => import('./pages/Digitalbonus.vue'),
-  },
-  {
-    path: '/kontakt',
-    component: () => import('./pages/Kontakt.vue'),
-  },
-  {
-    path: '/impressum',
-    component: () => import('./pages/Impressum.vue'),
-  },
-  {
-    path: '/datenschutz',
-    component: () => import('./pages/Datenschutz.vue'),
-  },
-  // Chrome extension privacy policies (must be kept)
-  {
-    path: '/privacy_policy_recipe_radar',
-    component: () => import('./pages/RecipeRadarPrivacyPolicy.vue'),
-  },
-  {
-    path: '/privacy_policy_xg_goals_calculator',
-    component: () => import('./pages/XgCalculatorPrivacyPolicy.vue'),
-  },
-  // Legacy redirects
+  ...discoveredRoutes,
+  // Legacy redirects (historical, no component)
   { path: '/inpress', redirect: '/impressum' },
   { path: '/privacy_policy', redirect: '/datenschutz' },
   { path: '/appointment', redirect: '/kontakt' },
-  // Catch-all
-  {
-    path: '/:pathMatch(.*)*',
-    name: 'NotFound',
-    component: () => import('./pages/NotFound.vue'),
-  },
 ]
 
-// Backward-compatible router instance for tests
 export const router = createRouter({
   history: typeof window !== 'undefined' ? createWebHistory() : createMemoryHistory(),
   routes,
