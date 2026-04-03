@@ -20,7 +20,21 @@ function createTestRouter() {
 }
 
 describe('homepage KI focus', () => {
-  it('homepage does not contain E-Rechnung content', async () => {
+  it('homepage hero focuses on KI, not E-Rechnung', async () => {
+    const { default: Home } = await import('../pages/Home.vue')
+    const router = createTestRouter()
+    router.push('/')
+    await router.isReady()
+
+    const wrapper = mount(Home, {
+      global: { plugins: [router], stubs: { MainLayout: { template: '<div><slot /></div>' } } },
+    })
+    const hero = wrapper.find('h1')
+    expect(hero.text()).toContain('KI')
+    expect(hero.text()).not.toContain('E-Rechnung')
+  })
+
+  it('homepage links to all three services', async () => {
     const { default: Home } = await import('../pages/Home.vue')
     const router = createTestRouter()
     router.push('/')
@@ -30,9 +44,9 @@ describe('homepage KI focus', () => {
       global: { plugins: [router], stubs: { MainLayout: { template: '<div><slot /></div>' } } },
     })
     const text = wrapper.text()
-    expect(text).not.toContain('E-Rechnung')
-    expect(text).not.toContain('XRechnung')
-    expect(text).not.toContain('ZUGFeRD')
+    expect(text).toContain('E-Rechnung')
+    expect(text).toContain('KI-Automatisierung')
+    expect(text).toContain('Website-Redesign')
   })
 
   it('homepage renders KI-Automatisierung content', async () => {
