@@ -39,7 +39,6 @@ const expectedPaths = [
   '/blog/:slug',
   '/ki-automatisierung/readiness-check', '/e-rechnung/pflicht-check',
   '/digitalbonus', '/website-redesign',
-  '/privacy_policy_recipe_radar', '/privacy_policy_xg_goals_calculator',
   '/:pathMatch(.*)*',
 ]
 
@@ -87,15 +86,21 @@ describe('route auto-discovery', () => {
     }
   })
 
+  it('does not include stale Chrome extension privacy policy routes', () => {
+    const paths = routes.map(r => r.path)
+    expect(paths).not.toContain('/privacy_policy_recipe_radar')
+    expect(paths).not.toContain('/privacy_policy_xg_goals_calculator')
+  })
+
   it('has legacy redirects', () => {
     const redirects = routes.filter(r => r.redirect)
     expect(redirects.length).toBeGreaterThanOrEqual(3)
   })
 
-  it('total discoverable pages >= 40', () => {
+  it('total discoverable pages >= 38', () => {
     const ssgRoutes = routes.filter(r => !r.redirect && r.path !== '/:pathMatch(.*)*' && !r.path.includes(':'))
     const blogRoutes = blogPosts.map(p => `/blog/${p.slug}`)
-    expect(ssgRoutes.length + blogRoutes.length).toBeGreaterThanOrEqual(40)
+    expect(ssgRoutes.length + blogRoutes.length).toBeGreaterThanOrEqual(38)
   })
 })
 

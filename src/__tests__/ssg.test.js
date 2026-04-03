@@ -19,8 +19,6 @@ const staticRoutes = [
   '/ki-automatisierung/readiness-check',
   '/e-rechnung/pflicht-check',
   '/digitalbonus',
-  '/privacy_policy_recipe_radar',
-  '/privacy_policy_xg_goals_calculator',
 ]
 
 const blogRoutes = blogPosts.map((p) => `/blog/${p.slug}`)
