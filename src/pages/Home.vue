@@ -148,6 +148,25 @@
       </div>
     </section>
 
+    <!-- Services -->
+    <section class="py-20 md:py-32 px-6 md:px-10 bg-warm-gray border-t border-border fade-up">
+      <div class="max-w-[var(--max-width-content)] mx-auto">
+        <SectionHeading badge="Leistungen">
+          Drei Wege zur Digitalisierung.
+          <template #description>Ob E-Rechnung, KI-Automatisierung oder Website-Redesign — wir bringen Ihr Unternehmen nach vorn.</template>
+        </SectionHeading>
+
+        <div class="grid md:grid-cols-3 gap-px bg-border rounded-md overflow-hidden">
+          <router-link v-for="service in services" :key="service.to" :to="service.to" class="bg-surface p-8 md:p-10 group hover:bg-warm-gray transition-colors">
+            <p class="label text-accent mb-4">{{ service.badge }}</p>
+            <h3 class="heading-md text-ink group-hover:text-accent transition-colors">{{ service.title }}</h3>
+            <p class="mt-2 body-md text-muted">{{ service.description }}</p>
+            <p class="mt-4 label text-accent">Mehr erfahren &rarr;</p>
+          </router-link>
+        </div>
+      </div>
+    </section>
+
     <!-- CTA -->
     <section class="section-dark py-24 md:py-40 px-6 md:px-10 fade-up">
       <div class="max-w-2xl mx-auto text-center">
@@ -202,6 +221,12 @@ const useCases = [
     metric: 'Echtzeit-Dashboards statt Excel',
     icon: '<svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z"/></svg>',
   },
+]
+
+const services = [
+  { badge: 'E-Rechnung', title: 'E-Rechnung & Compliance', description: 'XRechnung, ZUGFeRD und API-Integration — compliant ab 2027.', to: '/e-rechnung' },
+  { badge: 'KI-Automatisierung', title: 'KI-Agenten für Ihr Unternehmen', description: 'Autonome KI-Systeme, die Ihre Geschäftsprozesse verstehen und ausführen.', to: '/ki-automatisierung' },
+  { badge: 'Website-Redesign', title: 'Moderne Website in 48 Stunden', description: 'Professionelles Redesign Ihrer Website — modern, schnell und mobiloptimiert. Ab 499 €.', to: '/website-redesign' },
 ]
 
 const trustSignals = [
