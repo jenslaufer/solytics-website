@@ -196,6 +196,40 @@ useHead({
   description: 'Solytics entwickelt KI-Agenten, die Ihre Geschäftsprozesse verstehen und autonom ausführen. Von der Analyse über den Workshop bis zum produktiven Einsatz.',
 })
 
+// Structured data for local business SEO
+import { onMounted } from 'vue'
+onMounted(() => {
+  const ld = document.createElement('script')
+  ld.type = 'application/ld+json'
+  ld.textContent = JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': ['ProfessionalService', 'LocalBusiness'],
+    name: 'Solytics GmbH',
+    description: 'KI-Automatisierung und E-Rechnung für Unternehmen. KI-Agenten, XRechnung, ZUGFeRD — von der Analyse bis zum Produktivbetrieb.',
+    url: 'https://solytics.de',
+    telephone: '+49-6188-9149994',
+    email: 'jens.laufer@solytics.de',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: 'Hauptstr. 24',
+      addressLocality: 'Karlstein am Main',
+      postalCode: '63791',
+      addressCountry: 'DE',
+    },
+    geo: { '@type': 'GeoCoordinates', latitude: 50.0387, longitude: 9.0347 },
+    foundingDate: '2022',
+    priceRange: '€€',
+    areaServed: { '@type': 'Country', name: 'Germany' },
+    knowsAbout: ['KI-Automatisierung', 'KI-Agenten', 'E-Rechnung', 'XRechnung', 'ZUGFeRD', 'EN 16931'],
+    makesOffer: [
+      { '@type': 'Offer', name: 'KI-Potenzial-Check', price: '0', priceCurrency: 'EUR', description: 'Kostenlose Analyse Ihrer Automatisierungspotenziale' },
+      { '@type': 'Offer', name: 'KI-Workshop', price: '2500', priceCurrency: 'EUR', description: 'Halbtägiger Workshop zur KI-Strategie' },
+      { '@type': 'Offer', name: 'E-Rechnung Compliance-Check', price: '1500', priceCurrency: 'EUR', description: 'Prüfung Ihrer E-Rechnung-Readiness' },
+    ],
+  })
+  document.head.appendChild(ld)
+})
+
 const processSteps = [
   { title: 'Analyse', description: 'Wir identifizieren Ihre Automatisierungspotenziale.' },
   { title: 'Workshop', description: 'Gemeinsam definieren wir den optimalen KI-Einsatz.' },
