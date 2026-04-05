@@ -30,6 +30,7 @@ const expectedBlogSlugs = [
   'e-rechnung-lexoffice',
   'e-rechnung-sevdesk',
   'e-rechnung-checkliste-2026',
+  'e-rechnung-freiberufler',
 ]
 
 const expectedPaths = [
@@ -43,8 +44,8 @@ const expectedPaths = [
 ]
 
 describe('blog post auto-discovery', () => {
-  it('discovers all 25 blog posts', () => {
-    expect(blogPosts.length).toBe(25)
+  it('discovers all 26 blog posts', () => {
+    expect(blogPosts.length).toBe(26)
   })
 
   it('discovers all expected slugs', () => {
