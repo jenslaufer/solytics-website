@@ -33,6 +33,7 @@ const expectedBlogSlugs = [
   'e-rechnung-freiberufler',
   'e-rechnung-gastronomie',
   'e-rechnung-baugewerbe',
+  'e-rechnung-einzelhandel',
 ]
 
 const expectedPaths = [
@@ -46,8 +47,8 @@ const expectedPaths = [
 ]
 
 describe('blog post auto-discovery', () => {
-  it('discovers all 28 blog posts', () => {
-    expect(blogPosts.length).toBe(28)
+  it('discovers all 29 blog posts', () => {
+    expect(blogPosts.length).toBe(29)
   })
 
   it('discovers all expected slugs', () => {
