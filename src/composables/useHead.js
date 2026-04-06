@@ -1,24 +1,22 @@
-import { onMounted } from 'vue'
-
-function setMeta(attr, key, content) {
-  let el = document.querySelector(`meta[${attr}="${key}"]`)
-  if (!el) {
-    el = document.createElement('meta')
-    el.setAttribute(attr, key)
-    document.head.appendChild(el)
-  }
-  el.setAttribute('content', content)
-}
+import { useHead as _useHead } from '@unhead/vue'
+import { useRoute } from 'vue-router'
 
 export function useHead({ title, description }) {
-  onMounted(() => {
-    if (title) {
-      document.title = title
-      setMeta('property', 'og:title', title)
-    }
-    if (description) {
-      setMeta('name', 'description', description)
-      setMeta('property', 'og:description', description)
-    }
+  const route = useRoute()
+  const url = `https://solytics.de${route.path}`
+
+  _useHead({
+    title,
+    meta: [
+      ...(description ? [
+        { name: 'description', content: description },
+        { property: 'og:description', content: description },
+      ] : []),
+      ...(title ? [{ property: 'og:title', content: title }] : []),
+      { property: 'og:url', content: url },
+    ],
+    link: [
+      { rel: 'canonical', href: url },
+    ],
   })
 }

@@ -1,44 +1,36 @@
-import { describe, it, expect, beforeEach } from 'vitest'
-import { mount } from '@vue/test-utils'
-import { defineComponent } from 'vue'
+import { describe, it, expect, vi, beforeEach } from 'vitest'
+import { useHead as mockUseHead } from '@unhead/vue'
+vi.mock('vue-router', () => ({ useRoute: () => ({ path: '/test-page' }) }))
+
 import { useHead } from '../composables/useHead.js'
 
-function createWrapper(options) {
-  const Comp = defineComponent({
-    setup() { useHead(options) },
-    template: '<div />',
-  })
-  return mount(Comp)
-}
-
 describe('useHead', () => {
-  beforeEach(() => {
-    document.title = ''
-    document.head.querySelectorAll('meta[name="description"], meta[property^="og:"]').forEach(el => el.remove())
+  beforeEach(() => mockUseHead.mockClear())
+
+  it('sets title and og:title', () => {
+    useHead({ title: 'Test Title', description: '' })
+    const call = mockUseHead.mock.calls[0][0]
+    expect(call.title).toBe('Test Title')
+    expect(call.meta).toContainEqual({ property: 'og:title', content: 'Test Title' })
   })
 
-  it('sets document title', () => {
-    createWrapper({ title: 'Test Title', description: '' })
-    expect(document.title).toBe('Test Title')
+  it('sets meta description and og:description', () => {
+    useHead({ title: '', description: 'Test desc' })
+    const call = mockUseHead.mock.calls[0][0]
+    expect(call.meta).toContainEqual({ name: 'description', content: 'Test desc' })
+    expect(call.meta).toContainEqual({ property: 'og:description', content: 'Test desc' })
   })
 
-  it('sets meta description', () => {
-    createWrapper({ title: '', description: 'Test desc' })
-    const meta = document.querySelector('meta[name="description"]')
-    expect(meta?.getAttribute('content')).toBe('Test desc')
+  it('sets canonical URL from route', () => {
+    useHead({ title: 'Page', description: 'Desc' })
+    const call = mockUseHead.mock.calls[0][0]
+    expect(call.link).toContainEqual({ rel: 'canonical', href: 'https://solytics.de/test-page' })
+    expect(call.meta).toContainEqual({ property: 'og:url', content: 'https://solytics.de/test-page' })
   })
 
-  it('sets og:title and og:description', () => {
-    createWrapper({ title: 'OG Title', description: 'OG Desc' })
-    expect(document.querySelector('meta[property="og:title"]')?.getAttribute('content')).toBe('OG Title')
-    expect(document.querySelector('meta[property="og:description"]')?.getAttribute('content')).toBe('OG Desc')
-  })
-
-  it('reuses existing meta tags', () => {
-    createWrapper({ title: 'First', description: 'First desc' })
-    createWrapper({ title: 'Second', description: 'Second desc' })
-    const metas = document.querySelectorAll('meta[name="description"]')
-    expect(metas.length).toBe(1)
-    expect(metas[0].getAttribute('content')).toBe('Second desc')
+  it('omits description meta when empty', () => {
+    useHead({ title: 'Title', description: '' })
+    const call = mockUseHead.mock.calls[0][0]
+    expect(call.meta.find(m => m.name === 'description')).toBeUndefined()
   })
 })
