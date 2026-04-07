@@ -50,8 +50,8 @@ test.describe('Blog articles', () => {
   test('prev/next navigation works', async ({ page }) => {
     await page.goto('/blog/ki-agenten-fuer-unternehmen')
     // Should have prev and next links
-    const prevLink = page.locator('a[href="/blog/xrechnung-pflicht-2027"]')
-    const nextLink = page.locator('a[href="/blog/e-rechnung-software-vergleich-2026"]')
+    const prevLink = page.locator('a[href="/blog/e-rechnung-software-vergleich-2026"]')
+    const nextLink = page.locator('a[href="/blog/e-rechnung-handwerk"]')
     await expect(prevLink).toBeVisible({ timeout: 10000 })
     await expect(nextLink).toBeVisible()
   })

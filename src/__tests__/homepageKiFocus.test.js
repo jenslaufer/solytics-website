@@ -46,7 +46,7 @@ describe('homepage KI focus', () => {
     const text = wrapper.text()
     expect(text).toContain('E-Rechnung')
     expect(text).toContain('KI-Automatisierung')
-    expect(text).toContain('Website-Redesign')
+    expect(text).toContain('Website-Modernisierung')
   })
 
   it('homepage renders KI-Automatisierung content', async () => {

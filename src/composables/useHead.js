@@ -1,24 +1,34 @@
-import { onMounted } from 'vue'
+import { useHead as _useHead } from '@unhead/vue'
+import { useRoute } from 'vue-router'
 
-function setMeta(attr, key, content) {
-  let el = document.querySelector(`meta[${attr}="${key}"]`)
-  if (!el) {
-    el = document.createElement('meta')
-    el.setAttribute(attr, key)
-    document.head.appendChild(el)
-  }
-  el.setAttribute('content', content)
-}
+const DEFAULT_OG_IMAGE = 'https://solytics.de/og-image.png'
 
-export function useHead({ title, description }) {
-  onMounted(() => {
-    if (title) {
-      document.title = title
-      setMeta('property', 'og:title', title)
-    }
-    if (description) {
-      setMeta('name', 'description', description)
-      setMeta('property', 'og:description', description)
-    }
+export function useHead({ title, description, image }) {
+  const route = useRoute()
+  const url = `https://solytics.de${route.path}`
+  const ogImage = image || DEFAULT_OG_IMAGE
+
+  _useHead({
+    title,
+    meta: [
+      ...(description ? [
+        { name: 'description', content: description },
+        { property: 'og:description', content: description },
+        { name: 'twitter:description', content: description },
+      ] : []),
+      ...(title ? [
+        { property: 'og:title', content: title },
+        { name: 'twitter:title', content: title },
+      ] : []),
+      { property: 'og:url', content: url },
+      { property: 'og:type', content: 'website' },
+      { property: 'og:locale', content: 'de_DE' },
+      { property: 'og:image', content: ogImage },
+      { name: 'twitter:card', content: 'summary_large_image' },
+      { name: 'twitter:image', content: ogImage },
+    ],
+    link: [
+      { rel: 'canonical', href: url },
+    ],
   })
 }

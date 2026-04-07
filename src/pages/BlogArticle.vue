@@ -75,10 +75,11 @@
 </template>
 
 <script setup>
-import { computed, defineAsyncComponent, watchEffect, onUnmounted } from 'vue'
+import { computed, defineAsyncComponent } from 'vue'
 import { useRoute } from 'vue-router'
 import MainLayout from '../layouts/MainLayout.vue'
 import { useHead } from '../composables/useHead.js'
+import { useHead as _useHead } from '@unhead/vue'
 import { blogPosts } from '../data/blogPosts.js'
 
 const route = useRoute()
@@ -108,28 +109,35 @@ useHead({
   description: post.value?.excerpt ?? '',
 })
 
-// JSON-LD
-let jsonLdScript = null
-watchEffect(() => {
-  if (!post.value || typeof document === 'undefined') return
-  if (jsonLdScript) jsonLdScript.remove()
-  jsonLdScript = document.createElement('script')
-  jsonLdScript.type = 'application/ld+json'
-  jsonLdScript.textContent = JSON.stringify({
-    '@context': 'https://schema.org',
-    '@type': 'BlogPosting',
-    headline: post.value.title,
-    description: post.value.excerpt,
-    datePublished: post.value.date,
-    url: `https://solytics.de/blog/${post.value.slug}`,
-    mainEntityOfPage: { '@type': 'WebPage', '@id': `https://solytics.de/blog/${post.value.slug}` },
-    author: { '@type': 'Organization', name: 'Solytics GmbH', url: 'https://solytics.de' },
-    publisher: { '@type': 'Organization', name: 'Solytics GmbH', url: 'https://solytics.de' },
+// JSON-LD (SSR-compatible via useHead)
+if (post.value) {
+  const postUrl = `https://solytics.de/blog/${post.value.slug}`
+  _useHead({
+    script: [{
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify([
+        {
+          '@context': 'https://schema.org',
+          '@type': 'BlogPosting',
+          headline: post.value.title,
+          description: post.value.excerpt,
+          datePublished: post.value.date,
+          url: postUrl,
+          mainEntityOfPage: { '@type': 'WebPage', '@id': postUrl },
+          author: { '@type': 'Person', name: 'Jens Laufer', url: 'https://solytics.de' },
+          publisher: { '@type': 'Organization', name: 'Solytics GmbH', url: 'https://solytics.de' },
+        },
+        {
+          '@context': 'https://schema.org',
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://solytics.de/' },
+            { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://solytics.de/blog' },
+            { '@type': 'ListItem', position: 3, name: post.value.title, item: postUrl },
+          ],
+        },
+      ]),
+    }],
   })
-  document.head.appendChild(jsonLdScript)
-})
-
-onUnmounted(() => {
-  if (jsonLdScript) jsonLdScript.remove()
-})
+}
 </script>
