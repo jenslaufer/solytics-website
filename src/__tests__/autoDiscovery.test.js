@@ -130,9 +130,11 @@ describe('footer auto-discovery', () => {
 
   it('company links contain expected items in order', () => {
     expect(footerCompany).toEqual([
+      { label: 'Über uns', to: '/ueber-uns' },
       { label: 'Kontakt', to: '/kontakt' },
       { label: 'Impressum', to: '/impressum' },
       { label: 'Datenschutz', to: '/datenschutz' },
+      { label: 'FAQ', to: '/faq' },
     ])
   })
 })
