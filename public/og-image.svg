@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
-  <rect width="1200" height="630" fill="#F8F6F3"/>
-  <rect x="0" y="0" width="1200" height="6" fill="#2563EB"/>
-  <text x="100" y="260" font-family="system-ui, sans-serif" font-size="64" font-weight="700" fill="#1A1A1A">Solytics GmbH</text>
-  <text x="100" y="340" font-family="system-ui, sans-serif" font-size="32" fill="#6B7280">E-Rechnung &amp; KI-Automatisierung</text>
-  <text x="100" y="520" font-family="system-ui, sans-serif" font-size="24" fill="#2563EB">solytics.de</text>
-</svg>
