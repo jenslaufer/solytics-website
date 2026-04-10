@@ -1,0 +1,336 @@
+{
+  "\u0000plugin-vue:export-helper": [
+    "/assets/_plugin-vue_export-helper-DlAUqK2U.js"
+  ],
+  "\u0000vite/modulepreload-polyfill.js": [],
+  "\u0000vite/preload-helper.js": [],
+  "index.html": [],
+  "node_modules/@unhead/vue/dist/client.mjs": [],
+  "node_modules/@unhead/vue/dist/shared/vue.Cr7xSEtD.mjs": [],
+  "node_modules/@unhead/vue/dist/shared/vue.N9zWjxoK.mjs": [],
+  "node_modules/@unhead/vue/node_modules/unhead/dist/client.mjs": [],
+  "node_modules/@unhead/vue/node_modules/unhead/dist/shared/unhead.B5FWS6X0.mjs": [],
+  "node_modules/@unhead/vue/node_modules/unhead/dist/shared/unhead.CbpEuj3y.mjs": [],
+  "node_modules/@unhead/vue/node_modules/unhead/dist/shared/unhead.Ct24BOby.mjs": [],
+  "node_modules/@unhead/vue/node_modules/unhead/dist/shared/unhead.yem5I2v_.mjs": [],
+  "node_modules/@vue/reactivity/dist/reactivity.esm-bundler.js": [],
+  "node_modules/@vue/runtime-core/dist/runtime-core.esm-bundler.js": [],
+  "node_modules/@vue/runtime-dom/dist/runtime-dom.esm-bundler.js": [],
+  "node_modules/@vue/shared/dist/shared.esm-bundler.js": [],
+  "node_modules/hookable/dist/index.mjs": [],
+  "node_modules/vite-ssg/dist/index.mjs": [],
+  "node_modules/vite-ssg/dist/shared/vite-ssg.C6pK7rvr.mjs": [],
+  "node_modules/vite-ssg/dist/shared/vite-ssg.ETIvV-80.mjs": [],
+  "node_modules/vue-router/dist/devtools-EWN81iOl.mjs": [],
+  "node_modules/vue-router/dist/vue-router.mjs": [],
+  "src/App.vue": [],
+  "src/components/FeatureCard.vue": [
+    "/assets/Home-BhKtQgue.js"
+  ],
+  "src/components/NavBar.vue": [
+    "/assets/MainLayout-DwlK-4bG.js"
+  ],
+  "src/components/RelatedArticles.vue": [
+    "/assets/RelatedArticles-CNqs9Foa.js"
+  ],
+  "src/components/SectionHeading.vue": [
+    "/assets/SectionHeading-BwoGQuPu.js"
+  ],
+  "src/components/SiteFooter.vue": [
+    "/assets/MainLayout-DwlK-4bG.js"
+  ],
+  "src/composables/useHead.js": [
+    "/assets/useHead-BGIlumTW.js"
+  ],
+  "src/composables/useScrollAnimation.js": [
+    "/assets/useScrollAnimation-Dz0CpBrg.js"
+  ],
+  "src/data/articles.js": [
+    "/assets/RelatedArticles-CNqs9Foa.js"
+  ],
+  "src/data/blogPosts.js": [
+    "/assets/blogPosts-cJV7zRsp.js"
+  ],
+  "src/data/navigation.js": [
+    "/assets/MainLayout-DwlK-4bG.js"
+  ],
+  "src/layouts/LandingLayout.vue": [
+    "/assets/LandingLayout-Cec3vVaM.js"
+  ],
+  "src/layouts/MainLayout.vue": [
+    "/assets/MainLayout-DwlK-4bG.js"
+  ],
+  "src/main.js": [],
+  "src/pages/About.route.js": [],
+  "src/pages/About.vue": [
+    "/assets/About-CZS01ncB.js"
+  ],
+  "src/pages/Blog.route.js": [],
+  "src/pages/Blog.vue": [
+    "/assets/Blog-Pl1LD0IK.js"
+  ],
+  "src/pages/BlogArticle.route.js": [],
+  "src/pages/BlogArticle.vue": [
+    "/assets/BlogArticle-TQF8U4oz.js"
+  ],
+  "src/pages/Datenschutz.route.js": [],
+  "src/pages/Datenschutz.vue": [
+    "/assets/Datenschutz-C-Cj0Nkr.js"
+  ],
+  "src/pages/Digitalbonus.route.js": [],
+  "src/pages/Digitalbonus.vue": [
+    "/assets/Digitalbonus-D4aug9eS.js"
+  ],
+  "src/pages/FAQ.route.js": [],
+  "src/pages/FAQ.vue": [
+    "/assets/FAQ-BX1L-fDq.js"
+  ],
+  "src/pages/Home.route.js": [],
+  "src/pages/Home.vue": [
+    "/assets/Home-BhKtQgue.js"
+  ],
+  "src/pages/Impressum.route.js": [],
+  "src/pages/Impressum.vue": [
+    "/assets/Impressum-BAgKXiPP.js"
+  ],
+  "src/pages/Kontakt.route.js": [],
+  "src/pages/Kontakt.vue": [
+    "/assets/Kontakt-DDRM7o6P.js"
+  ],
+  "src/pages/NotFound.route.js": [],
+  "src/pages/NotFound.vue": [
+    "/assets/NotFound-GiEPpOlO.js"
+  ],
+  "src/pages/WebsiteRedesign.route.js": [],
+  "src/pages/WebsiteRedesign.vue": [
+    "/assets/WebsiteRedesign-D0z6Y2yU.js"
+  ],
+  "src/pages/ai/Index.route.js": [],
+  "src/pages/ai/Index.vue": [
+    "/assets/Index-CyNA2RBq.js"
+  ],
+  "src/pages/ai/ReadinessCheck.route.js": [],
+  "src/pages/ai/ReadinessCheck.vue": [
+    "/assets/ReadinessCheck-B70jRktb.js",
+    "/assets/ReadinessCheck-CioigN2e.css"
+  ],
+  "src/pages/ai/ReadinessCheck.vue?vue&type=style&index=0&scoped=2fb6b130&lang.css": [
+    "/assets/ReadinessCheck-B70jRktb.js",
+    "/assets/ReadinessCheck-CioigN2e.css"
+  ],
+  "src/pages/blog/CategoryERechnung.route.js": [],
+  "src/pages/blog/CategoryKiAutomatisierung.route.js": [],
+  "src/pages/blog/CategoryPage.vue": [
+    "/assets/CategoryPage-CF3va5wq.js"
+  ],
+  "src/pages/blog/DigitalisierungMittelstand2026.meta.js": [
+    "/assets/blogPosts-cJV7zRsp.js"
+  ],
+  "src/pages/blog/DigitalisierungMittelstand2026.vue": [
+    "/assets/DigitalisierungMittelstand2026-B1vu6mfP.js"
+  ],
+  "src/pages/blog/EN16931Branchenerweiterungen.meta.js": [
+    "/assets/blogPosts-cJV7zRsp.js"
+  ],
+  "src/pages/blog/EN16931Branchenerweiterungen.vue": [
+    "/assets/EN16931Branchenerweiterungen-DGF-O4ev.js"
+  ],
+  "src/pages/blog/ERechnungBaugewerbe.meta.js": [
+    "/assets/blogPosts-cJV7zRsp.js"
+  ],
+  "src/pages/blog/ERechnungBaugewerbe.vue": [
+    "/assets/ERechnungBaugewerbe-_n1VGN1Q.js"
+  ],
+  "src/pages/blog/ERechnungCheckliste2026.meta.js": [
+    "/assets/blogPosts-cJV7zRsp.js"
+  ],
+  "src/pages/blog/ERechnungCheckliste2026.vue": [
+    "/assets/ERechnungCheckliste2026-DliJ6arA.js"
+  ],
+  "src/pages/blog/ERechnungDatev.meta.js": [
+    "/assets/blogPosts-cJV7zRsp.js"
+  ],
+  "src/pages/blog/ERechnungDatev.vue": [
+    "/assets/ERechnungDatev-dX4Fvf6r.js"
+  ],
+  "src/pages/blog/ERechnungEinzelhandel.meta.js": [
+    "/assets/blogPosts-cJV7zRsp.js"
+  ],
+  "src/pages/blog/ERechnungEinzelhandel.vue": [
+    "/assets/ERechnungEinzelhandel-DpGvPx0I.js"
+  ],
+  "src/pages/blog/ERechnungErstellenAnleitung.meta.js": [
+    "/assets/blogPosts-cJV7zRsp.js"
+  ],
+  "src/pages/blog/ERechnungErstellenAnleitung.vue": [
+    "/assets/ERechnungErstellenAnleitung-BkzeuSyc.js"
+  ],
+  "src/pages/blog/ERechnungFehler.meta.js": [
+    "/assets/blogPosts-cJV7zRsp.js"
+  ],
+  "src/pages/blog/ERechnungFehler.vue": [
+    "/assets/ERechnungFehler-CmIWIRpp.js"
+  ],
+  "src/pages/blog/ERechnungFreiberufler.meta.js": [
+    "/assets/blogPosts-cJV7zRsp.js"
+  ],
+  "src/pages/blog/ERechnungFreiberufler.vue": [
+    "/assets/ERechnungFreiberufler-DV_w_Ng9.js"
+  ],
+  "src/pages/blog/ERechnungGastronomie.meta.js": [
+    "/assets/blogPosts-cJV7zRsp.js"
+  ],
+  "src/pages/blog/ERechnungGastronomie.vue": [
+    "/assets/ERechnungGastronomie-HSfCuSSv.js"
+  ],
+  "src/pages/blog/ERechnungHandwerk.meta.js": [
+    "/assets/blogPosts-cJV7zRsp.js"
+  ],
+  "src/pages/blog/ERechnungHandwerk.vue": [
+    "/assets/ERechnungHandwerk-G1QC36Pg.js"
+  ],
+  "src/pages/blog/ERechnungKleinunternehmer.meta.js": [
+    "/assets/blogPosts-cJV7zRsp.js"
+  ],
+  "src/pages/blog/ERechnungKleinunternehmer.vue": [
+    "/assets/ERechnungKleinunternehmer-CPX8QIMt.js"
+  ],
+  "src/pages/blog/ERechnungLexoffice.meta.js": [
+    "/assets/blogPosts-cJV7zRsp.js"
+  ],
+  "src/pages/blog/ERechnungLexoffice.vue": [
+    "/assets/ERechnungLexoffice-C2pDNYa2.js"
+  ],
+  "src/pages/blog/ERechnungSevdesk.meta.js": [
+    "/assets/blogPosts-cJV7zRsp.js"
+  ],
+  "src/pages/blog/ERechnungSevdesk.vue": [
+    "/assets/ERechnungSevdesk-D_zdAfZo.js"
+  ],
+  "src/pages/blog/ERechnungSoftwareVergleich2026.meta.js": [
+    "/assets/blogPosts-cJV7zRsp.js"
+  ],
+  "src/pages/blog/ERechnungSoftwareVergleich2026.vue": [
+    "/assets/ERechnungSoftwareVergleich2026-Cm9Z13Xz.js"
+  ],
+  "src/pages/blog/ERechnungSteuerberater.meta.js": [
+    "/assets/blogPosts-cJV7zRsp.js"
+  ],
+  "src/pages/blog/ERechnungSteuerberater.vue": [
+    "/assets/ERechnungSteuerberater-BxyS4gkD.js"
+  ],
+  "src/pages/blog/GmbhMitKiAgentenAutomatisiert.meta.js": [
+    "/assets/blogPosts-cJV7zRsp.js"
+  ],
+  "src/pages/blog/GmbhMitKiAgentenAutomatisiert.vue": [
+    "/assets/GmbhMitKiAgentenAutomatisiert-r0402TAN.js"
+  ],
+  "src/pages/blog/KiAgentVsChatbot.meta.js": [
+    "/assets/blogPosts-cJV7zRsp.js"
+  ],
+  "src/pages/blog/KiAgentVsChatbot.vue": [
+    "/assets/KiAgentVsChatbot-BsTKUKJT.js"
+  ],
+  "src/pages/blog/KiAgentenDsgvoDatenschutz.meta.js": [
+    "/assets/blogPosts-cJV7zRsp.js"
+  ],
+  "src/pages/blog/KiAgentenDsgvoDatenschutz.vue": [
+    "/assets/KiAgentenDsgvoDatenschutz-Dosu_vGZ.js"
+  ],
+  "src/pages/blog/KiAgentenFuerUnternehmen.meta.js": [
+    "/assets/blogPosts-cJV7zRsp.js"
+  ],
+  "src/pages/blog/KiAgentenFuerUnternehmen.vue": [
+    "/assets/KiAgentenFuerUnternehmen-DoFVKCnW.js"
+  ],
+  "src/pages/blog/KiAutomatisierungKosten.meta.js": [
+    "/assets/blogPosts-cJV7zRsp.js"
+  ],
+  "src/pages/blog/KiAutomatisierungKosten.vue": [
+    "/assets/KiAutomatisierungKosten-_0wumDS-.js"
+  ],
+  "src/pages/blog/KiBuchhaltung.meta.js": [
+    "/assets/blogPosts-cJV7zRsp.js"
+  ],
+  "src/pages/blog/KiBuchhaltung.vue": [
+    "/assets/KiBuchhaltung-BAxLs-SQ.js"
+  ],
+  "src/pages/blog/KiFuerSteuerberater.meta.js": [
+    "/assets/blogPosts-cJV7zRsp.js"
+  ],
+  "src/pages/blog/KiFuerSteuerberater.vue": [
+    "/assets/KiFuerSteuerberater-D-gIiV3-.js"
+  ],
+  "src/pages/blog/KiImVertrieb.meta.js": [
+    "/assets/blogPosts-cJV7zRsp.js"
+  ],
+  "src/pages/blog/KiImVertrieb.vue": [
+    "/assets/KiImVertrieb-DDoq1Qhg.js"
+  ],
+  "src/pages/blog/KiKundenserviceAgent.meta.js": [
+    "/assets/blogPosts-cJV7zRsp.js"
+  ],
+  "src/pages/blog/KiKundenserviceAgent.vue": [
+    "/assets/KiKundenserviceAgent-5QwAhTD1.js"
+  ],
+  "src/pages/blog/KiRoiBerechnen.meta.js": [
+    "/assets/blogPosts-cJV7zRsp.js"
+  ],
+  "src/pages/blog/KiRoiBerechnen.vue": [
+    "/assets/KiRoiBerechnen-em3Cph5w.js"
+  ],
+  "src/pages/blog/XRechnungImplementieren.meta.js": [
+    "/assets/blogPosts-cJV7zRsp.js"
+  ],
+  "src/pages/blog/XRechnungImplementieren.vue": [
+    "/assets/XRechnungImplementieren-D7ZjUinK.js"
+  ],
+  "src/pages/blog/XRechnungPflicht2027.meta.js": [
+    "/assets/blogPosts-cJV7zRsp.js"
+  ],
+  "src/pages/blog/XRechnungPflicht2027.vue": [
+    "/assets/XRechnungPflicht2027-T1cGdPqS.js"
+  ],
+  "src/pages/blog/XRechnungVsZugferd.meta.js": [
+    "/assets/blogPosts-cJV7zRsp.js"
+  ],
+  "src/pages/blog/XRechnungVsZugferd.vue": [
+    "/assets/XRechnungVsZugferd-BPsccCLD.js"
+  ],
+  "src/pages/einvoice/Index.route.js": [],
+  "src/pages/einvoice/Index.vue": [
+    "/assets/Index-C6EtkhbP.js"
+  ],
+  "src/pages/einvoice/PflichtCheck.route.js": [],
+  "src/pages/einvoice/PflichtCheck.vue": [
+    "/assets/PflichtCheck-B80NjHIe.js",
+    "/assets/PflichtCheck-B-2igK0c.css"
+  ],
+  "src/pages/einvoice/PflichtCheck.vue?vue&type=style&index=0&scoped=0a222ce7&lang.css": [
+    "/assets/PflichtCheck-B80NjHIe.js",
+    "/assets/PflichtCheck-B-2igK0c.css"
+  ],
+  "src/pages/lp/ERechnung.route.js": [],
+  "src/pages/lp/ERechnung.vue": [
+    "/assets/ERechnung-C_jzPa1k.js"
+  ],
+  "src/pages/lp/ERechnung.vue?vue&type=script&setup=true&lang.ts": [
+    "/assets/ERechnung-C_jzPa1k.js"
+  ],
+  "src/pages/lp/KiAutomatisierung.route.js": [],
+  "src/pages/lp/KiAutomatisierung.vue": [
+    "/assets/KiAutomatisierung-BF25sK1b.js"
+  ],
+  "src/pages/lp/KiAutomatisierung.vue?vue&type=script&setup=true&lang.ts": [
+    "/assets/KiAutomatisierung-BF25sK1b.js"
+  ],
+  "src/pages/lp/WebsiteRedesign.route.js": [],
+  "src/pages/lp/WebsiteRedesign.vue": [
+    "/assets/WebsiteRedesign-PGez_pML.js"
+  ],
+  "src/pages/lp/WebsiteRedesign.vue?vue&type=script&setup=true&lang.ts": [
+    "/assets/WebsiteRedesign-PGez_pML.js"
+  ],
+  "src/router.js": [],
+  "src/style.css": []
+}
