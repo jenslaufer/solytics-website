@@ -1,0 +1,49 @@
+# Solytics GmbH
+
+> E-invoicing compliance and AI automation for German SMEs. Bavarian GmbH.
+
+## Services
+
+### E-Rechnung (E-Invoicing)
+E-invoicing compliance for German businesses. XRechnung, ZUGFeRD. B2B mandatory from January 2027.
+- Compliance Check: 1,500 EUR, 1 week
+- Implementation: 5,000 EUR, 2-3 weeks
+- Full Migration: custom pricing
+URL: https://solytics.de/e-rechnung
+Landing Page: https://solytics.de/lp/e-rechnung
+
+### KI-Automatisierung (AI Automation)
+AI agents for business process automation. Reports, approvals, data reconciliation, status updates.
+- Workshop: 2,500 EUR, 2-3 days
+- Agent Setup: 5,000 EUR, 30 days
+- Retainer: 2,000 EUR/month
+URL: https://solytics.de/ki-automatisierung
+Landing Page: https://solytics.de/lp/ki-automatisierung
+
+### Website-Redesign
+Professional website redesign for SMEs. We write the copy. Fixed price.
+- Kompakt (5-10 pages): 5,000 EUR, 4 weeks
+- Mittelstand (10-20 pages): 10,000 EUR, 6 weeks
+- Komplett: custom pricing
+URL: https://solytics.de/website-redesign
+Landing Page: https://solytics.de/lp/website-redesign
+
+## Digitalbonus Bayern
+Both services qualify for 50% state subsidy (up to 7,500 EUR). Expires end of 2027.
+URL: https://solytics.de/digitalbonus
+
+## Blog
+29 articles covering e-invoicing compliance and AI automation for German SMEs.
+URL: https://solytics.de/blog
+Categories: E-Rechnung, KI-Automatisierung
+
+## Interactive Tools
+- E-Rechnung Pflicht-Check: https://solytics.de/e-rechnung/pflicht-check
+- KI Readiness Check: https://solytics.de/ki-automatisierung/readiness-check
+
+## Contact
+URL: https://solytics.de/kontakt
+
+## Legal
+- Impressum: https://solytics.de/impressum
+- Datenschutz: https://solytics.de/datenschutz
