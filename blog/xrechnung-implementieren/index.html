@@ -1,0 +1,263 @@
+<!DOCTYPE html><html lang="de"><head><meta charset="utf-8"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="XRechnung in Python implementieren: XML-Struktur (UBL &amp; CII), Pflichtfelder, EN 16931 Validierung, API-Beispiele und typische Fehler vermeiden."><meta property="og:title" content="XRechnung implementieren: Schritt-für-Schritt Anleitung für Entwickler — Solytics"><meta property="og:description" content="XRechnung in Python implementieren: XML-Struktur (UBL &amp; CII), Pflichtfelder, EN 16931 Validierung, API-Beispiele und typische Fehler vermeiden."><meta property="og:type" content="website"><meta property="og:url" content="https://solytics.de/blog/xrechnung-implementieren/"><meta property="og:locale" content="de_DE"><meta property="og:image" content="https://solytics.de/og-image.png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="XRechnung implementieren: Schritt-für-Schritt Anleitung für Entwickler — Solytics"><meta name="twitter:description" content="XRechnung in Python implementieren: XML-Struktur (UBL &amp; CII), Pflichtfelder, EN 16931 Validierung, API-Beispiele und typische Fehler vermeiden."><meta name="twitter:image" content="https://solytics.de/og-image.png"><title>XRechnung implementieren: Schritt-für-Schritt Anleitung für Entwickler — Solytics</title><script type="application/ld+json">{
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Solytics GmbH",
+      "url": "https://solytics.de",
+      "email": "jens.laufer@solytics.de",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Hörsteiner Str. 20a",
+        "addressLocality": "Karlstein a. Main",
+        "postalCode": "63791",
+        "addressCountry": "DE"
+      },
+      "founder": {
+        "@type": "Person",
+        "name": "Jens Laufer"
+      },
+      "description": "E-Rechnung & KI-Automatisierung. XRechnung, ZUGFeRD Compliance und KI-Agenten für Geschäftsprozesse."
+    }</script><script type="module" async="" crossorigin="" src="/assets/app-B-frYFks.js"></script><link rel="stylesheet" crossorigin="" href="/assets/app-DH0lwEsY.css"><link rel="modulepreload" crossorigin="" href="/assets/BlogArticle-DW2CKynL.js"><link rel="modulepreload" crossorigin="" href="/assets/MainLayout-C4ZQByQc.js"><link rel="modulepreload" crossorigin="" href="/assets/XRechnungImplementieren-XXAYzfaW.js"><link rel="modulepreload" crossorigin="" href="/assets/RelatedArticles-Dd3zHcAM.js"><link rel="canonical" href="https://solytics.de/blog/xrechnung-implementieren/"><script type="application/ld+json">[{"@context":"https://schema.org","@type":"BlogPosting","headline":"XRechnung implementieren: Schritt-für-Schritt Anleitung für Entwickler","description":"XRechnung in Python implementieren: XML-Struktur (UBL & CII), Pflichtfelder, EN 16931 Validierung, API-Beispiele und typische Fehler vermeiden.","datePublished":"2026-03-22","url":"https://solytics.de/blog/xrechnung-implementieren","mainEntityOfPage":{"@type":"WebPage","@id":"https://solytics.de/blog/xrechnung-implementieren"},"author":{"@type":"Person","name":"Jens Laufer","url":"https://solytics.de"},"publisher":{"@type":"Organization","name":"Solytics GmbH","url":"https://solytics.de"}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://solytics.de/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://solytics.de/blog"},{"@type":"ListItem","position":3,"name":"XRechnung implementieren: Schritt-für-Schritt Anleitung für Entwickler","item":"https://solytics.de/blog/xrechnung-implementieren"}]}]</script></head><body><div id="app" data-server-rendered="true"><div class="min-h-screen flex flex-col"><nav class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-sm border-b border-border/60"><div class="max-w-[var(--max-width-content)] mx-auto px-6 md:px-10 flex items-center justify-between h-16"><a href="/" class="text-lg font-bold tracking-tight text-ink">Solytics</a><div class="hidden md:flex items-center gap-1"><!--[--><a href="/e-rechnung" class="px-4 py-2 text-sm font-medium text-muted hover:text-ink transition-colors duration-200">E-Rechnung</a><a href="/ki-automatisierung" class="px-4 py-2 text-sm font-medium text-muted hover:text-ink transition-colors duration-200">KI-Automatisierung</a><a href="/website-redesign" class="px-4 py-2 text-sm font-medium text-muted hover:text-ink transition-colors duration-200">Website-Redesign</a><a href="/blog" class="px-4 py-2 text-sm font-medium text-muted hover:text-ink transition-colors duration-200">Blog</a><!--]--><a href="/kontakt" class="ml-3 label text-accent hover:text-accent-hover transition-colors duration-200"> Gespräch vereinbaren</a></div><button class="md:hidden p-2 text-muted hover:text-ink" aria-label="Toggle menu"><svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"></path></svg></button></div><!----></nav><main class="flex-1 pt-16"><!--[--><!--[--><section class="pt-24 pb-16 md:pt-32 md:pb-28 px-6 md:px-10"><div class="max-w-3xl mx-auto"><nav class="mb-6 text-sm text-muted"><a href="/" class="hover:text-ink transition-colors">Home</a><span class="mx-2">/</span><a href="/blog" class="hover:text-ink transition-colors">Blog</a><span class="mx-2">/</span><span class="text-ink">XRechnung implementieren: Schritt-für-Schritt Anleitung für Entwickler</span></nav><span class="text-urgency label mb-6 inline-block">E-Rechnung</span><h1 class="heading-xl text-ink">XRechnung implementieren: Schritt-für-Schritt Anleitung für Entwickler</h1><div class="mt-6 flex items-center gap-4 text-sm text-muted"><span>22. März 2026</span><span>12 Min.</span></div></div></section><section class="pb-20 md:pb-32 px-6 md:px-10"><div class="max-w-3xl mx-auto"><article class="prose-article"><h2>Warum XRechnung implementieren?</h2><p>Ab 1. Januar 2027 müssen alle deutschen Unternehmen im B2B-Bereich E-Rechnungen versenden können. XRechnung ist der deutsche Standard nach <strong>EN 16931</strong> — und das Pflichtformat für Rechnungen an öffentliche Auftraggeber. Wer Software für Rechnungsstellung entwickelt, kommt an XRechnung nicht vorbei.</p><p>Dieser Artikel zeigt Ihnen als Entwickler den direkten Weg: XML-Struktur verstehen, Pflichtfelder korrekt befüllen, gegen EN 16931 validieren und per API automatisieren.</p><h2>1. XML-Struktur: UBL 2.1 vs. CII</h2><p>XRechnung unterstützt zwei XML-Syntaxen. Beide sind gleichwertig gültig — die Wahl hängt von Ihrem Anwendungsfall ab.</p><h3>UBL 2.1 (Universal Business Language)</h3><p>UBL ist der international verbreitetere Standard. Die Rechnungsdaten liegen im Namespace <code>urn:oasis:names:specification:ubl:schema:xsd:Invoice-2</code>. Das Root-Element ist <code>&lt;Invoice&gt;</code>.</p><pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;Invoice xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2"
+         xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+         xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"&gt;
+  &lt;cbc:CustomizationID&gt;urn:cen.eu:en16931:2017#compliant#urn:xoev-de:kosit:standard:xrechnung_3.0&lt;/cbc:CustomizationID&gt;
+  &lt;cbc:ID&gt;RE-2026-001&lt;/cbc:ID&gt;
+  &lt;cbc:IssueDate&gt;2026-03-22&lt;/cbc:IssueDate&gt;
+  &lt;cbc:InvoiceTypeCode&gt;380&lt;/cbc:InvoiceTypeCode&gt;
+  &lt;cbc:DocumentCurrencyCode&gt;EUR&lt;/cbc:DocumentCurrencyCode&gt;
+  &lt;cac:AccountingSupplierParty&gt;
+    &lt;!-- Rechnungssteller --&gt;
+  &lt;/cac:AccountingSupplierParty&gt;
+  &lt;cac:AccountingCustomerParty&gt;
+    &lt;!-- Rechnungsempfänger --&gt;
+  &lt;/cac:AccountingCustomerParty&gt;
+  &lt;cac:LegalMonetaryTotal&gt;
+    &lt;!-- Summen --&gt;
+  &lt;/cac:LegalMonetaryTotal&gt;
+  &lt;cac:InvoiceLine&gt;
+    &lt;!-- Rechnungspositionen --&gt;
+  &lt;/cac:InvoiceLine&gt;
+&lt;/Invoice&gt;</code></pre><h3>UN/CEFACT CII (Cross-Industry Invoice)</h3><p>CII ist die UN-Syntax, die auch ZUGFeRD verwendet. Das Root-Element ist <code>&lt;CrossIndustryInvoice&gt;</code>. Die Daten sind hierarchisch in Trade-Blöcke gegliedert.</p><pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;rsm:CrossIndustryInvoice
+    xmlns:rsm="urn:un:unece:uncefact:data:standard:CrossIndustryInvoice:100"
+    xmlns:ram="urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100"
+    xmlns:udt="urn:un:unece:uncefact:data:standard:UnqualifiedDataType:100"&gt;
+  &lt;rsm:ExchangedDocumentContext&gt;
+    &lt;ram:GuidelineSpecifiedDocumentContextParameter&gt;
+      &lt;ram:ID&gt;urn:cen.eu:en16931:2017#compliant#urn:xoev-de:kosit:standard:xrechnung_3.0&lt;/ram:ID&gt;
+    &lt;/ram:GuidelineSpecifiedDocumentContextParameter&gt;
+  &lt;/rsm:ExchangedDocumentContext&gt;
+  &lt;rsm:ExchangedDocument&gt;
+    &lt;ram:ID&gt;RE-2026-001&lt;/ram:ID&gt;
+    &lt;ram:TypeCode&gt;380&lt;/ram:TypeCode&gt;
+    &lt;ram:IssueDateTime&gt;
+      &lt;udt:DateTimeString format="102"&gt;20260322&lt;/udt:DateTimeString&gt;
+    &lt;/ram:IssueDateTime&gt;
+  &lt;/rsm:ExchangedDocument&gt;
+  &lt;rsm:SupplyChainTradeTransaction&gt;
+    &lt;!-- Handelspartner, Lieferung, Zahlung --&gt;
+  &lt;/rsm:SupplyChainTradeTransaction&gt;
+&lt;/rsm:CrossIndustryInvoice&gt;</code></pre><h3>UBL oder CII?</h3><p><strong>UBL</strong> eignet sich, wenn Sie international agieren oder PEPPOL nutzen. <strong>CII</strong> ist die Wahl, wenn Sie auch ZUGFeRD unterstützen wollen — ZUGFeRD verwendet ausschließlich CII.</p><h2>2. Pflichtfelder nach EN 16931</h2><p>EN 16931 definiert über 160 semantische Elemente. Nicht alle sind Pflicht. Die folgende Tabelle zeigt die <strong>Mindestanforderungen</strong> für eine gültige XRechnung:</p><table><thead><tr><th>BT-Nr.</th><th>Feld</th><th>Beschreibung</th><th>Beispielwert</th></tr></thead><tbody><tr><td>BT-1</td><td>Rechnungsnummer</td><td>Eindeutige Kennung der Rechnung</td><td><code>RE-2026-001</code></td></tr><tr><td>BT-2</td><td>Rechnungsdatum</td><td>Ausstellungsdatum</td><td><code>2026-03-22</code></td></tr><tr><td>BT-3</td><td>Rechnungsart</td><td>UNTDID 1001 Code</td><td><code>380</code> (Rechnung)</td></tr><tr><td>BT-5</td><td>Währung</td><td>ISO 4217 Währungscode</td><td><code>EUR</code></td></tr><tr><td>BT-27</td><td>Verkäufername</td><td>Name des Rechnungsstellers</td><td><code>Muster GmbH</code></td></tr><tr><td>BT-44</td><td>Käufername</td><td>Name des Rechnungsempfängers</td><td><code>Kunde AG</code></td></tr><tr><td>BT-109</td><td>Zahlbarer Betrag</td><td>Gesamtbetrag inkl. MwSt.</td><td><code>1190.00</code></td></tr><tr><td>BT-112</td><td>Nettobetrag</td><td>Gesamtbetrag exkl. MwSt.</td><td><code>1000.00</code></td></tr><tr><td>BT-115</td><td>Fälliger Betrag</td><td>Zu zahlender Betrag</td><td><code>1190.00</code></td></tr></tbody></table><h3>Zusätzliche Pflichtfelder für XRechnung (BR-DE)</h3><p>Die deutschen Geschäftsregeln (BR-DE) erweitern die EN 16931-Pflichtfelder:</p><ul><li><strong>Leitweg-ID</strong> (BT-10): Pflicht bei B2G-Rechnungen. Format: <code>04011000-12345-67</code></li><li><strong>Bankverbindung</strong> (BG-17): IBAN des Verkäufers bei Überweisung</li><li><strong>E-Mail-Adresse</strong> (BT-43): Kontaktadresse des Verkäufers</li><li><strong>Zahlungsbedingungen</strong> (BT-20): Freitext für Zahlungskonditionen</li></ul><h2>3. XRechnung implementieren mit der E-Invoice API</h2><p>Statt XML manuell zu bauen, können Sie die <strong>E-Invoice API</strong> nutzen. Sie senden Rechnungsdaten als JSON — die API erzeugt valides XRechnung-XML.</p><h3>API starten (Docker)</h3><pre><code>docker run -p 8000:8000 ghcr.io/jenslaufer/e-invoice:latest</code></pre><h3>XRechnung generieren (Python)</h3><p>Dieses Beispiel erstellt eine vollständige XRechnung im UBL-Format:</p><pre><code>import requests
+
+invoice_data = {
+    "invoice_number": "RE-2026-001",
+    "issue_date": "2026-03-22",
+    "due_date": "2026-04-21",
+    "currency_code": "EUR",
+    "invoice_type_code": "380",
+    "buyer_reference": "04011000-12345-67",  # Leitweg-ID
+    "seller": {
+        "name": "Muster GmbH",
+        "street": "Musterstraße 1",
+        "city": "Berlin",
+        "postal_code": "10115",
+        "country_code": "DE",
+        "tax_id": "DE123456789",
+        "contact": {
+            "email": "rechnung@muster.de"
+        },
+        "bank_account": {
+            "iban": "DE89370400440532013000"
+        }
+    },
+    "buyer": {
+        "name": "Bundesministerium für Beispiele",
+        "street": "Regierungsstraße 10",
+        "city": "Berlin",
+        "postal_code": "10117",
+        "country_code": "DE"
+    },
+    "lines": [
+        {
+            "description": "Softwareentwicklung",
+            "quantity": 10,
+            "unit_code": "HUR",
+            "unit_price": 100.00,
+            "tax_category": "S",
+            "tax_percent": 19.0
+        }
+    ],
+    "payment_terms": "Zahlbar innerhalb von 30 Tagen"
+}
+
+# XRechnung als UBL generieren
+response = requests.post(
+    "http://localhost:8000/api/v1/invoices/xml",
+    json=invoice_data,
+    params={"syntax": "ubl"}
+)
+
+if response.status_code == 200:
+    with open("rechnung.xml", "wb") as f:
+        f.write(response.content)
+    print("XRechnung erstellt: rechnung.xml")
+else:
+    print(f"Fehler: {response.json()}")</code></pre><h3>CII-Syntax verwenden</h3><p>Für CII-Output ändern Sie nur den Parameter:</p><pre><code>response = requests.post(
+    "http://localhost:8000/api/v1/invoices/xml",
+    json=invoice_data,
+    params={"syntax": "cii"}
+)</code></pre><h2>4. Validierung gegen EN 16931</h2><p>Eine XRechnung muss fünf Validierungsschichten bestehen. Jede Schicht prüft unterschiedliche Aspekte:</p><table><thead><tr><th>Schicht</th><th>Prüfung</th><th>Werkzeug</th></tr></thead><tbody><tr><td>1. Schema</td><td>XML-Struktur und Datentypen</td><td>XSD-Validierung</td></tr><tr><td>2. EN 16931</td><td>Europäische Geschäftsregeln (BR-*)</td><td>Schematron</td></tr><tr><td>3. XRechnung CIUS</td><td>Deutsche Geschäftsregeln (BR-DE-*)</td><td>Schematron</td></tr><tr><td>4. Berechnung</td><td>Summen, Steuern, Rundung</td><td>Arithmetische Prüfung</td></tr><tr><td>5. Semantik</td><td>Codelisten, Referenzen, Konsistenz</td><td>Geschäftslogik</td></tr></tbody></table><h3>Validierung per API</h3><pre><code># XRechnung validieren
+with open("rechnung.xml", "rb") as f:
+    xml_content = f.read()
+
+response = requests.post(
+    "http://localhost:8000/api/v1/invoices/validate",
+    files={"file": ("rechnung.xml", xml_content, "application/xml")}
+)
+
+result = response.json()
+print(f"Gültig: {result['valid']}")
+
+if not result["valid"]:
+    for error in result["errors"]:
+        print(f"  [{error['rule']}] {error['message']}")</code></pre><p>Eine typische Validierungsantwort bei Fehlern:</p><pre><code>{
+  "valid": false,
+  "errors": [
+    {
+      "rule": "BR-DE-1",
+      "message": "Eine XRechnung muss eine Leitweg-ID enthalten (BT-10).",
+      "severity": "error",
+      "location": "/Invoice"
+    }
+  ],
+  "warnings": []
+}</code></pre><h3>Validierung in die CI/CD-Pipeline integrieren</h3><p>Validieren Sie generierte Rechnungen automatisch in Ihrer Pipeline:</p><pre><code># validate_invoices.py
+import sys
+import requests
+import glob
+
+api_url = "http://localhost:8000/api/v1/invoices/validate"
+errors_found = False
+
+for xml_file in glob.glob("output/*.xml"):
+    with open(xml_file, "rb") as f:
+        resp = requests.post(
+            api_url,
+            files={"file": (xml_file, f, "application/xml")}
+        )
+    result = resp.json()
+    if not result["valid"]:
+        errors_found = True
+        print(f"FEHLER in {xml_file}:")
+        for err in result["errors"]:
+            print(f"  [{err['rule']}] {err['message']}")
+    else:
+        print(f"OK: {xml_file}")
+
+sys.exit(1 if errors_found else 0)</code></pre><h2>5. Häufige Fehler und wie Sie sie vermeiden</h2><p>Diese Fehler treten bei der <strong>EN 16931 Implementierung</strong> am häufigsten auf:</p><h3>Fehler 1: Falsche CustomizationID</h3><p>Die CustomizationID muss exakt zur XRechnung-Version passen. Ein Tippfehler führt zur Ablehnung.</p><pre><code>&lt;!-- Falsch --&gt;
+&lt;cbc:CustomizationID&gt;urn:cen.eu:en16931:2017&lt;/cbc:CustomizationID&gt;
+
+&lt;!-- Richtig (XRechnung 3.0) --&gt;
+&lt;cbc:CustomizationID&gt;urn:cen.eu:en16931:2017#compliant#urn:xoev-de:kosit:standard:xrechnung_3.0&lt;/cbc:CustomizationID&gt;</code></pre><h3>Fehler 2: Steuerberechnung mit Rundungsfehlern</h3><p>EN 16931 verlangt kaufmännische Rundung auf 2 Dezimalstellen. Fließkomma-Arithmetik führt zu Abweichungen.</p><pre><code># Falsch: Fließkomma-Fehler
+tax = 100.05 * 0.19  # 19.0095000000000027...
+
+# Richtig: Decimal verwenden
+from decimal import Decimal, ROUND_HALF_UP
+tax = (Decimal("100.05") * Decimal("0.19")).quantize(
+    Decimal("0.01"), rounding=ROUND_HALF_UP
+)  # Decimal('19.01')</code></pre><h3>Fehler 3: Fehlende Leitweg-ID bei B2G</h3><p>Die Geschäftsregel <strong>BR-DE-1</strong> verlangt eine Leitweg-ID (<code>BT-10</code>) für alle Rechnungen an öffentliche Auftraggeber. Ohne Leitweg-ID wird die Rechnung abgelehnt.</p><h3>Fehler 4: Datumsformat in CII</h3><p>CII verwendet ein anderes Datumsformat als UBL. Häufiger Fehler: ISO-8601 statt CCYYMMDD.</p><pre><code>&lt;!-- Falsch in CII --&gt;
+&lt;udt:DateTimeString format="102"&gt;2026-03-22&lt;/udt:DateTimeString&gt;
+
+&lt;!-- Richtig in CII --&gt;
+&lt;udt:DateTimeString format="102"&gt;20260322&lt;/udt:DateTimeString&gt;</code></pre><h3>Fehler 5: Summen stimmen nicht überein</h3><p>EN 16931 enthält arithmetische Regeln (BR-CO-*). Die Summen müssen exakt passen:</p><ul><li><strong>BT-106</strong> (Summe Nettobetrag Positionen) = Summe aller BT-131</li><li><strong>BT-109</strong> (Rechnungsbetrag ohne MwSt.) = BT-106 + BT-108 (Zuschlag) − BT-107 (Abzug)</li><li><strong>BT-112</strong> (Rechnungsbetrag mit MwSt.) = BT-109 + BT-110 (MwSt.-Betrag)</li><li><strong>BT-115</strong> (Fälliger Betrag) = BT-112 − BT-113 (bereits gezahlt)</li></ul><h3>Fehler 6: Falsche Unit-Codes</h3><p>Mengeneinheiten müssen UN/ECE Recommendation 20 entsprechen. Häufige Codes:</p><table><thead><tr><th>Code</th><th>Bedeutung</th></tr></thead><tbody><tr><td><code>HUR</code></td><td>Stunde</td></tr><tr><td><code>DAY</code></td><td>Tag</td></tr><tr><td><code>C62</code></td><td>Stück (Einheit)</td></tr><tr><td><code>KGM</code></td><td>Kilogramm</td></tr><tr><td><code>MTR</code></td><td>Meter</td></tr><tr><td><code>LTR</code></td><td>Liter</td></tr></tbody></table><p><strong>Tipp:</strong> Validieren Sie jede generierte Rechnung <strong>vor dem Versand</strong>. Die E-Invoice API prüft alle 5 Schichten in einem Aufruf — Schema, EN 16931, BR-DE, Berechnung und Semantik.</p><h2>6. Komplettes Beispiel: XRechnung von A bis Z</h2><p>Das folgende Beispiel zeigt den vollständigen Workflow — Rechnung erstellen, validieren und speichern:</p><pre><code>import requests
+from pathlib import Path
+
+API_BASE = "http://localhost:8000/api/v1"
+
+def create_xrechnung():
+    """Erstellt eine XRechnung und validiert sie."""
+    invoice = {
+        "invoice_number": "RE-2026-042",
+        "issue_date": "2026-03-22",
+        "due_date": "2026-04-21",
+        "currency_code": "EUR",
+        "invoice_type_code": "380",
+        "buyer_reference": "04011000-12345-67",
+        "seller": {
+            "name": "DevCorp GmbH",
+            "street": "Entwicklerweg 42",
+            "city": "München",
+            "postal_code": "80331",
+            "country_code": "DE",
+            "tax_id": "DE987654321",
+            "contact": {"email": "billing@devcorp.de"},
+            "bank_account": {"iban": "DE89370400440532013000"}
+        },
+        "buyer": {
+            "name": "Stadt München",
+            "street": "Marienplatz 8",
+            "city": "München",
+            "postal_code": "80331",
+            "country_code": "DE"
+        },
+        "lines": [
+            {
+                "description": "API-Entwicklung",
+                "quantity": 80,
+                "unit_code": "HUR",
+                "unit_price": 120.00,
+                "tax_category": "S",
+                "tax_percent": 19.0
+            },
+            {
+                "description": "Code Review",
+                "quantity": 20,
+                "unit_code": "HUR",
+                "unit_price": 95.00,
+                "tax_category": "S",
+                "tax_percent": 19.0
+            }
+        ],
+        "payment_terms": "Zahlbar innerhalb von 30 Tagen netto"
+    }
+
+    # 1. XML generieren
+    resp = requests.post(
+        f"{API_BASE}/invoices/xml",
+        json=invoice,
+        params={"syntax": "ubl"}
+    )
+    resp.raise_for_status()
+    xml_bytes = resp.content
+
+    # 2. Validieren
+    val = requests.post(
+        f"{API_BASE}/invoices/validate",
+        files={"file": ("invoice.xml", xml_bytes, "application/xml")}
+    )
+    result = val.json()
+
+    if not result["valid"]:
+        for err in result["errors"]:
+            print(f"Fehler: [{err['rule']}] {err['message']}")
+        return False
+
+    # 3. Speichern
+    output = Path("output/RE-2026-042.xml")
+    output.parent.mkdir(exist_ok=True)
+    output.write_bytes(xml_bytes)
+    print(f"Valide XRechnung gespeichert: {output}")
+    return True
+
+if __name__ == "__main__":
+    create_xrechnung()</code></pre><h2>7. Nächste Schritte</h2><p>Sie haben die Grundlagen der <strong>XRechnung-Implementierung</strong> kennengelernt. Für den produktiven Einsatz empfehlen wir:</p><ul><li><strong>Branchenerweiterungen prüfen:</strong> Bau, Gesundheit, Logistik und Automotive haben zusätzliche Anforderungen.</li><li><strong>ZUGFeRD parallel einrichten:</strong> Viele B2B-Empfänger bevorzugen das Hybridformat.</li><li><strong>Fristen beachten:</strong> Die E-Rechnungspflicht 2027 betrifft alle B2B-Unternehmen.</li></ul><section class="mt-16 pt-10 border-t border-border"><h2 class="heading-md text-ink mb-6">Das könnte Sie auch interessieren</h2><div class="grid gap-px bg-border rounded-md overflow-hidden sm:grid-cols-2 lg:grid-cols-3"><!--[--><a href="/blog/e-rechnung-datev" class="block bg-surface p-6 hover:bg-warm-gray transition-colors group no-underline"><span class="label mb-2 inline-block text-urgency">E-Rechnung</span><h3 class="text-base font-semibold text-ink mb-2 group-hover:text-accent transition-colors">E-Rechnung mit DATEV: So richten Sie XRechnung ein</h3><p class="body-md text-muted line-clamp-2">XRechnung in DATEV einrichten: Module, Schritt-für-Schritt Konfiguration, GoBD-konforme Archivierung und häufige Fehler bei der Umstellung auf E-Rechnung.</p><span class="inline-flex items-center text-sm font-medium text-accent mt-3 group-hover:gap-2 transition-all">Weiterlesen <svg class="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg></span></a><a href="/blog/en16931-branchenerweiterungen" class="block bg-surface p-6 hover:bg-warm-gray transition-colors group no-underline"><span class="label mb-2 inline-block text-urgency">E-Rechnung</span><h3 class="text-base font-semibold text-ink mb-2 group-hover:text-accent transition-colors">EN 16931 Branchenerweiterungen: E-Rechnungen für Bau, Gesundheit und Logistik</h3><p class="body-md text-muted line-clamp-2">EN 16931 allein reicht für viele Branchen nicht. So funktionieren Branchenerweiterungen für Bau, Gesundheit, Logistik und Automotive — technisch und praktisch.</p><span class="inline-flex items-center text-sm font-medium text-accent mt-3 group-hover:gap-2 transition-all">Weiterlesen <svg class="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg></span></a><a href="/blog/xrechnung-pflicht-2027" class="block bg-surface p-6 hover:bg-warm-gray transition-colors group no-underline"><span class="label mb-2 inline-block text-urgency">E-Rechnung</span><h3 class="text-base font-semibold text-ink mb-2 group-hover:text-accent transition-colors">XRechnung-Pflicht 2027: Was Unternehmen jetzt wissen müssen</h3><p class="body-md text-muted line-clamp-2">Ab 2027 wird die elektronische Rechnung im B2B-Bereich Pflicht. Erfahren Sie, welche Fristen gelten, wer betroffen ist und wie Sie Ihr Unternehmen rechtzeitig vorbereiten.</p><span class="inline-flex items-center text-sm font-medium text-accent mt-3 group-hover:gap-2 transition-all">Weiterlesen <svg class="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg></span></a><!--]--></div></section></article><div class="mt-16 bg-warm-gray rounded-md p-8 sm:p-12 text-center"><h3 class="heading-lg text-ink">E-Rechnung-Pflicht ab 2027. Sind Sie bereit?</h3><p class="mt-3 body-lg text-muted max-w-xl mx-auto">1.500 EUR Compliance-Check. Eine Woche. Konkreter Maßnahmenplan — oder Sie zahlen nichts.</p><a href="/lp/e-rechnung" class="cta-button inline-block mt-8 bg-accent text-white px-8 py-4 text-base rounded-md hover:bg-accent-hover">Compliance-Check anfragen</a></div><div class="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-px bg-border rounded-md overflow-hidden"><a href="/blog/en16931-branchenerweiterungen" class="bg-surface p-4 hover:bg-warm-gray transition-colors"><span class="label text-muted">Vorheriger Artikel</span><p class="mt-1 body-md font-semibold text-ink">EN 16931 Branchenerweiterungen: E-Rechnungen für Bau, Gesundheit und Logistik</p></a><a href="/blog/xrechnung-vs-zugferd" class="bg-surface p-4 hover:bg-warm-gray transition-colors text-right"><span class="label text-muted">Nächster Artikel</span><p class="mt-1 body-md font-semibold text-ink">XRechnung vs ZUGFeRD: Welches Format passt zu Ihrem Unternehmen?</p></a></div></div></section><!--]--><!--]--></main><footer class="py-12 px-6 md:px-10 bg-warm-gray border-t border-border"><div class="max-w-[var(--max-width-content)] mx-auto"><div class="grid grid-cols-1 md:grid-cols-4 gap-10"><div><div class="font-bold text-lg text-ink mb-2">Solytics</div><p class="body-md text-muted">E-Rechnung &amp; KI-Automatisierung.<br>Software made in Germany.</p></div><div><h4 class="label text-muted mb-4">Leistungen</h4><ul class="space-y-2 text-sm"><!--[--><li><a href="/e-rechnung" class="text-muted hover:text-ink transition-colors">E-Rechnung</a></li><li><a href="/ki-automatisierung" class="text-muted hover:text-ink transition-colors">KI-Automatisierung</a></li><li><a href="/website-redesign" class="text-muted hover:text-ink transition-colors">Website-Redesign</a></li><li><a href="/blog" class="text-muted hover:text-ink transition-colors">Blog</a></li><!--]--></ul></div><div><h4 class="label text-muted mb-4">Unternehmen</h4><ul class="space-y-2 text-sm"><!--[--><li><a href="/ueber-uns" class="text-muted hover:text-ink transition-colors">Über uns</a></li><li><a href="/kontakt" class="text-muted hover:text-ink transition-colors">Kontakt</a></li><li><a href="/impressum" class="text-muted hover:text-ink transition-colors">Impressum</a></li><li><a href="/datenschutz" class="text-muted hover:text-ink transition-colors">Datenschutz</a></li><li><a href="/faq" class="text-muted hover:text-ink transition-colors">FAQ</a></li><!--]--></ul></div><div><h4 class="label text-muted mb-4">Kontakt</h4><ul class="space-y-2 text-sm"><li><a href="mailto:jens.laufer@solytics.de" class="text-muted hover:text-ink transition-colors">jens.laufer@solytics.de</a></li><li><a href="https://www.linkedin.com/in/jenslaufer" target="_blank" rel="noopener" class="text-muted hover:text-ink transition-colors">LinkedIn</a></li><li><a href="https://github.com/jenslaufer" target="_blank" rel="noopener" class="text-muted hover:text-ink transition-colors">GitHub</a></li></ul></div></div><div class="mt-12 pt-8 border-t border-border flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-muted"><p>© 2026 Solytics GmbH. Alle Rechte vorbehalten.</p><div class="flex gap-6"><a href="/impressum" class="hover:text-ink transition-colors">Impressum</a><a href="/datenschutz" class="hover:text-ink transition-colors">Datenschutz</a></div></div></div></footer></div></div><script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async=""></script></body></html>
