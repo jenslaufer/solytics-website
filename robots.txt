@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://solytics.de/sitemap.xml
+LLMs: https://solytics.de/llms.txt
